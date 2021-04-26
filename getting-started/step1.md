@@ -1,7 +1,6 @@
 Firstly, we need to wait for Kubernetes to be available:
 
-    until kubectl cluster-info; do sleep 5s; done
-    {{execute}}
+`until kubectl cluster-info; do sleep 5s; done`{{execute}}
 
 Argo is normally installed into a namespace named `argo`, so create that
 
