@@ -7,7 +7,8 @@
     "steps": [
       {
         "title": "Artifacts",
-        "text": "artifacts.md"
+        "text": "artifacts.md",
+        "code": "launch.sh"
       }
     ],
     "assets": {
