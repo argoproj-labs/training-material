@@ -22,6 +22,11 @@
         "text": "cli.md"
       }
     ],
+    "assets": {
+      "host01": [
+        {"file": "hello-workflow.yaml", "target": "."}
+      ]
+    },
     "intro": {
       "text": "intro.md"
     },

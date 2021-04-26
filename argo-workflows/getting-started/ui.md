@@ -1,6 +1,6 @@
 You can view the user interface by running a port forward:
 
-`kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 &`{{execute}}
+`kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &`{{execute}}
 
 To check this is working correctly, you can curl the info API:
 
