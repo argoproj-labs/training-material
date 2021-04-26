@@ -12,8 +12,6 @@ Argo Server runs on port 2746, this is just a convention, because ports 80 and 8
 
 Open the "Argo Server" tab and you should see the user interface:
 
-
-
 Lets start a workflow from the user interface:
 
 1. Click the "Create" create button

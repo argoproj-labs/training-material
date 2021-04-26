@@ -16,11 +16,11 @@ Users typically want to process and store data in a workflow, for the quick star
 
 `kubectl -n argo get pod minio`{{execute}}
 
-Lets wait for all the deployments to be available
-
-`kubectl -n argo wait deploy --all --for condition=Available`{{execute}}
-
 Finally, the Argo Server provides a user interface and API;
 
 `kubectl -n argo get deploy argo-server`{{execute}}
+
+Before we proceed, wait for all the deployments to be available:
+
+`kubectl -n argo wait deploy --all --for condition=Available`{{execute}}
 
