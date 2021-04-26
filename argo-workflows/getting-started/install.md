@@ -30,5 +30,5 @@ Finally, the Argo Server provides a user interface and API;
 
 Before we proceed, let wait (around 1m) for our deployments to be available:
 
-`kubectl -n argo wait deploy --all --for condition=Available`{{execute}}
+`kubectl -n argo wait deploy --all --for condition=Available --timeout 2m`{{execute}}
 
