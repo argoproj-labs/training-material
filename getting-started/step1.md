@@ -2,6 +2,10 @@ Firstly, we need to wait about 30s for Kubernetes to be available:
 
 `until kubectl cluster-info; do sleep 3s; done`{{execute}}
 
+When it is ready, you will see:
+
+    Kubernetes master is running at https://172.17.0.55:6443
+
 Argo is normally installed into a namespace named `argo`, so create that
 
 `kubectl create ns argo`{{execute}}
