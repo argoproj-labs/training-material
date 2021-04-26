@@ -1,10 +1,23 @@
-To run workflows, the easiest way is to use the Argo CLI, you can download it as follows:
+You can view the user interface by running a port forward:
 
-    curl -sLO https://github.com/argoproj/argo/releases/download/v2.12.11/argo-linux-amd64.gz
-    gunzip argo-linux-amd64.gz
-    chmod +x argo-linux-amd64
-    mv ./argo-linux-amd64 /usr/local/bin/argo{{execute}}
+`kubectl -n argo port-forward --address 0.0.0.0 deployment/argo-server 2746:2746 &`{{execute}}
 
-To check it is installed correctly:
+To check this is working correctly, you can curl the info API:
 
-`argo version`{{execute}}
+`curl -v localhost:2746/api/v1/info`{{execute}}
+
+You should see `HTTP/1.1 200 OK`.
+
+Argo Server runs on port 2746, this is just a convention, because ports 80 and 8080 are often popular and therefore not available. Often the server will be installed behind a load balancer with TLS enabled. When this happens it will be available on port 443.
+
+Open the "Argo Server" tab and you should see the user interface:
+
+
+
+Lets start a workflow from the user interface:
+
+1. Click the "Create" create button
+2. Click the "Submit" button.
+
+You should see the workflow running.
+
