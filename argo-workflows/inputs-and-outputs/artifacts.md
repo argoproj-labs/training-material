@@ -51,7 +51,7 @@ If the artifact was a compressed directory, it will be uncompressed and unpacked
 
 ## Inputs and Outputs
 
-You can't use inputs and output is isolation, you need to combine them together uses either steps or a DAG template:
+You can't use inputs and output is isolation, you need to combine them together using either steps or a DAG template:
 
 ```
     - name: main
@@ -67,8 +67,11 @@ You can't use inputs and output is isolation, you need to combine them together 
                   from: "{{tasks.generate-artifact.outputs.artifacts.hello-art}}"
 ```
 
-In the above example `arguments` is used to declare the value for the artifact input. This uses a feature you've not seen before: **template tag**. Simple template tags are enclosed in `{{` and `}}` and when the template in run, the tags are replaced with the correct value. In this example, it becomes the path within the storage.
+In the above example `arguments` is used to declare the value for the artifact input. This uses a feature you've not
+seen before: **template tag**. Simple template tags are enclosed in `{{` and `}}` and when the template in run, the tags
+are replaced with the correct value. In this example, it becomes the path within the storage.
 
+We'll dive deeper into template tags in a future lesson.
 
 Lets see the complete workflow:
 
