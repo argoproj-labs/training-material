@@ -1,0 +1,3 @@
+Let's recap:
+
+* TODO
