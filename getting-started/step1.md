@@ -1,4 +1,4 @@
-Argo is normally installed into a namespace named `argo`, so create that
+Argo is normally installed into a namespace named `argo`, so create that:
 
 `kubectl create ns argo`{{execute}}
 
@@ -14,7 +14,7 @@ The workflow controller is responsible for running workflows.
 
 Users typically want to process and store data in a workflow, for the quick start we use MinIO, which is similar to Amazon S3:
 
-`kubectl -n argo get pod minio`{{execute}}
+`kubectl -n argo get deploy minio`{{execute}}
 
 Finally, the Argo Server provides a user interface and API;
 

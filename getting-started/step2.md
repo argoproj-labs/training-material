@@ -12,7 +12,7 @@ Argo Server runs on port 2746, this is just a convention, because ports 80 and 8
 
 Open the "Argo Server" tab and you should see the user interface:
 
-![UI](ui.png)
+![UI](./assets/ui.png)
 
 Lets start a workflow from the user interface:
 
