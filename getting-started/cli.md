@@ -11,11 +11,15 @@ To check it is installed correctly:
 
 `argo version`{{execute}}
 
+You should see something like this:
+
+![UI](./assets/version.png)
+
 Lets run a workflow!
 
 `argo submit -n argo --watch https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml`{{execute}}
 
-You should see the workflow turn green after about 1m:
+You should see the workflow complete successfully after about 1m:
 
 ![UI](./assets/submit-cli.png)
 

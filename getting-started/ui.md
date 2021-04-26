@@ -34,17 +34,17 @@ kind: Workflow
 metadata:
   generateName: hello-world-  
 spec:
-  entrypoint: main # the first template to run in the workflows        
+  entrypoint: main        
   templates:
   - name: main           
-    container: # this is a container template
-      image: docker/whalesay # this image prints "hello world" to the console 
+    container: 
+      image: docker/whalesay  
 ```{{copy}}
 
-Click "Create". You should see the workflow. The yellow icon shows that it is pending, after a few seconds it'll turn blue to indicate it is running, and finally green to show that it has completed successfully:
+Click "Create". You will see a diagram of the workflow. The yellow icon shows that it is pending, after a few seconds it'll turn blue to indicate it is running, and finally green to show that it has completed successfully:
 
 ![UI](./assets/running.png)
 
-After about 30s, the icon should change to green:
+After about 30s, the icon will change to green:
 
 ![UI](./assets/green.png)
