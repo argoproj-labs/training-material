@@ -1,0 +1,11 @@
+{
+  "title": "Argo Workflows",
+  "description": "Learn how to run workflows on Kubernetes using Argo Workflows.",
+  "courses": [
+    {
+      "course_id": "getting-started",
+      "title": "Argo Workflows Getting Started",
+      "description": "Learn how how to set-up Argo Workflows and run you first workflow"
+    }
+  ]
+}
