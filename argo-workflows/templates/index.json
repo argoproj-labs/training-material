@@ -1,25 +1,13 @@
 {
-  "title": "Getting Started",
-  "description": "Learn how how to set-up Argo Workflows and run you first workflow",
+  "title": "Templates",
+  "description": "Learn about different types of templates such as container and DAG.",
   "difficulty": "Beginner",
   "time": "15",
   "details": {
     "steps": [
       {
-        "title": "Installing Argo Workflows",
-        "text": "install.md"
-      },
-      {
-        "title": "What is a workflow?",
-        "text": "workflow.md"
-      },
-      {
-        "title": "Using the UI",
-        "text": "ui.md"
-      },
-      {
-        "title": "Using the CLI",
-        "text": "cli.md"
+        "title": "Step 1",
+        "text": "step1.md"
       }
     ],
     "intro": {
