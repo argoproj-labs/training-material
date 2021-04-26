@@ -30,7 +30,7 @@ Finally, the Argo Server provides a user interface and API;
 
 You can view the user interface by running a port forward 2746:
 
-`kubectl -n argo port-forward deployment/argo-server 2746:2746 &`{{execute}}
+`kubectl -n argo port-forward --address 0.0.0.0 deployment/argo-server 2746:2746 &`{{execute}}
 
 To check this is working correctly, you can curl the info API:
 

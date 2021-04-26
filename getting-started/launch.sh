@@ -1,0 +1,1 @@
+until kubectl cluster-info; do sleep 3s; done
