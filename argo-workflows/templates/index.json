@@ -6,8 +6,9 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
+        "title": "Templates Types",
+        "text": "types.md",
+        "code": "launch.sh"
       }
     ],
     "intro": {
@@ -15,8 +16,7 @@
       "code": "launch.sh"
     },
     "finish": {
-      "text": "finish.md",
-      "code": "launch.sh"
+      "text": "finish.md"
     }
   },
   "environment": {
