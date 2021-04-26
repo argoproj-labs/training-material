@@ -1,4 +1,4 @@
-Lets recap:
+Let's recap:
 
 * Argo Workflows is a workflow engine for Kubernetes
 * A workflow is a **Kubernetes resource**, so you can use `kubectl` with them.

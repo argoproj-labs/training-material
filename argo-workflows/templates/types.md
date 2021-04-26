@@ -1,16 +1,18 @@
 There are several types of templates, divided into two different categories.
 
-The first category defines work to be done. This includes:
+The first category defines **work** to be done. This includes:
 
 * Container
-* Script
+* Container Set
+* Data
 * Resource
-* Suspend
+* Script
 
-The second category defines execution:
+The second category **orchestrate** the work:
 
 * DAG
 * Steps
+* Suspend
 
 We're going to take a deep-dive into the two most common: containers and DAG.
 

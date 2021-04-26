@@ -15,8 +15,16 @@
         "text": "container.md"
       },
       {
+        "title": "Work Templates",
+        "text": "work.md"
+      },
+      {
         "title": "DAG Template",
         "text": "dag.md"
+      },
+      {
+        "title": "Orchestration Templates",
+        "text": "orchestration.md"
       }
     ],
     "assets": {
