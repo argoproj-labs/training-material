@@ -8,7 +8,7 @@ Argo is normally installed into a namespace named `argo`, so create that
 
 ```
 kubectl create ns argo
-```
+```{{execute}}
 
 Next, you can apply a quick-start manifest:
 
