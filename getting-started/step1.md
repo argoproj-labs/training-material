@@ -34,8 +34,14 @@ Finally, the Argo Server provides a user interface and API;
 kubectl -n argo get deploy argo-server
 ```{{execute}}
 
-You can view the Argo Server by forwarding it port 2746:
+You can view the user interface by running a port forward 2746:
 
 ```
-kubectl -n argo port-forward deployment/argo-server 2747:2746
+kubectl -n argo port-forward deployment/argo-server 8080:2746
 ```{{execute}}
+
+Argo Server runs on port 2746, just is just a convention, because ports 80 and 8080 are often popular and therefore not available.
+
+Open the "Argo Server" tabe and you should see something like this:
+
+
