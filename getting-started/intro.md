@@ -1,5 +1,3 @@
-Argo Workflows is a workflow engine for Kubernetes.
-
 In this scenario you will:
 
 1. Install Argo Workflows into a Kubernetes cluster.

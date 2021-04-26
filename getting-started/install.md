@@ -1,12 +1,18 @@
-Argo is normally installed into a namespace named `argo`, so create that:
+Firstly, wait for Kubernetes to be ready:
+
+`until kubectl cluster-info; do sleep 3s; done`{{execute}}
+
+Argo is normally installed into a namespace named `argo`, so lets create that:
 
 `kubectl create ns argo`{{execute}}
 
-Next, you can apply a quick-start manifest:
+Next, apply the quick-start manifest:
 
 `kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo-workflows/stable/manifests/quick-start-minimal.yaml`{{execute}}
 
-It will take about 1m for all components to become available. In the meantime, so lets look at what is installed.
+## What was installed?
+
+It will take about 1m for all deployments to become available. In the meantime, so lets look at what is installed while we wait.
 
 The workflow controller is responsible for running workflows. 
 
@@ -20,7 +26,9 @@ Finally, the Argo Server provides a user interface and API;
 
 `kubectl -n argo get deploy argo-server`{{execute}}
 
-Before we proceed, wait for all the deployments to be available:
+## Wait for everything to be ready
+
+Before we proceed, let wait (around 1m) for our deployments to be available:
 
 `kubectl -n argo wait deploy --all --for condition=Available`{{execute}}
 

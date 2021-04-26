@@ -7,15 +7,19 @@
     "steps": [
       {
         "title": "Installing Argo Workflows",
-        "text": "step1.md"
+        "text": "install.md"
+      },
+      {
+        "title": "What is a workflow",
+        "text": "workflow.md"
       },
       {
         "title": "Using the UI",
-        "text": "step2.md"
+        "text": "ui.md"
       },
       {
         "title": "Using the CLI",
-        "text": "step3.md"
+        "text": "cli.md"
       }
     ],
     "intro": {
@@ -31,7 +35,7 @@
     "dashboards": [
       {
         "name": "Argo Server",
-        "href": "https://[[HOST_SUBDOMAIN]]-2746-[[KATACODA_HOST]].environments.katacoda.com/"
+        "port": "2746"
       }
     ]
   },
