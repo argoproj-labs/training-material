@@ -7,14 +7,12 @@
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md",
-        "intro": {
-          "code": "launch.sh"
-        }
+        "text": "step1.md"
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "launch.sh"
     },
     "finish": {
       "text": "finish.md"
