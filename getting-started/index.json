@@ -22,7 +22,14 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "Argo Server",
+        "port": 2746
+      }
+    ]
   },
   "backend": {
     "imageid": "kubernetes"
