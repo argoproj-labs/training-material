@@ -1,11 +1,3 @@
-Firstly, we need to wait about 30s for Kubernetes to be available:
-
-`until kubectl cluster-info; do sleep 3s; done`{{execute}}
-
-When it is ready, you will see:
-
-    Kubernetes master is running at https://172.17.0.55:6443
-
 Argo is normally installed into a namespace named `argo`, so create that
 
 `kubectl create ns argo`{{execute}}
@@ -22,7 +14,11 @@ The workflow controller is responsible for running workflows.
 
 Users typically want to process and store data in a workflow, for the quick start we use MinIO, which is similar to Amazon S3:
 
-`kubectl -n argo get pod minio {{execute}}
+`kubectl -n argo get pod minio`{{execute}}
+
+Lets wait for all the deployments to be available
+
+`kubectl -n argo wait deploy --all --for condition=Available`{{execute}}
 
 Finally, the Argo Server provides a user interface and API;
 
