@@ -4,7 +4,7 @@ Argo is normally installed into a namespace named `argo`, so create that
 
 Next, you can apply a quick-start manifest:
 
-`kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo-workflows/v2.12.10/manifests/quick-start-minimal.yaml`{{execute}}
+`kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo-workflows/stable/manifests/quick-start-minimal.yaml`{{execute}}
 
 It will take about 1m for all components to become available. In the meantime, so lets look at what is installed.
 
