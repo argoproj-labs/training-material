@@ -15,7 +15,8 @@
       "code": "launch.sh"
     },
     "finish": {
-      "text": "finish.md"
+      "text": "finish.md",
+      "code": "launch.sh"
     }
   },
   "environment": {
