@@ -31,7 +31,7 @@
     "dashboards": [
       {
         "name": "Argo Server",
-        "port": 2746
+        "href": "https://[[HOST_SUBDOMAIN]]-2746-[[KATACODA_HOST]].environments.katacoda.com/"
       }
     ]
   },
