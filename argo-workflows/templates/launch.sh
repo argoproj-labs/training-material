@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
-until kubectl cluster-info; do sleep 3s; done
+set -eu
+
+echo "Let me install everything you need to get up and running (takes around 3m)..."
+
+until kubectl cluster-info; do sleep 5s; done
 
 kubectl create ns argo
 kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo-workflows/stable/manifests/quick-start-minimal.yaml
@@ -15,3 +19,5 @@ argo submit -n argo --watch https://raw.githubusercontent.com/argoproj/argo-work
 
 kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 &
 curl -kv https://localhost:2746/api/v1/info
+
+echo "Ready to start!"
