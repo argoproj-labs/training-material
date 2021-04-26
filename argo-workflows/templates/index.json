@@ -9,11 +9,19 @@
         "title": "Templates Types",
         "text": "types.md",
         "code": "launch.sh"
+      },
+      {
+        "title": "Container Template",
+        "text": "container.md"
       }
     ],
+    "assets": {
+      "host01": [
+        {"file": "container-workflow.yaml", "target": "."}
+      ]
+    },
     "intro": {
-      "text": "intro.md",
-      "code": "launch.sh"
+      "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"

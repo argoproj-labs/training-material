@@ -18,3 +18,5 @@ There are several other types of template, and we'll come to more of them soon.
 Because a workflow in just a Kuberenetes resource, you can use `kubectl` with them:
 
 `kubectl -n argo get workflows`{{execute}}
+
+You should see `No resources found in argo namespace.`
