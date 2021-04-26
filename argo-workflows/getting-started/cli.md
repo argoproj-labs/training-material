@@ -41,4 +41,4 @@ And you can view that workflows logs:
 
 Finally, you can get help:
 
-    argo --help
+`argo --help`{{execute}}

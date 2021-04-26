@@ -1,6 +1,6 @@
 Firstly, wait for Kubernetes to be ready:
 
-`until kubectl cluster-info; do sleep 3s; done`{{execute}}
+`until kubectl cluster-info; do sleep 5s; done`{{execute}}
 
 Argo is normally installed into a namespace named `argo`, so lets create that:
 
@@ -12,7 +12,7 @@ Next, apply the quick-start manifest:
 
 ## What was installed?
 
-It will take about 1m for all deployments to become available. In the meantime, so lets look at what is installed while we wait.
+It will take about 1m for all deployments to become available. In the meantime lets look at what is installed while we wait.
 
 The workflow controller is responsible for running workflows. 
 
