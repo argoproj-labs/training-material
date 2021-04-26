@@ -13,11 +13,22 @@
       {
         "title": "Container Template",
         "text": "container.md"
+      },
+      {
+        "title": "DAG Template",
+        "text": "dag.md"
       }
     ],
     "assets": {
       "host01": [
-        {"file": "container-workflow.yaml", "target": "."}
+        {
+          "file": "container-workflow.yaml",
+          "target": "."
+        },
+        {
+          "file": "dag-workflow.yaml",
+          "target": "."
+        }
       ]
     },
     "intro": {
