@@ -24,6 +24,7 @@ argo server --namespaced --auth-mode=server --secure=false > server.log 2>&1 &
 
 echo "Waiting for the Workflow Controller to be available..."
 
+kubectl scale deploy/workflow-controller --replicas 1 > /dev/null
 kubectl wait deploy/workflow-controller --for condition=Available > /dev/null
 kubectl scale deploy/minio --replicas 1 > /dev/null
 
