@@ -878,16 +878,3 @@ spec:
       securityContext:
         runAsNonRoot: true
       serviceAccountName: argo
----
-apiVersion: argoproj.io/v1alpha1
-kind: Workflow
-metadata:
-  name: canary
-spec:
-  entrypoint: main
-  templates:
-  - container:
-      image: docker/whalesay:latest
-    name: main
-  ttlStrategy:
-    secondsAfterCompletion: 1
