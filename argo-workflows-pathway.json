@@ -6,6 +6,11 @@
       "course_id": "getting-started",
       "title": "Getting Started",
       "description": "Learn how how to set-up Argo Workflows and run you first workflow."
+    },
+    {
+      "course_id": "templates",
+      "title": "Templates",
+      "description": "Learn about different types of templates, including key types such as container and DAG."
     }
   ]
 }
