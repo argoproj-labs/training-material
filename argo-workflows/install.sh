@@ -9,6 +9,7 @@ curl -sLO https://github.com/argoproj/argo/releases/download/v3.0.2/argo-linux-a
 gunzip argo-linux-amd64.gz
 chmod +x argo-linux-amd64
 mv ./argo-linux-amd64 /usr/local/bin/argo
-argo server > /dev/null &
+argo server --managed-namespace --auth-mode=server > server.log 2>&1 &
 
-kubectl wait deploy --all --for condition=Available --timeout 2m
+kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m
+kubectl scale deploy/minio --replicas 1
