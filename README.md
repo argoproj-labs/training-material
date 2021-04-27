@@ -2,10 +2,15 @@
 
 [Get started!](https://katacoda.com/argoproj)
 
-
 ## Troubleshooting
 
 Stuck on `Hang tight! We’re preparing the environment for you`.
+
+Things that don't seem to help:
+
+* Turning VPN on or off.
+* Clearing cache.
+* Restarting browser.
 
 Open another browser.
 
