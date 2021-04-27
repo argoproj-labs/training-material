@@ -2,6 +2,13 @@
 
 [Get started!](https://katacoda.com/argoproj)
 
+
+## Troubleshooting
+
+Stuck on `Hang tight! We’re preparing the environment for you`.
+
+Open another browser.
+
 ## Contributing
 
 Tips:
