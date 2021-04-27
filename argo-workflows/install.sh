@@ -3,11 +3,11 @@ echo "Any problems? Raise an issue: https://github.com/alexec/katacoda-scenarios
 
 launch.sh
 
-echo "Installing Argo Workflows.."
+echo "Installing Argo Workflows..."
 
 kubectl create ns argo > /dev/null
 kubectl config set-context --current --namespace=argo > /dev/null
-kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-workflows/stable/manifests/quick-start-minimal.yaml > /dev/null
+kubectl apply -f https://raw.githubusercontent.com/alexec/katacoda-scenarios/master/config/argo-workflows.yaml > /dev/null
 
 echo "Installing Argo CLI..."
 
