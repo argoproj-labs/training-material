@@ -8,7 +8,7 @@
       {
         "title": "Artifacts",
         "text": "artifacts.md",
-        "code": "install.sh"
+        "code": "foreground.sh"
       }
     ],
     "assets": {
