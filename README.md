@@ -16,3 +16,11 @@ Things that could help:
 * Katacoda tends to fail without any diagnostics or remediation action. So make small changes incrementally, and be
   ready to rollback if anything weird happens.
 * Starting pods in MUCH slower than running binaries.
+
+Here's some topics we might want to add:
+
+* Workflow templates
+* API usage
+* Cron workflows
+* Exit handlers
+* Workflow Service Account
