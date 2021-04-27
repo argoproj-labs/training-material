@@ -15,12 +15,20 @@
         "text": "container.md"
       },
       {
+        "title": "Template Tags",
+        "text": "template-tags.md"
+      },
+      {
         "title": "Work Templates",
         "text": "work.md"
       },
       {
         "title": "DAG Template",
         "text": "dag.md"
+      },
+      {
+        "title": "Loops",
+        "text": "loops.md"
       },
       {
         "title": "Orchestration Templates",
@@ -35,6 +43,18 @@
         },
         {
           "file": "dag-workflow.yaml",
+          "target": "."
+        },
+        {
+          "file": "template-tag-workflow.yaml",
+          "target": "."
+        },
+        {
+          "file": "with-items-workflow.yaml",
+          "target": "."
+        },
+        {
+          "file": "with-sequence-workflow.yaml",
           "target": "."
         }
       ]

@@ -67,7 +67,7 @@ You can't use inputs and output is isolation, you need to combine them together 
                   from: "{{tasks.generate-artifact.outputs.artifacts.hello-art}}"
 ```
 
-In the above example `arguments` is used to declare the value for the artifact input. This uses a feature you've not
+In the above example `arguments` is used to declare the value for the artifact input. This uses 
 seen before: **template tag**. Simple template tags are enclosed in `{{` and `}}` and when the template in run, the tags
 are replaced with the correct value. In this example, it becomes the path within the storage.
 
