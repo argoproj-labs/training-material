@@ -1,3 +1,5 @@
+launch.sh
+
 until kubectl cluster-info; do sleep 5s; done
 
 kubectl create ns argo

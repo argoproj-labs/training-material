@@ -8,7 +8,7 @@
       {
         "title": "Artifacts",
         "text": "artifacts.md",
-        "code": "launch.sh"
+        "code": "install.sh"
       }
     ],
     "assets": {
