@@ -11,11 +11,6 @@
       "course_id": "templates",
       "title": "Templates",
       "description": "Learn about different types of templates, including key types such as container and DAG."
-    },
-    {
-      "course_id": "inputs-and-outputs",
-      "title": "Inputs and Outputs",
-      "description": "Learn about input and outputs, including parameters and artifacts."
     }
   ]
 }
