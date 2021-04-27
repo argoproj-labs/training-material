@@ -3,7 +3,7 @@ launch.sh
 echo
 echo "It takes a couple of minutes to get Argo Workflows ready."
 echo
-echo "Any problems? Raise an issue: https://github.com/alexec/katacoda-scenarios"
+echo "Any problems? Raise an issue: https://github.com/alexec/katacoda-scenarios/issues/new"
 echo
 
 echo "1. Installing Argo Workflows..."
