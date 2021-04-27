@@ -16,4 +16,3 @@ The second category **orchestrate** the work:
 
 We're going to take a deep-dive into the two most common: containers and DAG.
 
-To make life easier, Argo Workflows will install automatically.

@@ -14,4 +14,25 @@ you've added a script to it.
 
 Every type of templates that does work does it by running a pod. So you can use `kubectl` to view these pods:
 
-`kubectl get pods`{{execute}}
+`kubectl get pods -l workflows.argoproj.io/workflow`{{execute}}
+
+You can identify workflow pods by the `workflows.argoproj.io/workflow` label.
+
+You should see something like this:
+
+```
+NAME                 READY   STATUS      RESTARTS   AGE
+container-m5664      0/2     Completed   0          5m21s
+template-tag-kqpc6   0/2     Completed   0          4m6s
+```
+
+You should see something like:
+
+```
+STEP          TEMPLATE  PODNAME              DURATION  MESSAGE
+ ✔ dag-shxn5  main                                       
+ ├─✔ a        ctr       dag-shxn5-289972251  6s          
+ └─✔ b        ctr       dag-shxn5-306749870  6s          
+```
+
+Did you see how `b` did not start until `a` had completed?
