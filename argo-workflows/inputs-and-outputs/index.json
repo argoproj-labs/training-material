@@ -6,15 +6,27 @@
   "details": {
     "steps": [
       {
-        "title": "Artifacts",
-        "text": "artifacts.md",
+        "title": "Parameters",
+        "text": "parameters.md",
         "code": "foreground.sh"
+      },
+      {
+        "title": "Artifacts",
+        "text": "artifacts.md"
       }
     ],
     "assets": {
       "host01": [
         {
           "file": "artifacts-workflow.yaml",
+          "target": "."
+        },
+        {
+          "file": "input-parameters-workflow.yaml",
+          "target": "."
+        },
+        {
+          "file": "parameters-workflow.yaml",
           "target": "."
         }
       ]

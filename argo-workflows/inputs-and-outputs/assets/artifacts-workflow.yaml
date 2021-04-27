@@ -12,6 +12,8 @@ spec:
             template: save-message
           - name: consume-artifact
             template: print-message
+            dependencies:
+              - generate-artifact
             arguments:
               artifacts:
                 - name: message

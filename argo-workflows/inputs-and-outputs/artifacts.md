@@ -3,11 +3,14 @@ There are two kind of artifact in Argo:
 * An **input artifact** is a file downloaded from storage (e.g. S3) and mounted as a volume within the container.
 * An **output artifact** is a file created in the container that is uploaded to storage.
 
-Artifacts are typically uploaded into a bucket within some kind of storage such as S3 or GCP.
+Artifacts are typically uploaded into a bucket within some kind of storage such as S3 or GCP. We call that storage an
+**artifact repository**. Within these lessons we'll be using MinIO for this purpose, but you can just imagine it is S3
+or what ever you're used too
 
 ## Output Artifact
 
-To specify an output artifact, you must include `outputs` in the manifest. Each output artifact declares:
+Each task within a workflow can produce output artifacts. To specify an output artifact, you must include `outputs` in
+the manifest. Each output artifact declares:
 
 * The **path** within the container where it can be found.
 * A **name** so that it can be referred to.
@@ -51,7 +54,7 @@ If the artifact was a compressed directory, it will be uncompressed and unpacked
 
 ## Inputs and Outputs
 
-You can't use inputs and output is isolation, you need to combine them together using either steps or a DAG template:
+You can't use inputs and output is isolation, you need to combine them together using either a steps or a DAG template:
 
 ```
     - name: main
@@ -61,17 +64,19 @@ You can't use inputs and output is isolation, you need to combine them together 
             template: save-message
           - name: consume-artifact
             template: print-message
+            dependencies:
+              - generate-artifact            
             arguments:
               artifacts:
                 - name: message
                   from: "{{tasks.generate-artifact.outputs.artifacts.hello-art}}"
 ```
 
-In the above example `arguments` is used to declare the value for the artifact input. This uses 
-seen before: **template tag**. Simple template tags are enclosed in `{{` and `}}` and when the template in run, the tags
-are replaced with the correct value. In this example, it becomes the path within the storage.
+In the above example `arguments` is used to declare the value for the artifact input. This uses seen before: **template
+tag**. In this example, `{{tasks.generate-artifact.outputs.artifacts.hello-art}}` becomes the path of the artifact
+within the storage.
 
-We'll dive deeper into template tags in a future lesson.
+The task `consume-artifact` must run after `generate-artifact`, so we use `dependencies` to declare that relationship.
 
 Lets see the complete workflow:
 

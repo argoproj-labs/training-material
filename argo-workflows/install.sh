@@ -24,9 +24,9 @@ echo "3. Starting Argo Server..."
 
 argo server --namespaced --auth-mode=server --secure=false > server.log 2>&1 &
 
-echo "4.Waiting for the Workflow Controller to be available..."
+echo "4. Waiting for the Workflow Controller to be available..."
 
-kubectl wait deploy/workflow-controller --for condition=Available --timeout 1m > /dev/null
+kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
 kubectl scale deploy/minio --replicas 1 > /dev/null
 
 echo
