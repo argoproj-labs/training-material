@@ -42,3 +42,7 @@ And you can view that workflows logs:
 Finally, you can get help:
 
 `argo --help`{{execute}}
+
+## Exercise
+
+Submit a workflow, but change the name using the `--name` option.

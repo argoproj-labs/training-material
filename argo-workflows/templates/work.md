@@ -36,3 +36,8 @@ STEP          TEMPLATE  PODNAME              DURATION  MESSAGE
 ```
 
 Did you see how `b` did not start until `a` had completed?
+
+## Exercise
+
+Use `kubectl describe` to describe a workflow pod. What interesting information is contained within the pods labels
+and annotations?

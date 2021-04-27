@@ -91,5 +91,8 @@ Run it:
 You should see:
 
 ```
-TODO
+STEP                     TEMPLATE       PODNAME                      DURATION  MESSAGE
+ ✔ parameters-vjvwg      main                                                    
+ ├─✔ generate-parameter  whalesay       parameters-vjvwg-4019940555  43s         
+ └─✔ consume-parameter   print-message  parameters-vjvwg-1497618270  8s          
 ```

@@ -64,4 +64,8 @@ STEP                     TEMPLATE  PODNAME                         DURATION  MES
  └─✔ print-message(4:4)  whalesay  with-sequence-8nrp5-361941985   11s         
 ```
 
-See how 5 pods were run at the same time.
+See how 5 pods were run at the same time, and that their names have the item value in them, zero-indexed 
+
+## Exercise
+
+Change the **with sequence** to print the numbers 10 to 20. 

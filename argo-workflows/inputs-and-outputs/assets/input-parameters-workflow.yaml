@@ -9,7 +9,7 @@ spec:
       - name: message
         value: hello world
   templates:
-    - name: print-message
+    - name: main
       inputs:
         parameters:
           - name: message

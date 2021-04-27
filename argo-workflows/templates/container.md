@@ -20,3 +20,7 @@ Lets run the workflow:
 `argo submit --watch container-workflow.yaml`{{execute}}
 
 Open the Argo Server tab a navigate to the workflow, you should see a single container running.
+
+## Exercise
+
+Edit the workflow to make it echo "howdy world".

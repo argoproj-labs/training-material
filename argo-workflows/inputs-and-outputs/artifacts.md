@@ -1,3 +1,5 @@
+Artifact is a fancy name for a file that is compressed and stored in S3.
+
 There are two kind of artifact in Argo:
 
 * An **input artifact** is a file downloaded from storage (e.g. S3) and mounted as a volume within the container.
@@ -5,7 +7,7 @@ There are two kind of artifact in Argo:
 
 Artifacts are typically uploaded into a bucket within some kind of storage such as S3 or GCP. We call that storage an
 **artifact repository**. Within these lessons we'll be using MinIO for this purpose, but you can just imagine it is S3
-or what ever you're used too
+or what ever you're used too.
 
 ## Output Artifact
 
@@ -72,9 +74,9 @@ You can't use inputs and output is isolation, you need to combine them together 
                   from: "{{tasks.generate-artifact.outputs.artifacts.hello-art}}"
 ```
 
-In the above example `arguments` is used to declare the value for the artifact input. This uses seen before: **template
-tag**. In this example, `{{tasks.generate-artifact.outputs.artifacts.hello-art}}` becomes the path of the artifact
-within the storage.
+In the above example `arguments` is used to declare the value for the artifact input. This uses a **template tag**. In
+this example, `{{tasks.generate-artifact.outputs.artifacts.hello-art}}` becomes the path of the artifact in the
+repository.
 
 The task `consume-artifact` must run after `generate-artifact`, so we use `dependencies` to declare that relationship.
 
@@ -85,3 +87,12 @@ Lets see the complete workflow:
 Lets run an example:
 
 `argo submit --watch artifacts-workflow.yaml`{{execute}}
+
+You should see:
+
+```
+STEP                    TEMPLATE       PODNAME                     DURATION  MESSAGE
+ ✔ artifacts-qvcpn      main                                                   
+ ├─✔ generate-artifact  save-message   artifacts-qvcpn-3260493969  7s          
+ └─✔ consume-artifact   print-message  artifacts-qvcpn-2991781604  8s      
+```

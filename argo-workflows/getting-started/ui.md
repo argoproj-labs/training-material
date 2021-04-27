@@ -48,3 +48,11 @@ Click "Create". You will see a diagram of the workflow. The yellow icon shows th
 After about 30s, the icon will change to green:
 
 ![UI](./assets/green.png)
+
+## Exercise
+
+Take a few minutes to play around with the user interface. Find out how to:
+ 
+* List workflows.
+* View a workflow.
+* Resubmit a completed workflow.

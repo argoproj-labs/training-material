@@ -43,3 +43,7 @@ template-tag-kqpc6:           \____\______/
 ```
 
 There are many more different tags, you can [read more about template tags in the docs](https://argoproj.github.io/argo-workflows/variables/).
+
+## Exercise
+
+Change the workflow to echo the date the workflow was created. 
