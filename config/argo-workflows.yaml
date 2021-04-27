@@ -832,7 +832,7 @@ kind: Deployment
 metadata:
   name: workflow-controller
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: workflow-controller
