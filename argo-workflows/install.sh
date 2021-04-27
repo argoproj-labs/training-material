@@ -1,7 +1,7 @@
 launch.sh
 
 echo
-echo "It takes a couple of minutes to get Argo Workflows ready."
+echo "It typically between 1m and 2m to get Argo Workflows ready."
 echo
 echo "Any problems? Raise an issue: https://github.com/alexec/katacoda-scenarios/issues/new"
 echo
@@ -27,7 +27,13 @@ argo server --namespaced --auth-mode=server --secure=false > server.log 2>&1 &
 echo "4. Waiting for the Workflow Controller to be available..."
 
 kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
-kubectl scale deploy/minio --replicas 1 > /dev/null
+
+if [ "${MINIO:-0}" -eq 1 ]; then
+  echo "5. Waiting for MinIO to be available..."
+
+  kubectl scale deploy/minio --replicas 1 > /dev/null
+  kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
+fi
 
 echo
 echo "Ready"

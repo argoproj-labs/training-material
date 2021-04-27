@@ -16,7 +16,9 @@ Lets have a look at an example:
         args: [ "{{inputs.parameters.message}}" ]
 ```
 
-This template declare that it has one input parameter named "message". See the complete workflow:
+This template declare that it has one input parameter named "message".
+
+See the complete workflow:
 
 `cat input-parameters-workflow.yaml`{{execute}}
 
