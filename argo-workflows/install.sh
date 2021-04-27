@@ -1,7 +1,9 @@
-echo "It takes a couple of minutes to start Argo Workflows."
-echo "Any problems? Raise an issue: https://github.com/alexec/katacoda-scenarios"
-
 launch.sh
+
+set -eu
+
+echo "It takes a couple of minutes to get Argo Workflows ready."
+echo "Any problems? Raise an issue: https://github.com/alexec/katacoda-scenarios"
 
 echo "Installing Argo Workflows..."
 
