@@ -1,0 +1,42 @@
+{
+  "title": "Inputs and Outputs",
+  "description": "Learn about loading and saving data in a workflow.",
+  "difficulty": "Beginner",
+  "time": "15m",
+  "details": {
+    "steps": [
+      {
+        "title": "Artifacts",
+        "text": "artifacts.md",
+        "code": "foreground.sh"
+      }
+    ],
+    "assets": {
+      "host01": [
+        {
+          "file": "artifacts-workflow.yaml",
+          "target": "."
+        }
+      ]
+    },
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-iframe",
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "Argo Server",
+        "port": "2746"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
