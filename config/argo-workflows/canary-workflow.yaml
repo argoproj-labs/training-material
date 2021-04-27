@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  name: canary
+spec:
+  entrypoint: main
+  ttlStrategy:
+    secondsAfterCompletion: 1
+  templates:
+  - name: main
+    container:
+      image: docker/whalesay:latest

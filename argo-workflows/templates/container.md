@@ -1,7 +1,6 @@
 A container templates is the most common type of template, lets look at a complete example:
 
 ```
-argo submit 
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow                 
 metadata:

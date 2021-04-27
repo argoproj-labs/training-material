@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workflow-controller
+spec:
+  replicas: 0
+  template:
+    spec:
+      containers:
+        - name: workflow-controller
+          env:
+            - name: DEFAULT_REQUEUE_TIME
+              value: 1s
