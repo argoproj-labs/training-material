@@ -19,7 +19,7 @@
     },
     {
       "course_id": "reuse",
-      "title": "Reusing Workflows and Running Workflow on Schedule",
+      "title": "Workflow Templates and Cron Workflows",
       "description": "Learn about reuse with workflow templates, and running workflows on schedule."
     },
     {

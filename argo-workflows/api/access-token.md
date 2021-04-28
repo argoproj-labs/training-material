@@ -17,11 +17,13 @@ Bind the service account to the role:
 
 `kubectl create rolebinding jenkins --role=jenkins --serviceaccount=argo:jenkins`{{execute}}
 
-Now we can get the token:
+Now we can get the name of the secret:
 
 `SECRET=$(kubectl get sa jenkins -o=jsonpath='{.secrets[0].name}')`{{execute}}
-`ARGO_TOKEN="Bearer $(kubectl get secret $SECRET) -o=jsonpath='{.data.token}' | base64 --decode)"`
-{{execute}}
+
+Then we can get the secret and base-64 encode it:
+
+`ARGO_TOKEN="Bearer $(kubectl get secret $SECRET -o=jsonpath='{.data.token}' | base64 --decode)"`{{execute}}
 
 You should see:
 
@@ -29,7 +31,9 @@ You should see:
 TODO
 ```
 
-`curl https://localhost:2746/api/v1/workflows/argo -H "Authorization: $ARGO_TOKEN"`{{execute}}
+To use the token, you add it as an `Authorization` header to you HTTP request:
+
+`curl http://localhost:2746/api/v1/workflows/argo -H "Authorization: $ARGO_TOKEN"`{{execute}}
 
 You should see something like:
 
@@ -39,7 +43,7 @@ TODO
 
 You should also check you cannot do what you're not allowed:
 
-`curl https://localhost:2746/api/v1/workflow-templates/argo -H "Authorization: $ARGO_TOKEN"`{{execute}}
+`curl http://localhost:2746/api/v1/workflow-templates/argo -H "Authorization: $ARGO_TOKEN"`{{execute}}
 
 You should see
 
