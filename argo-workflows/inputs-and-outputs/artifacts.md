@@ -20,7 +20,7 @@ the manifest. Each output artifact declares:
 ```
     - name: save-message
       container:
-        image: docker/whalesay:latest
+        image: docker/whalesay
         command: [ sh, -c ]
         args: [ "cowsay hello world > /tmp/hello_world.txt" ]
       outputs:
@@ -47,7 +47,7 @@ To declare an input artifact, you must include `inputs` in the manifest. Each in
           - name: message
             path: /tmp/message
       container:
-        image: docker/whalesay:latest
+        image: docker/whalesay
         command: [ sh, -c ]
         args: [ "cat /tmp/message" ]
 ```

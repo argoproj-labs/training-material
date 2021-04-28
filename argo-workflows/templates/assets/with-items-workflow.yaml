@@ -23,6 +23,6 @@ spec:
         parameters:
           - name: message
       container:
-        image: docker/whalesay:latest
+        image: docker/whalesay
         command: [ cowsay ]
         args: [ "{{inputs.parameters.message}}" ]

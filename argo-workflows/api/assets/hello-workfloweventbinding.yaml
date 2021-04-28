@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowEventBinding
+metadata:
+  name: hello
+spec:
+  event:
+    selector: payload.message != ""
+  submit:
+    workflowTemplateRef:
+      name: hello
+    arguments:
+      parameters:
+        - name: message
+          valueFrom:
+            event: payload.message

@@ -19,12 +19,24 @@
         "text": "create-workflow.md"
       },
       {
+        "title": "Webhooks",
+        "text": "webhooks.md"
+      },
+      {
         "title": "API Docs",
         "text": "api-docs.md"
       }
     ],
     "assets": {
       "host01": [
+        {
+          "file": "hello-workflowtemplate.yaml",
+          "target": "."
+        },
+        {
+          "file": "hello-workfloweventbinding.yaml",
+          "target": "."
+        }
       ]
     },
     "intro": {

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Workflow
+kind: WorkflowTemplate
 metadata:
-  generateName: input-parameters-
+  name: hello
 spec:
   entrypoint: main
   arguments:

@@ -77,7 +77,7 @@ container creates a file with a message in it:
 ```
   - name: whalesay
     container:
-      image: docker/whalesay:latest
+      image: docker/whalesay
       command: [sh, -c]
       args: ["echo -n hello world > /tmp/hello_world.txt"] 
     outputs:
