@@ -21,6 +21,11 @@
       "course_id": "reuse",
       "title": "Reusing Workflows and Running Workflow on Schedule",
       "description": "Learn about reuse with workflow templates, and running workflows on schedule."
+    },
+    {
+      "course_id": "api",
+      "title": "Argo's API",
+      "description": "Learn about submitting workflows using the Argo REST API."
     }
   ]
 }

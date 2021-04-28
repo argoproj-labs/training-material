@@ -1,0 +1,38 @@
+{
+  "title": "Argo API",
+  "description": "Learn how to use the API for programmatic access.",
+  "difficulty": "Intermediate",
+  "time": "15m",
+  "details": {
+    "steps": [
+      {
+        "title": "Access Token",
+        "text": "access-token.md",
+        "code": "foreground.sh"
+      }
+    ],
+    "assets": {
+      "host01": [
+      ]
+    },
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-iframe",
+    "showdashboard": true,
+    "dashboards": [
+      {
+        "name": "Argo Server",
+        "href": "https://[[HOST_SUBDOMAIN]]-2746-[[KATACODA_HOST]].environments.katacoda.com/workflows/argo"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
