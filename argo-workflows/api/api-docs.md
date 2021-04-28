@@ -7,7 +7,7 @@ You can use the API docs to send API requests, so it is really useful to testing
 
 But you were asked for a password weren't you?
 
-You can use your ARGO_TOKEN as a password.
+You can use your `ARGO_TOKEN` as a password.
 
 ## Exercise
 
