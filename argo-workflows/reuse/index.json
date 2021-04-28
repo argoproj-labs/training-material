@@ -9,6 +9,10 @@
         "title": "Workflow Templates",
         "text": "workflow-templates.md",
         "code": "foreground.sh"
+      },
+      {
+        "title": "Cron Workflows",
+        "text": "cron-workflows.md"
       }
     ],
     "assets": {

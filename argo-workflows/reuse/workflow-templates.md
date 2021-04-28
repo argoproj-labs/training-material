@@ -24,7 +24,7 @@ You can also manage templates using `kubectl`:
 
 `kubectl apply -f hello-workflowtemplate.yaml`{{execute}}
 
-This is useful, because you can use GitOps to managed them.
+This allows you to use GitOps to managed your templates.
 
 To submit a template, you can use the UI or the CLI:
 
@@ -33,17 +33,20 @@ To submit a template, you can use the UI or the CLI:
 You should see:
 
 ```
-TODO
+STEP            TEMPLATE  PODNAME      DURATION  MESSAGE
+ ✔ hello-c622t  main      hello-c622t  33s         
 ```
 
 Lets take a look at the workflow you created:
 
 `argo get @latest -o yaml`{{execute}}
 
-You should see:
+Look for the workflow specification in the output:
 
 ```
-TODO
+spec:
+  workflowTemplateRef:
+    name: hello
 ```
 
 Note how the specification of the workflow is actually a reference to the template.

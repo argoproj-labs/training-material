@@ -19,8 +19,8 @@
     },
     {
       "course_id": "reuse",
-      "title": "Reuse & Running on Schedule",
-      "description": "Learn about use with workflow templates, and running workflows on schedule."
+      "title": "Reusing Workflows and Running Workflow on Schedule",
+      "description": "Learn about reuse with workflow templates, and running workflows on schedule."
     }
   ]
 }
