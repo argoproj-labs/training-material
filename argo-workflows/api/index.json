@@ -17,6 +17,10 @@
       {
         "title": "Create a Workflow",
         "text": "create-workflow.md"
+      },
+      {
+        "title": "API Docs",
+        "text": "api-docs.md"
       }
     ],
     "assets": {
