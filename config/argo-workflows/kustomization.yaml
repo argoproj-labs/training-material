@@ -7,3 +7,4 @@ patchesStrategicMerge:
   - minio-deploy.yaml
   - workflow-controller-deploy.yaml
   - workflow-controller-configmap.yaml
+  - artifact-repostiories-configmap.yaml

@@ -1,4 +1,4 @@
-API endpoints take JSON rather than YAML as their payload
+API endpoints take JSON rather than YAML as their payload, you can submit a workflow using `curl`:
 
 ```bash
 curl \

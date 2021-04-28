@@ -37,20 +37,40 @@ echo the message.
 
 Create the workflow template:
 
-`kubect apply -f hellow-workflowtemplate.yaml`{{execute}}
+`kubectl apply -f hello-workflowtemplate.yaml`{{execute}}
 
 Create the workflow event binding:
 
-`kubect apply -f hellow-workfloweventbinding.yaml`{{execute}}
+`kubectl apply -f hello-workfloweventbinding.yaml`{{execute}}
 
 Try it out:
 
-`curl http://localhost:2746/api/v1/events/argo/- -H "Authorization: $ARGO_TOKEN" -d '{"message": "hello events"}'`
-{{execute}}
+`curl http://localhost:2746/api/v1/events/argo/- -H "Authorization: $ARGO_TOKEN" -d '{"message": "hello events"}'`{{execute}}
+
+You'll not get any response - this is processed asynchronously.
 
 Check the logs:
 
 `argo logs @latest`{{execute}}
+
+You should see something lke:
+
+```
+ ______________ 
+< hello events >
+ -------------- 
+    \
+     \
+      \     
+                    ##        .            
+              ## ## ##       ==            
+           ## ## ## ##      ===            
+       /""""""""""""""""___/ ===        
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
+       \______ o          __/            
+        \    \        __/             
+          \____\______/  
+```
 
 [Learn more about webhooks](https://argoproj.github.io/argo-workflows/events/)
 

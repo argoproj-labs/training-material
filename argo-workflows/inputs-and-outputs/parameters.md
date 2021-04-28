@@ -53,20 +53,20 @@ Lets check the output in the logs:
 You should see:
 
 ```
-input-parameters-lwkdx:  ______________ 
-input-parameters-lwkdx: < Hi Katacoda! >
-input-parameters-lwkdx:  -------------- 
-input-parameters-lwkdx:     \
-input-parameters-lwkdx:      \
-input-parameters-lwkdx:       \     
-input-parameters-lwkdx:                     ##        .            
-input-parameters-lwkdx:               ## ## ##       ==            
-input-parameters-lwkdx:            ## ## ## ##      ===            
-input-parameters-lwkdx:        /""""""""""""""""___/ ===        
-input-parameters-lwkdx:   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
-input-parameters-lwkdx:        \______ o          __/            
-input-parameters-lwkdx:         \    \        __/             
-input-parameters-lwkdx:           \____\______/   
+ ______________ 
+< Hi Katacoda! >
+ -------------- 
+    \
+     \
+      \     
+                    ##        .            
+              ## ## ##       ==            
+           ## ## ## ##      ===            
+       /""""""""""""""""___/ ===        
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
+       \______ o          __/            
+        \    \        __/             
+          \____\______/   
 ```
 
 ## Output Parameters

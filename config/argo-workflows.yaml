@@ -571,7 +571,7 @@ subjects:
 apiVersion: v1
 data:
   default-v1: |
-    archiveLogs: true
+    archiveLogs: false
     s3:
       bucket: my-bucket
       endpoint: minio:9000

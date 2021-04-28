@@ -26,20 +26,20 @@ You can see the output by running
 You should see something like:
 
 ```
-template-tag-kqpc6:  __________________________ 
-template-tag-kqpc6: < hello template-tag-kqpc6 >
-template-tag-kqpc6:  -------------------------- 
-template-tag-kqpc6:     \
-template-tag-kqpc6:      \
-template-tag-kqpc6:       \     
-template-tag-kqpc6:                     ##        .            
-template-tag-kqpc6:               ## ## ##       ==            
-template-tag-kqpc6:            ## ## ## ##      ===            
-template-tag-kqpc6:        /""""""""""""""""___/ ===        
-template-tag-kqpc6:   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
-template-tag-kqpc6:        \______ o          __/            
-template-tag-kqpc6:         \    \        __/             
-template-tag-kqpc6:           \____\______/   
+ __________________________ 
+< hello template-tag-kqpc6 >
+ -------------------------- 
+    \
+     \
+      \     
+                    ##        .            
+              ## ## ##       ==            
+           ## ## ## ##      ===            
+       /""""""""""""""""___/ ===        
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
+       \______ o          __/            
+        \    \        __/             
+          \____\______/   
 ```
 
 There are many more different tags, you can [read more about template tags in the docs](https://argoproj.github.io/argo-workflows/variables/).
