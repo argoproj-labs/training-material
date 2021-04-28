@@ -9,7 +9,8 @@ Typically, it is good to be able to check you can access it first. This can be d
 You should see something like:
 
 ```
-controlplane $ curl http://localhost:2746/api/v1/info
-{"managedNamespace":"argo",...
+{"code":16,"message":"token not valid for running mode"}
 ```
+
+That's fine - you can connect - but we need to set-up an **access token**.
 

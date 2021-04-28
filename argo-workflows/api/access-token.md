@@ -39,20 +39,10 @@ Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6...
 
 To use the token, you add it as an `Authorization` header to you HTTP request:
 
-`curl http://localhost:2746/api/v1/workflows/argo -H "Authorization: $ARGO_TOKEN"`{{execute}}
+`curl http://localhost:2746/api/v1/info -H "Authorization: $ARGO_TOKEN"`{{execute}}
 
 You should see something like:
 
 ```
-{"metadata":{"resourceVersion":"8936"},"items":null}
-```
-
-You should also check you cannot do what you're not allowed:
-
-`curl http://localhost:2746/api/v1/workflow-templates/argo -H "Authorization: $ARGO_TOKEN"`{{execute}}
-
-You should see
-
-```
-{"metadata":{"resourceVersion":"8936"},"items":null}
+{"managedNamespace":"argo"...
 ```

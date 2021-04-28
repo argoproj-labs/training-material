@@ -36,5 +36,10 @@ if [ "${MINIO:-0}" -eq 1 ]; then
   kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
 fi
 
+if [ "${CANARY:-0}" -eq 1 ]; then
+  echo "6. Waiting for canary workflow to be deleted..."
+  kubectl wait workflow/canary --for delete--timeout 2m > /dev/null
+fi
+
 echo
 echo "Ready"

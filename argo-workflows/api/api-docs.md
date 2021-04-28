@@ -5,6 +5,10 @@ now:
 
 You can use the API docs to send API requests, so it is really useful to testing things out.
 
+But you were asked for a password weren't you?
+
+You can use your ARGO_TOKEN as a password.
+
 ## Exercise
 
 Open the API docs and find an endpoint to create workflow templates. Create a workflow template and then submit it. 
