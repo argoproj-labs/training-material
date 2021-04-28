@@ -6,3 +6,4 @@ patchesStrategicMerge:
   - argo-server-deploy.yaml
   - minio-deploy.yaml
   - workflow-controller-deploy.yaml
+  - workflow-controller-configmap.yaml
