@@ -26,6 +26,11 @@
       "course_id": "api",
       "title": "Using the API",
       "description": "Learn about submitting workflows using the Argo Server's REST API."
+    },
+    {
+      "course_id": "python",
+      "title": "Writing workflows in Python",
+      "description": "Learn about writing workflow in Python."
     }
   ]
 }
