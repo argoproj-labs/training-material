@@ -29,5 +29,5 @@ Note how the exit handler task ran last.
 
 ## Exercise
 
-An exit handle can be run at the end of a template, or at the end of a workflow. Change the example to run one at the
+An exit handler can be run at the end of a template, or at the end of a workflow. Change the example to run one at the
 end of the workflow.

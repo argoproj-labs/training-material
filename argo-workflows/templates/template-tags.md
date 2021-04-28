@@ -1,4 +1,4 @@
-**Template tags** (also knows as **template variables**) are a way for you substitute data into you workflow at runtime. Template tags are delimited by `{{`
+**Template tags** (also knows as **template variables**) are a way for you to substitute data into your workflow at runtime. Template tags are delimited by `{{`
 and `}}` and will be replaced when the template is executed.
 
 What tags are available to use depends on the template type, and there are a number of global ones you can use, such as `{{workflow.name}}`, which is replaced by the workflow's name:
