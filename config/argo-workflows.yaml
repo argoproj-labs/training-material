@@ -604,7 +604,7 @@ metadata:
 apiVersion: v1
 data:
   artifactRepository: |
-    archiveLogs: true
+    archiveLogs: false
     s3:
       bucket: my-bucket
       endpoint: minio:9000
@@ -615,7 +615,7 @@ data:
       secretKeySecret:
         name: my-minio-cred
         key: secretkey
-  containerRuntimeExecutor: pns
+  containerRuntimeExecutor: docker
   containerRuntimeExecutors: |
     - name: k8sapi
       selector:

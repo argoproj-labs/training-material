@@ -11,6 +11,8 @@ Things that could help:
 
 ## Contributing
 
+Tips:
+
 * Katacoda can take 15m replicate changes, so it can be easier to link to assets than to embed them.
 * Making a changes to `intro.md` is a good way to see you're change was replicated.
 * Katacoda tends to fail without any diagnostics or remediation action. So make small changes incrementally, and be
