@@ -4,6 +4,7 @@ support creation of workflows via an api: `api/v1/events`. You should prefer thi
 1. It only allows you to create workflows from workflow templates, so is more secure.
 1. It allows you to parse the HTTP payload and use it as parameters.
 1. It allows you to integrate with other systems without you having to change those systems.
+1. Webhooks also have support Github and Gitlab, so you can trigger workflow from a code commit.
 
 To use this, you need to create a workflow template and a **workflow event binding**.:
 
