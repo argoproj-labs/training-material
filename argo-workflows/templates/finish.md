@@ -6,4 +6,4 @@ Let's recap:
 * Other templates **orchestrate** that work, such as DAG templates.
 * You can run task at the end of a template or workflow using an **exit handler**.
 
-Please [let us know what can be improved](https://github.com/alexec/katacoda-scenarios/issues/new).
+Please [let us know what can be improved](https://github.com/argoproj-labs/katacoda-scenarios/issues/new).

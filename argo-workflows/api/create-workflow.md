@@ -48,7 +48,7 @@ curl \
 You should see something like:
 
 ```bash
-TODO
+{"metadata":{"name":"hello-world-2j74f",...
 ```
 
 ## Exercise

@@ -3,15 +3,15 @@ launch.sh
 echo
 echo "It typically takes between 1m and 2m to get Argo Workflows ready."
 echo
-echo "Any problems? Raise an issue: https://github.com/alexec/katacoda-scenarios/issues/new"
+echo "Any problems? Raise an issue: https://github.com/argoproj-labs/katacoda-scenarios/issues/new"
 echo
 
 echo "1. Installing Argo Workflows..."
 
 kubectl create ns argo > /dev/null
 kubectl config set-context --current --namespace=argo > /dev/null
-kubectl apply -f https://raw.githubusercontent.com/alexec/katacoda-scenarios/master/config/argo-workflows.yaml > /dev/null
-kubectl apply -f https://raw.githubusercontent.com/alexec/katacoda-scenarios/master/config/argo-workflows/canary-workflow.yaml > /dev/null
+kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/katacoda-scenarios/master/config/argo-workflows.yaml > /dev/null
+kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/katacoda-scenarios/master/config/argo-workflows/canary-workflow.yaml > /dev/null
 kubectl scale deploy/workflow-controller --replicas 1 > /dev/null
 
 echo "2. Installing Argo CLI..."

@@ -5,4 +5,4 @@ Let's recap:
 * API endpoints use JSON not YAML.
 * You can find **API docs** in the user interface.
 
-Please [let us know what can be improved](https://github.com/alexec/katacoda-scenarios/issues/new).
+Please [let us know what can be improved](https://github.com/argoproj-labs/katacoda-scenarios/issues/new).

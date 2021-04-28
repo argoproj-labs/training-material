@@ -31,7 +31,8 @@ Run it:
 You should see:
 
 ```
-TODO
+STEP                       TEMPLATE  PODNAME                 DURATION  MESSAGE
+ ✔ input-parameters-mvtcw  main      input-parameters-mvtcw  8s          
 ```
 
 If a workflow has parameters, you can change the parameters using `-p`:
@@ -41,7 +42,31 @@ If a workflow has parameters, you can change the parameters using `-p`:
 You should see:
 
 ```
-TODO
+STEP                       TEMPLATE  PODNAME                 DURATION  MESSAGE
+ ✔ input-parameters-lwkdx  main      input-parameters-lwkdx  5s          
+```
+
+Lets check the output in the logs:
+
+`argo logs @latest`{{execute}}
+
+You should see:
+
+```
+input-parameters-lwkdx:  ______________ 
+input-parameters-lwkdx: < Hi Katacoda! >
+input-parameters-lwkdx:  -------------- 
+input-parameters-lwkdx:     \
+input-parameters-lwkdx:      \
+input-parameters-lwkdx:       \     
+input-parameters-lwkdx:                     ##        .            
+input-parameters-lwkdx:               ## ## ##       ==            
+input-parameters-lwkdx:            ## ## ## ##      ===            
+input-parameters-lwkdx:        /""""""""""""""""___/ ===        
+input-parameters-lwkdx:   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
+input-parameters-lwkdx:        \______ o          __/            
+input-parameters-lwkdx:         \    \        __/             
+input-parameters-lwkdx:           \____\______/   
 ```
 
 ## Output Parameters

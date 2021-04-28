@@ -25,7 +25,7 @@ You should see:
 TODO
 ```
 
-Note how the exit handler ran last
+Note how the exit handler task ran last.
 
 ## Exercise
 
