@@ -13,6 +13,10 @@
       {
         "title": "Access Token",
         "text": "access-token.md"
+      },
+      {
+        "title": "Create a Workflow",
+        "text": "create-workflow.md"
       }
     ],
     "assets": {

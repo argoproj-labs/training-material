@@ -23,7 +23,7 @@ mv ./argo-linux-amd64 /usr/local/bin/argo
 
 echo "3. Starting Argo Server..."
 
-argo server --namespaced --auth-mode=hybrid --secure=false > server.log 2>&1 &
+argo server --namespaced --auth-mode=${AUTH_MODE:-hybrid} --secure=false > server.log 2>&1 &
 
 echo "4. Waiting for the Workflow Controller to be available..."
 

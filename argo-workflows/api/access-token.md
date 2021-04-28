@@ -5,9 +5,11 @@ just a Kubernetes service account token. So, to set up a service account for our
 * A **service account** for our automation user.
 * A **role binding** to bind the role to the service account:
 
+In our example, we want to create a role for Jenkins to use that can create, get and list workflows:
+
 Create the role:
 
-`kubectl create role jenkins --verb=list,update --resource=workflows.argoproj.io`{{execute}}
+`kubectl create role jenkins --verb=create,get,list --resource=workflows.argoproj.io`{{execute}}
 
 Create the service account:
 
@@ -25,10 +27,14 @@ Then we can get the secret and base-64 encode it:
 
 `ARGO_TOKEN="Bearer $(kubectl get secret $SECRET -o=jsonpath='{.data.token}' | base64 --decode)"`{{execute}}
 
-You should see:
+Print out the token:
+
+`echo $ARGO_TOKEN`{{execute}}
+
+You should something like :
 
 ```
-TODO
+Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6...
 ```
 
 To use the token, you add it as an `Authorization` header to you HTTP request:
@@ -38,7 +44,7 @@ To use the token, you add it as an `Authorization` header to you HTTP request:
 You should see something like:
 
 ```
-TODO
+{"metadata":{"resourceVersion":"8936"},"items":null}
 ```
 
 You should also check you cannot do what you're not allowed:
@@ -48,5 +54,5 @@ You should also check you cannot do what you're not allowed:
 You should see
 
 ```
-TODO
+{"metadata":{"resourceVersion":"8936"},"items":null}
 ```
