@@ -49,7 +49,7 @@ Try it out:
 
 You'll not get any response - this is processed asynchronously.
 
-Check the logs:
+Allow about 5 seconds to the workflow to start and then check the logs:
 
 `argo logs @latest`{{execute}}
 
