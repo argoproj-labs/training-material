@@ -15,7 +15,7 @@ spec:
       args: ["hello world"]
 ```
 
-Lets run the workflow:
+Let's run the workflow:
 
 `argo submit --watch container-workflow.yaml`{{execute}}
 

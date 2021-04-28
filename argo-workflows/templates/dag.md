@@ -33,7 +33,7 @@ In this example, we have two templates:
 The DAG has two tasks: "a" and "b". Both run the "whalesay" template, but as "b" depends on "a", it won't start until "
 a" has completed successfully.
 
-Lets run the workflow:
+Let's run the workflow:
 
 `argo submit --watch dag-workflow.yaml`{{execute}}
 

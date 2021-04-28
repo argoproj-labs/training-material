@@ -84,7 +84,7 @@ Lets see the complete workflow:
 
 `cat artifacts-workflow.yaml`{{execute}}
 
-Lets run an example:
+Let's run an example:
 
 `argo submit --watch artifacts-workflow.yaml`{{execute}}
 
