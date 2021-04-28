@@ -9,6 +9,10 @@
         "title": "Options",
         "text": "options.md",
         "code": "foreground.sh"
+      },
+      {
+        "title": "Creating a Workflow",
+        "text": "create.md"
       }
     ],
     "assets": {

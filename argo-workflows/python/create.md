@@ -25,3 +25,17 @@ couler.when(couler.equal(result, "tails"), lambda: tails())
 submitter = ArgoSubmitter()
 couler.run(submitter=submitter)
 ```
+
+You can run this as follows:
+
+`python example.py`{{execute}}
+
+Then you can wait for it:
+
+`argo wait @latest`{{execute}}
+
+You should see:
+
+```
+TODO
+```
