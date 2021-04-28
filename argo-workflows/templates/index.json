@@ -33,6 +33,10 @@
       {
         "title": "Orchestration Templates",
         "text": "orchestration.md"
+      },
+      {
+        "title": "Exit Handler",
+        "text": "exit-handler.md"
       }
     ],
     "assets": {
@@ -43,6 +47,10 @@
         },
         {
           "file": "dag-workflow.yaml",
+          "target": "."
+        },
+        {
+          "file": "exit-handler-workflow.yaml",
           "target": "."
         },
         {

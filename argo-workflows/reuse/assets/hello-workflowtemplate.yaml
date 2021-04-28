@@ -1,0 +1,10 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: hello
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      container:
+        image: docker/whalesay

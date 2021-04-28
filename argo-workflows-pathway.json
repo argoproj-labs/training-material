@@ -16,6 +16,11 @@
       "course_id": "inputs-and-outputs",
       "title": "Inputs and Outputs",
       "description": "Learn about input and outputs, including parameters and artifacts."
+    },
+    {
+      "course_id": "reuse",
+      "title": "Reuse & Running on Schedule",
+      "description": "Learn about use with workflow templates, and running workflows on schedule."
     }
   ]
 }
