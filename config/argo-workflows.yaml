@@ -615,17 +615,14 @@ data:
       secretKeySecret:
         name: my-minio-cred
         key: secretkey
-  containerRuntimeExecutor: docker
+  containerRuntimeExecutor: pns
   containerRuntimeExecutors: |
     - name: k8sapi
       selector:
         matchLabels:
           workflows.argoproj.io/container-runtime-executor: k8sapi
   executor: |
-    resources:
-      requests:
-        cpu: 10m
-        memory: 64Mi
+    imagePullPolicy: IfNotPresent
   links: |
     - name: Workflow Link
       scope: workflow
