@@ -1,14 +1,18 @@
 {
-  "title": "Argo API",
+  "title": "Using the API",
   "description": "Learn how to use the API for programmatic access.",
   "difficulty": "Intermediate",
   "time": "15m",
   "details": {
     "steps": [
       {
-        "title": "Access Token",
-        "text": "access-token.md",
+        "title": "Info Endpoint",
+        "text": "info.md",
         "code": "foreground.sh"
+      },
+      {
+        "title": "Access Token",
+        "text": "access-token.md"
       }
     ],
     "assets": {
