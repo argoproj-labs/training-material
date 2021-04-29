@@ -6,4 +6,4 @@ Let's recap:
 * **Webhooks** allow you integrate with any service that supports them. 
 * You can find **API docs** in the user interface.
 
-Please [let us know what can be improved](https://github.com/argoproj-labs/katacoda-scenarios/issues/new).
+Please [let us know what can be improved](https://github.com/argoproj-labs/katacoda-scenarios).

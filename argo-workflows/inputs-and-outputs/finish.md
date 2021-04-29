@@ -6,4 +6,4 @@ Let's recap:
   S3. 
 * For one task to use the the output of another task, you can use DAG or steps templates.
 
-Please [let us know what can be improved](https://github.com/argoproj-labs/katacoda-scenarios/issues/new).
+Please [let us know what can be improved](https://github.com/argoproj-labs/katacoda-scenarios).

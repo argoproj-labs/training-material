@@ -3,7 +3,7 @@ launch.sh
 echo
 echo "It typically takes between 1m and 2m to get Argo Workflows ready."
 echo
-echo "Any problems? Raise an issue: https://github.com/argoproj-labs/katacoda-scenarios/issues/new"
+echo "Any problems? https://github.com/argoproj-labs/katacoda-scenarios"
 echo
 
 echo "1. Installing Argo Workflows..."

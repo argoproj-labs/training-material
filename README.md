@@ -1,15 +1,20 @@
 # Argo Katacoda Training Material
 
-[Get started!](https://katacoda.com/argoproj)
+[Open the material](https://katacoda.com/argoproj)
 
 ## Troubleshooting
-
-Things that could help:
 
 * Turn your VPN off.
 * Clear your browser's cache.
 
+If you find any problem - please raise an issue - or better still create a pull request to fix it.
+
 ## Contributing
+
+Changes are propagated to Katacoda's CDN once committed to `master` branch (Katacoda does not support `main` branch). So
+this means you changes must be on `master` to be seen.
+
+I'm not sure how best to make it easy to see your changes.
 
 Tips:
 
