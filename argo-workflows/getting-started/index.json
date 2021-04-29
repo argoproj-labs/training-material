@@ -7,7 +7,8 @@
     "steps": [
       {
         "title": "Installing Argo Workflows",
-        "text": "install.md"
+        "text": "install.md",
+        "code": "foreground.sh"
       },
       {
         "title": "What is a workflow?",
@@ -24,7 +25,10 @@
     ],
     "assets": {
       "host01": [
-        {"file": "hello-workflow.yaml", "target": "."}
+        {
+          "file": "hello-workflow.yaml",
+          "target": "."
+        }
       ]
     },
     "intro": {
