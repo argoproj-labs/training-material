@@ -2,7 +2,7 @@
   "title": "Python",
   "description": "Learn how to write workflows using Python",
   "difficulty": "Intermediate",
-  "time": "5 minutes",
+  "time": "10 minutes",
   "details": {
     "steps": [
       {
@@ -18,7 +18,11 @@
     "assets": {
       "host01": [
         {
-          "file": "example.py",
+          "file": "coin_flip_example.py",
+          "target": "."
+        },
+        {
+          "file": "dag_example.py",
           "target": "."
         }
       ]
