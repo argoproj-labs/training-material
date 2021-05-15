@@ -22,7 +22,10 @@ Run it:
 You should see:
 
 ```
-TODO
+STEP                   TEMPLATE  PODNAME                        DURATION  MESSAGE
+ ✔ exit-handler-plvg7  main                                                 
+ ├─✔ a                 whalesay  exit-handler-plvg7-1651124468  5s          
+ └─✔ a.onExit          tidy-up   exit-handler-plvg7-3635807335  6s          
 ```
 
 Note how the exit handler task ran last.
