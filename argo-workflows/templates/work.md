@@ -26,17 +26,6 @@ container-m5664      0/2     Completed   0          5m21s
 template-tag-kqpc6   0/2     Completed   0          4m6s
 ```
 
-You should see something like:
-
-```
-STEP          TEMPLATE  PODNAME              DURATION  MESSAGE
- ✔ dag-shxn5  main                                       
- ├─✔ a        ctr       dag-shxn5-289972251  6s          
- └─✔ b        ctr       dag-shxn5-306749870  6s          
-```
-
-Did you see how `b` did not start until `a` had completed?
-
 ## Exercise
 
 Use `kubectl describe` to describe a workflow pod. What interesting information is contained within the pods labels

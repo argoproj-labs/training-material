@@ -37,6 +37,17 @@ Let's run the workflow:
 
 `argo submit --watch dag-workflow.yaml`{{execute}}
 
+You should see something like:
+
+```
+STEP          TEMPLATE  PODNAME              DURATION  MESSAGE
+ ✔ dag-shxn5  main                                       
+ ├─✔ a        ctr       dag-shxn5-289972251  6s          
+ └─✔ b        ctr       dag-shxn5-306749870  6s          
+```
+
+Did you see how `b` did not start until `a` had completed?
+
 Open the Argo Server tab a navigate to the workflow, you should see a two containers.
 
 ## Exercise
