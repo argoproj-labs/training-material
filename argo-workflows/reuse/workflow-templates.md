@@ -1,7 +1,7 @@
 **Workflow templates** (not to be confused with a template) allow you to create a library of code that can be reused.
 They're similar to pipelines in Jenkins.
 
-Workflow templatse have a different `kind` to a workflow, but are otherwise very similar:
+Workflow templates have a different `kind` to a workflow, but are otherwise very similar:
 
 ```
 apiVersion: argoproj.io/v1alpha1
@@ -24,7 +24,7 @@ You can also manage templates using `kubectl`:
 
 `kubectl apply -f hello-workflowtemplate.yaml`{{execute}}
 
-This allows you to use GitOps to managed your templates.
+This allows you to use GitOps to manage your templates.
 
 To submit a template, you can use the UI or the CLI:
 

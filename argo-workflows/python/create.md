@@ -47,9 +47,9 @@ You can run this as follows:
 
 `python3 coin_flip_example.py`{{execute}}
 
-Then you can wait for it:
+Then you can watch the execution flow of it:
 
-`argo wait @latest`{{execute}}
+`argo watch @latest`{{execute}}
 
 You should see something like:
 
@@ -114,6 +114,12 @@ You can run this as follows:
 
 `python3 dag_example.py`{{execute}}
 
-And then wait for for completion similar to the previous example:
+And then watch the execution flow until completion similar to the previous example:
 
-`argo wait @latest`{{execute}}
+`argo watch @latest`{{execute}}
+
+## Exercise
+
+* Edit dag_example.py and test the diamond pattern workflow and submit the workflow again
+* Watch the execution flow using:
+  `argo watch @latest`{{execute}}
