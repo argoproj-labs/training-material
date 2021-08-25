@@ -4,7 +4,7 @@ You can view the user interface by running a port forward:
 
 To check this is working correctly, you can curl the info API:
 
-`curl -kv http://localhost:2746/api/v1/info`{{execute}}
+`curl -kv https://localhost:2746/api/v1/info`{{execute}}
 
 You should see `HTTP/1.1 200 OK`.
 
