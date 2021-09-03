@@ -1,6 +1,6 @@
 To install [Couler](https://github.com/couler-proj/couler) Python SDK, you need Python 3 and [pip](https://github.com/pypa/pip):
 
-`pip3 install git+https://github.com/couler-proj/couler@v0.1.1rc8-stable`{{execute}}
+`pip3 install git+https://github.com/couler-proj/couler@v0.1.1rc8-stable --ignore-installed`{{execute}}
 
 The following example combines the use of a Python function result, along with conditionals,
 to take a dynamic path in the workflow. In this example, depending on the result
