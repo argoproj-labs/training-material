@@ -14,17 +14,17 @@ Argo Server listens on port 2746. Often the server will be installed behind a lo
 
 Open the "Argo Server" tab and you should see the user interface:
 
-![UI](./assets/ui.png)
+![UI](../assets/ui.png)
 
 Lets start a workflow from the user interface:
 
 Click "Submit new workflow":
 
-![UI](./assets/submit-01.png)
+![UI](../assets/submit-01.png)
 
 Click "Edit using full workflow options". You should see something similar to this:
 
-![UI](./assets/submit-02.png)
+![UI](../assets/submit-02.png)
 
 Paste this YAML into the editor:
 
@@ -43,11 +43,11 @@ spec:
 
 Click "Create". You will see a diagram of the workflow. The yellow icon shows that it is pending, after a few seconds it'll turn blue to indicate it is running, and finally green to show that it has completed successfully:
 
-![UI](./assets/running.png)
+![UI](../assets/running.png)
 
 After about 30s, the icon will change to green:
 
-![UI](./assets/green.png)
+![UI](../assets/green.png)
 
 ## Exercise
 

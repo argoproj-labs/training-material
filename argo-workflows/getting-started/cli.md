@@ -13,7 +13,7 @@ To check it is installed correctly:
 
 You should see something like this:
 
-![UI](./assets/version.png)
+![UI](../assets/version.png)
 
 Let's run a workflow!
 
@@ -21,13 +21,13 @@ Let's run a workflow!
 
 You should see the workflow complete successfully after about 1m:
 
-![UI](./assets/submit-cli.png)
+![UI](../assets/submit-cli.png)
 
 You can list workflows easily:
 
 `argo list -n argo`{{execute}}
 
-![UI](./assets/list.png)
+![UI](../assets/list.png)
 
 Get details about a specific workflow. `@latest` is an alias for the latest workflow:
 
@@ -37,7 +37,7 @@ And you can view that workflows logs:
 
 `argo logs -n argo @latest`{{execute}}
 
-![UI](./assets/logs.png)
+![UI](../assets/logs.png)
 
 Finally, you can get help:
 
