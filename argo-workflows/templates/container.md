@@ -1,4 +1,4 @@
-A container templates is the most common type of template, lets look at a complete example:
+A container template is the most common type of template, let's look at a complete example:
 
 ```
 apiVersion: argoproj.io/v1alpha1
@@ -19,7 +19,7 @@ Let's run the workflow:
 
 `argo submit --watch container-workflow.yaml`{{execute}}
 
-Open the Argo Server tab a navigate to the workflow, you should see a single container running.
+Open the Argo Server tab and navigate to the workflow, you should see a single container running.
 
 ## Exercise
 
