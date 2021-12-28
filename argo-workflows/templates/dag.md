@@ -1,4 +1,4 @@
-A DAG template is another common type of template, lets look at a complete example:
+A DAG template is another common type of template, let's look at a complete example:
 
 ```
 apiVersion: argoproj.io/v1alpha1
@@ -48,7 +48,7 @@ STEP          TEMPLATE  PODNAME              DURATION  MESSAGE
 
 Did you see how `b` did not start until `a` had completed?
 
-Open the Argo Server tab a navigate to the workflow, you should see a two containers.
+Open the Argo Server tab and navigate to the workflow, you should see two containers.
 
 ## Exercise
 
