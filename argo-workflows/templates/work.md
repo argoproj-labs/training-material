@@ -12,7 +12,7 @@ A **resource template** allows you to create a Kubernetes resource and wait for 
 A **script template** allows you to run a script in a container. This is very similar to a container template, but when
 you've added a script to it.
 
-Every type of templates that does work does it by running a pod. So you can use `kubectl` to view these pods:
+Every type of template that does work, does so by running a pod. So you can use `kubectl` to view these pods:
 
 `kubectl get pods -l workflows.argoproj.io/workflow`{{execute}}
 
@@ -28,5 +28,5 @@ template-tag-kqpc6   0/2     Completed   0          4m6s
 
 ## Exercise
 
-Use `kubectl describe` to describe a workflow pod. What interesting information is contained within the pods labels
+Use `kubectl describe` to describe a workflow pod. What interesting information is contained within the pod's labels
 and annotations?
