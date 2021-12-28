@@ -1,4 +1,4 @@
-If you need to perform a task after something has is finished, you can use an exit handle. Exit handlers are specified
+If you need to perform a task after something has finished, you can use an exit handler. Exit handlers are specified
 using `onExit`:
 
 ```
@@ -11,7 +11,7 @@ using `onExit`:
 
 They just state the name of the template that should be run on-exit.
 
-Lets look at a complete example:
+Let's look at a complete example:
 
 `cat exit-handler-workflow.yaml`{{execute}}
 
