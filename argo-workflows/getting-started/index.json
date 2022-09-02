@@ -5,8 +5,7 @@
     "steps": [
       {
         "title": "Installing Argo Workflows",
-        "text": "install.md",
-        "verify": "install-verify.sh"
+        "text": "install.md"
       },
       {
         "title": "What is a workflow?",
