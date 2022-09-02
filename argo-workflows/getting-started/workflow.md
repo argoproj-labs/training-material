@@ -13,6 +13,7 @@ spec:
   - name: main           
     container: # this is a container template
       image: docker/whalesay # this image prints "hello world" to the console 
+      command: ["cowsay"]
 ```
 
 There are several other types of template, and we'll come to more of them soon.

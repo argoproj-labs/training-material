@@ -47,16 +47,16 @@ Click "Edit using full workflow options". You should see something similar to th
 Paste this YAML into the editor:
 
 ```
-apiVersion: argoproj.io/v1alpha1
-kind: Workflow
 metadata:
-  generateName: hello-world-  
+  generateName: hello-world-
+  namespace: argo
 spec:
   entrypoint: main        
   templates:
   - name: main           
     container: 
-      image: docker/whalesay  
+      image: docker/whalesay 
+      command: ["cowsay"]
 ```{{copy}}
 
 Click "Create". You will see a diagram of the workflow. The yellow icon shows that it is pending, after a few seconds it'll turn blue to indicate it is running, and finally green to show that it has completed successfully:
