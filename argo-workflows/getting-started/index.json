@@ -6,7 +6,7 @@
       {
         "title": "Installing Argo Workflows",
         "text": "install.md",
-        "code": "foreground.sh"
+        "verify": "install-verify.sh"
       },
       {
         "title": "What is a workflow?",
