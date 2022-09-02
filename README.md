@@ -18,4 +18,4 @@ I'm not sure how best to make it easy to see your changes.
 Tips:
 
 * Killercoda can take a few minutes to replicate changes, so it can be easier to link to assets than to embed them.
-* Making a changes to `intro.md` is a good way to see your change was replicated.
+* You can see when changes were pulled by looking at your [scenarios page](https://killercoda.com/creator/scenarios). You can also manually trigger the webhook from this page.
