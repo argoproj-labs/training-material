@@ -26,7 +26,7 @@ You can then view the user interface by running a port forward:
 
 You can then use this link to access the UI:
 
-[ACCESS ARGO WORKFLOWS UI]{{TRAFFIC_HOST1_2746}}
+[ACCESS ARGO WORKFLOWS UI]({{TRAFFIC_HOST1_2746}})
 
 ## Run a workflow
 
