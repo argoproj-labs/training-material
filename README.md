@@ -1,6 +1,6 @@
 # Argo Killercoda Training Material
 
-[Open the material]()
+[Open the material](TBD)
 
 ## Troubleshooting
 
@@ -17,8 +17,5 @@ I'm not sure how best to make it easy to see your changes.
 
 Tips:
 
-* Killercoda can take 15m replicate changes, so it can be easier to link to assets than to embed them.
-* Making a changes to `intro.md` is a good way to see you're change was replicated.
-* Killercoda tends to fail without any diagnostics or remediation action. So make small changes incrementally, and be
-  ready to rollback if anything weird happens.
-* Starting pods in MUCH slower than running binaries.
+* Killercoda can take a few minutes to replicate changes, so it can be easier to link to assets than to embed them.
+* Making a changes to `intro.md` is a good way to see your change was replicated.
