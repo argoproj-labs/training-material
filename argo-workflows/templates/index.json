@@ -1,14 +1,11 @@
 {
   "title": "Templates",
   "description": "Learn about different types of templates, including key types such as container and DAG.",
-  "difficulty": "Beginner",
-  "time": "15 to 20 minutes",
   "details": {
     "steps": [
       {
-        "title": "Templates Types",
+        "title": "Template Types",
         "text": "types.md",
-        "code": "foreground.sh"
       },
       {
         "title": "Container Template",
@@ -19,7 +16,7 @@
         "text": "template-tags.md"
       },
       {
-        "title": "Work Templates",
+        "title": "Other Work Templates",
         "text": "work.md"
       },
       {
@@ -27,15 +24,15 @@
         "text": "dag.md"
       },
       {
+        "title": "Other Orchestration Templates",
+        "text": "orchestration.md"
+      },
+      {
         "title": "Loops",
         "text": "loops.md"
       },
       {
-        "title": "Orchestration Templates",
-        "text": "orchestration.md"
-      },
-      {
-        "title": "Exit Handler",
+        "title": "Exit Handlers",
         "text": "exit-handler.md"
       }
     ],
@@ -74,17 +71,7 @@
       "text": "finish.md"
     }
   },
-  "environment": {
-    "uilayout": "terminal-iframe",
-    "showdashboard": true,
-    "dashboards": [
-      {
-        "name": "Argo Server",
-        "href": "https://[[HOST_SUBDOMAIN]]-2746-[[KATACODA_HOST]].environments.katacoda.com/workflows/argo"
-      }
-    ]
-  },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.18"
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }
