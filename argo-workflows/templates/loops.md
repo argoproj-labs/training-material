@@ -1,6 +1,6 @@
-The ability to run large parallel processing jobs is one of the key features or Argo Workflows.  Lets have a look at using loops to do this.
+The ability to run large parallel processing jobs is one of the key features or Argo Workflows.  Let's have a look at using loops to do this.
 
-## With Items
+## withItems
 
 A DAG allows you to loop over a number of items using `withItems`:
 
@@ -33,7 +33,7 @@ STEP                                 TEMPLATE  PODNAME                      DURA
 
 Notice how the two items ran at the same time.
 
-## With Sequence
+## withSequence
 
 You can also loop over a sequence of numbers using `withSequence`:
 
@@ -64,8 +64,8 @@ STEP                     TEMPLATE  PODNAME                         DURATION  MES
  └─✔ print-message(4:4)  whalesay  with-sequence-8nrp5-361941985   11s         
 ```
 
-See how 5 pods were run at the same time, and that their names have the item value in them, zero-indexed 
+See how 5 pods were run at the same time, and that their names have the item value in them, zero-indexed.
 
 ## Exercise
 
-Change the **with sequence** to print the numbers 10 to 20. 
+Change the **withSequence** to print the numbers 10 to 20. 
