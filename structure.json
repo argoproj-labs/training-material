@@ -1,0 +1,9 @@
+{
+    "items": [
+      { "path": "argo-workflows/getting-started" },
+      { "path": "argo-workflows/templates" },
+      { "path": "argo-workflows/inputs-and-outputs" },
+      { "path": "argo-workflows/reuse" },
+      { "path": "argo-workflows/api" }
+    ]
+  }
