@@ -1,0 +1,9 @@
+{
+    "items": [
+      { "path": "getting-started" },
+      { "path": "templates" },
+      { "path": "inputs-and-outputs" },
+      { "path": "reuse" },
+      { "path": "api" }
+    ]
+  }
