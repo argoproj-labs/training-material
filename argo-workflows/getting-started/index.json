@@ -3,8 +3,7 @@
   "description": "Learn how how to set up Argo Workflows and run your first workflow.",
   "details": {
     "intro": {
-      "text": "intro.md",
-      "foreground": "foreground.sh"
+      "text": "intro.md"
     },
     "steps": [
       {

@@ -2,6 +2,10 @@
   "title": "Inputs and Outputs",
   "description": "Learn about loading and saving data in a workflow.",
   "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh"
+    },
     "steps": [
       {
         "title": "Parameters",
@@ -27,9 +31,6 @@
           "target": "."
         }
       ]
-    },
-    "intro": {
-      "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"

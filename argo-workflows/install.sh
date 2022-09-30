@@ -42,10 +42,21 @@ kubectl rollout restart deployment workflow-controller  > /dev/null
 kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
 
 
-## I don't really know what this is for (yet?)
-if [ "${CANARY:-0}" -eq 1 ]; then
-  echo "5. Waiting for canary workflow to be deleted..."
-  kubectl wait workflow/canary --for delete--timeout 2m > /dev/null
+if [ "${AUTHCLIENT:-0}" -eq 1 ]; then
+  echo "5. Setting Argo Server to Client Auth..."
+  kubectl patch deployment \
+    argo-server \
+    --namespace argo \
+    --type='json' \
+    -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/args", "value": [
+    "server",
+    "--auth-mode=client",
+    "--secure=false"
+  ]},
+  {"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"}
+  ]' > /dev/null
+
+  kubectl wait deploy/argo-server --for condition=Available --timeout 2m > /dev/null
 fi
 
 echo

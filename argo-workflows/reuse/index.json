@@ -1,9 +1,11 @@
 {
   "title": "Reuse",
   "description": "Learn how to use workflow templates, cron workflows, and exit handlers.",
-  "difficulty": "Beginner",
-  "time": "10 to 20 minutes",
   "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh"
+    },
     "steps": [
       {
         "title": "Workflow Templates",
@@ -27,24 +29,11 @@
         }
       ]
     },
-    "intro": {
-      "text": "intro.md"
-    },
     "finish": {
       "text": "finish.md"
     }
   },
-  "environment": {
-    "uilayout": "terminal-iframe",
-    "showdashboard": true,
-    "dashboards": [
-      {
-        "name": "Argo Server",
-        "href": "https://[[HOST_SUBDOMAIN]]-2746-[[KATACODA_HOST]].environments.katacoda.com/workflows/argo"
-      }
-    ]
-  },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.18"
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }

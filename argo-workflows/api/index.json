@@ -2,6 +2,10 @@
   "title": "Using the API",
   "description": "Learn how to use the API for programmatic access.",
   "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh"
+    },
     "steps": [
       {
         "title": "Info Endpoint",
@@ -35,9 +39,6 @@
           "target": "."
         }
       ]
-    },
-    "intro": {
-      "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"
