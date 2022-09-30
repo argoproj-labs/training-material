@@ -1,15 +1,15 @@
-Artifact is a fancy name for a file that is compressed and stored in S3.
+Artifact is a fancy name for a file that is compressed and stored in object storage (S3, MinIO, GCS, etc.).
 
-There are two kind of artifact in Argo:
+There are two kind of artifacts in Argo:
 
-* An **input artifact** is a file downloaded from storage (e.g. S3) and mounted as a volume within the container.
+* An **input artifact** is a file downloaded from storage (i.e. S3) and mounted as a volume within the container.
 * An **output artifact** is a file created in the container that is uploaded to storage.
 
-Artifacts are typically uploaded into a bucket within some kind of storage such as S3 or GCP. We call that storage an
+Artifacts are typically uploaded into a bucket within some kind of storage such as AWS S3 or GCP GCS. We call that storage an
 **artifact repository**. Within these lessons we'll be using MinIO for this purpose, but you can just imagine it is S3
-or what ever you're used too.
+or what ever you're used to.
 
-## Output Artifact
+## Output Artifacts
 
 Each task within a workflow can produce output artifacts. To specify an output artifact, you must include `outputs` in
 the manifest. Each output artifact declares:
@@ -33,12 +33,12 @@ When the container completes, the file is copied out of it, compressed, and stor
 
 Files can also be directories, so when a directory is found all the files are compressed into an archive and stored.
 
-## Input Artifact
+## Input Artifacts
 
 To declare an input artifact, you must include `inputs` in the manifest. Each input artifact must declare:
 
-* Its **name**.
-* The **path** where it should be created.
+* Its **name**
+* The **path** where it should be created
 
 ```
     - name: print-message
@@ -56,7 +56,7 @@ If the artifact was a compressed directory, it will be uncompressed and unpacked
 
 ## Inputs and Outputs
 
-You can't use inputs and output is isolation, you need to combine them together using either a steps or a DAG template:
+You can't use inputs and outputs in isolation, you need to combine them together using either a steps or a DAG template, as in the below example:
 
 ```
     - name: main
@@ -74,13 +74,13 @@ You can't use inputs and output is isolation, you need to combine them together 
                   from: "{{tasks.generate-artifact.outputs.artifacts.hello-art}}"
 ```
 
-In the above example `arguments` is used to declare the value for the artifact input. This uses a **template tag**. In
+In the above example, `arguments` is used to declare the value for the artifact input. This uses a **template tag**. In
 this example, `{{tasks.generate-artifact.outputs.artifacts.hello-art}}` becomes the path of the artifact in the
 repository.
 
 The task `consume-artifact` must run after `generate-artifact`, so we use `dependencies` to declare that relationship.
 
-Lets see the complete workflow:
+Let's see the complete DAG workflow:
 
 `cat artifacts-workflow.yaml`{{execute}}
 
