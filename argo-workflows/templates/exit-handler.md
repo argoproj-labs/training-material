@@ -1,4 +1,4 @@
-If you need to perform a task after something has is finished, you can use an exit handler. Exit handlers are specified
+If you need to perform a task after something has is finished, you can use an exit handle. Exit handlers are specified
 using `onExit`:
 
 ```
