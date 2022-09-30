@@ -9,7 +9,6 @@ echo "1. Installing Argo Workflows..."
 kubectl create ns argo > /dev/null
 kubectl config set-context --current --namespace=argo > /dev/null
 kubectl apply -f https://github.com/argoproj/argo-workflows/releases/download/v3.4.0/install.yaml > /dev/null
-kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows/canary-workflow.yaml > /dev/null
 kubectl scale deploy/workflow-controller --replicas 1 > /dev/null
 
 echo "2. Installing Argo CLI..."
@@ -40,7 +39,8 @@ echo "4. Waiting for the Workflow Controller to be available..."
 kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
 
 echo "5. Deploy a canary workflow to test the installation..."
-kubectl wait workflows/canary --for condition=Completed --timeout 2m
+kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows/canary-workflow.yaml > /dev/null
+kubectl wait workflow/canary --for condition=Succeeded --timeout 2m
 
 # This won't work. Still to decide whether or not we need it.
 # if [ "${MINIO:-0}" -eq 1 ]; then
