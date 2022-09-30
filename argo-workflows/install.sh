@@ -10,7 +10,7 @@ echo "1. Installing Argo Workflows..."
 
 kubectl create ns argo > /dev/null
 kubectl config set-context --current --namespace=argo > /dev/null
-kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows.yaml > /dev/null
+kubectl apply -f https://github.com/argoproj/argo-workflows/releases/download/v3.4.0/install.yaml > /dev/null
 kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows/canary-workflow.yaml > /dev/null
 kubectl scale deploy/workflow-controller --replicas 1 > /dev/null
 
@@ -23,7 +23,19 @@ mv ./argo-linux-amd64 /usr/local/bin/argo
 
 echo "3. Starting Argo Server..."
 
-argo server --namespaced --auth-mode=${AUTH_MODE:-hybrid} --secure=false > server.log 2>&1 &
+kubectl patch deployment \
+  argo-server \
+  --namespace argo \
+  --type='json' \
+  -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/args", "value": [
+  "server",
+  "--auth-mode=server",
+  "--secure=false"
+]},
+{"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"}
+]'
+
+kubectl wait deploy/argo-server --for condition=Available --timeout 2m > /dev/null
 
 echo "4. Waiting for the Workflow Controller to be available..."
 
