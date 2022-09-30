@@ -39,15 +39,19 @@ echo "4. Waiting for the Workflow Controller to be available..."
 
 kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
 
-if [ "${MINIO:-0}" -eq 1 ]; then
-  echo "5. Waiting for MinIO to be available..."
+echo "5. Deploy a canary workflow to test the installation..."
+kubectl wait workflows/canary --for condition=Completed --timeout 2m
 
-  kubectl scale deploy/minio --replicas 1 > /dev/null
-  kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
-fi
+# This won't work. Still to decide whether or not we need it.
+# if [ "${MINIO:-0}" -eq 1 ]; then
+#   echo "6. Waiting for MinIO to be available..."
+
+#   kubectl scale deploy/minio --replicas 1 > /dev/null
+#   kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
+# fi
 
 if [ "${CANARY:-0}" -eq 1 ]; then
-  echo "6. Waiting for canary workflow to be deleted..."
+  echo "7. Waiting for canary workflow to be deleted..."
   kubectl wait workflow/canary --for delete--timeout 2m > /dev/null
 fi
 
