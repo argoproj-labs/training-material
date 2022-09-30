@@ -5,7 +5,7 @@
     {
       "course_id": "getting-started",
       "title": "Getting Started",
-      "description": "Learn how how to set-up Argo Workflows and run you first workflow."
+      "description": "Learn how how to set-up Argo Workflows and run your first workflow."
     },
     {
       "course_id": "templates",
@@ -19,18 +19,13 @@
     },
     {
       "course_id": "reuse",
-      "title": "Workflow Templates and Cron Workflows",
-      "description": "Learn about reuse with workflow templates, and running workflows on schedule."
+      "title": "Workflow Templates and CRON Workflows",
+      "description": "Learn how to reuse workflows with WorkflowTemplates, and learn how to run workflows on schedule with CRON."
     },
     {
       "course_id": "api",
       "title": "Using the API",
       "description": "Learn about submitting workflows using the Argo Server's REST API."
-    },
-    {
-      "course_id": "python",
-      "title": "Writing workflows in Python",
-      "description": "Learn about writing workflow in Python. WORK IN PROGRESS"
     }
   ]
 }
