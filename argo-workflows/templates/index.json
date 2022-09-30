@@ -1,9 +1,11 @@
 {
   "title": "Templates",
   "description": "Learn about different types of templates, including key types such as container and DAG.",
-  "difficulty": "Beginner",
-  "time": "15 to 20 minutes",
   "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh"
+    },
     "steps": [
       {
         "title": "Template Types",
@@ -65,9 +67,6 @@
           "target": "."
         }
       ]
-    },
-    "intro": {
-      "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"
