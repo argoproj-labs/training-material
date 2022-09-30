@@ -24,7 +24,7 @@ mv ./argo-linux-amd64 /usr/local/bin/argo
 echo "3. Starting Argo Server..."
 
 if [ "${AUTHCLIENT:-0}" -eq 1 ]; then
-  echo "5. Setting Argo Server to Client Auth..."
+  echo "Setting Argo Server to Client Auth..."
   kubectl patch deployment \
     argo-server \
     --namespace argo \
@@ -38,6 +38,7 @@ if [ "${AUTHCLIENT:-0}" -eq 1 ]; then
   ]' > /dev/null
 
 else
+  echo "Setting Argo Server to Server Auth..."
   kubectl patch deployment \
     argo-server \
     --namespace argo \
