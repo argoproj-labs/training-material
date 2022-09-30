@@ -3,7 +3,6 @@ kind: ConfigMap
 metadata:
   name: workflow-controller-configmap
 data:
-  containerRuntimeExecutor: docker
   artifactRepository: |
     archiveLogs: false
     s3:
@@ -16,5 +15,3 @@ data:
       secretKeySecret:
         name: my-minio-cred
         key: secretkey
-  executor: |
-    imagePullPolicy: IfNotPresent
