@@ -23,19 +23,35 @@ mv ./argo-linux-amd64 /usr/local/bin/argo
 
 echo "3. Starting Argo Server..."
 
-kubectl patch deployment \
-  argo-server \
-  --namespace argo \
-  --type='json' \
-  -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/args", "value": [
-  "server",
-  "--auth-mode=server",
-  "--secure=false"
-]},
-{"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"}
-]' > /dev/null
+if [ "${AUTHCLIENT:-0}" -eq 1 ]; then
+  echo "5. Setting Argo Server to Client Auth..."
+  kubectl patch deployment \
+    argo-server \
+    --namespace argo \
+    --type='json' \
+    -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/args", "value": [
+    "server",
+    "--auth-mode=client",
+    "--secure=false"
+  ]},
+  {"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"}
+  ]' > /dev/null
+
+else
+  kubectl patch deployment \
+    argo-server \
+    --namespace argo \
+    --type='json' \
+    -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/args", "value": [
+    "server",
+    "--auth-mode=server",
+    "--secure=false"
+  ]},
+  {"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"}
+  ]' > /dev/null
 
 kubectl wait deploy/argo-server --for condition=Available --timeout 2m > /dev/null
+fi
 
 echo "4. Waiting for the Workflow Controller to be available..."
 kubectl rollout restart deployment workflow-controller  > /dev/null
