@@ -6,9 +6,8 @@
   "details": {
     "steps": [
       {
-        "title": "Templates Types",
-        "text": "types.md",
-        "code": "foreground.sh"
+        "title": "Template Types",
+        "text": "types.md"
       },
       {
         "title": "Container Template",
