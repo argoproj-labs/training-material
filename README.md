@@ -1,6 +1,15 @@
 # Argo Workflows Killercoda Training Material
 
-[Open the material](https://killercoda.com/pipekit/course/argo-workflows/)
+[Open the material on Killercoda here.](https://killercoda.com/pipekit/course/argo-workflows/)
+
+## Maintainers
+* [Tim Collins](https://github.com/tico24), [Sendible](https://sendible.com)
+* [Caelan Urquhart](https://github.com/caelan-io), [Pipekit](https:/pipekit.io)
+
+Thank you to the following for their outsized contributions to this course:
+* [Alex Collins](https://github.com/alexec), [Intuit](https://intuit.com)
+* [Yuan Tang](https://github.com/terrytangyuan), Akuity
+
 
 ## Troubleshooting
 
@@ -11,11 +20,15 @@ If you find any problem - please raise an issue - or better still create a pull 
 
 ## Contributing
 
-Changes are propagated to Killercoda's CDN once committed to `master` branch. So this means you changes must be on `master` to be seen.
+Changes are propagated to Killercoda's CDN once committed to `master` branch. So this means you changes must be on `master` to be seen. This means you will need to fork this repo and set up your own Killercoda scenario in order to preview your changes.
 
-I'm not sure how best to make it easy to see your changes.
+If you open a PR with major changes to the code or assets (i.e. not just changing text or fixing typos), please include a link to your version of the Killercoda course (if possible) so we can preview it before merging.
 
 Tips:
-
 * Killercoda can take a few minutes to replicate changes, so it can be easier to link to assets than to embed them.
-* You can see when changes were pulled by looking at your [scenarios page](https://killercoda.com/creator/scenarios). You can also manually trigger the webhook from this page.
+* Once you've created a Creator account with Killercoda, you can see when changes were pulled by looking at your [scenarios page](https://killercoda.com/creator/scenarios). You can also manually trigger the webhook from this page to view your updates on `master`.
+
+Killercoda docs:
+* [FAQ](https://killercoda.com/faq)
+* [For course creators](https://killercoda.com/creators)
+* [For students](https://killercoda.com/learn)
