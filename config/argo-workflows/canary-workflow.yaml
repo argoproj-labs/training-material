@@ -5,7 +5,7 @@ metadata:
 spec:
   entrypoint: main
   ttlStrategy:
-    secondsAfterCompletion: 10
+    secondsAfterCompletion: 1
   templates:
   - name: main
     container:
