@@ -4,9 +4,13 @@ Argo is normally installed into a namespace named `argo`, so lets create that:
 
 `kubectl create ns argo`{{execute}}
 
-Next, apply the quick-start manifest:
+Next, navigate to the [releases page](https://github.com/argoproj/argo-workflows/releases/latest) and find the release you wish to use (the latest full release is preferred).
 
-`kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo-workflows/stable/manifests/quick-start-minimal.yaml`{{execute}}
+Scroll down to the `Controller and Server`{{}} section and execute the kubectl commands.
+
+Below is an example of the install commands, ensure that you update the command to install the correct version number:
+
+`kubectl apply -n argo -f https://github.com/argoproj/argo-workflows/releases/download/v3.4.0/install.yaml`{{execute}}
 
 ## What was installed?
 
@@ -16,11 +20,7 @@ The **Workflow Controller** is responsible for running workflows:
 
 `kubectl -n argo get deploy workflow-controller`{{execute}}
 
-Users typically want to process and store data in a workflow, for the quick start we use MinIO, which is similar to Amazon S3:
-
-`kubectl -n argo get deploy minio`{{execute}}
-
-Finally, the **Argo Server** provides a user interface and API:
+And the **Argo Server** provides a user interface and API:
 
 `kubectl -n argo get deploy argo-server`{{execute}}
 
