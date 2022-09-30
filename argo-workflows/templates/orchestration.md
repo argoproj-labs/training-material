@@ -1,4 +1,4 @@
-A DAG is an orchestration template. What other types of *orchestration* templates are there?
+We learned that a DAG template is a type of *orchestration* template. What other types of *orchestration* templates are there?
 
 A **steps template** allows you to run a series of steps in sequence.
 

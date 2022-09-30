@@ -1,4 +1,4 @@
-A DAG template is another common type of template, let's look at a complete example:
+A **DAG template** is a common type of *orchestration* template, let's look at a complete example:
 
 ```
 apiVersion: argoproj.io/v1alpha1
