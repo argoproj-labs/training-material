@@ -1,4 +1,4 @@
-**Template tags** (also known as **template variables**) are a way for you to substitute data into your workflow at runtime. Template tags are delimited by `{{`
+**Template tags** (also knows as **template variables**) are a way for you to substitute data into your workflow at runtime. Template tags are delimited by `{{`
 and `}}` and will be replaced when the template is executed.
 
 What tags are available to use depends on the template type, and there are a number of global ones you can use, such as `{{workflow.name}}`, which is replaced by the workflow's name:
@@ -26,9 +26,9 @@ You can see the output by running
 You should see something like:
 
 ```
- __________________________
+ __________________________ 
 < hello template-tag-kqpc6 >
- --------------------------
+ -------------------------- 
     \
      \
       \     
@@ -46,4 +46,4 @@ There are many more different tags, you can [read more about template tags in th
 
 ## Exercise
 
-Change the workflow to echo the date the workflow was created.
+Change the workflow to echo the date the workflow was created. 

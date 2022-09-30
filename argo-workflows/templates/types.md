@@ -1,4 +1,4 @@
-There are several types of templates, divided into two different categories: **work** and **orchestration**.
+There are several types of templates, divided into two different categories.
 
 The first category defines **work** to be done. This includes:
 
@@ -8,10 +8,11 @@ The first category defines **work** to be done. This includes:
 * Resource
 * Script
 
-The second category **orchestrates** the work:
+The second category **orchestrate** the work:
 
 * DAG
 * Steps
 * Suspend
 
-We're going to take a deep-dive into the two most common template types: **Container** and **DAG**.
+We're going to take a deep-dive into the two most common: containers and DAG.
+
