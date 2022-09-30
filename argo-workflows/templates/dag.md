@@ -1,4 +1,5 @@
-A DAG template is another common type of template, lets look at a complete example:
+A **DAG template** is a common type of *orchestration* template.
+Let's look at a complete example:
 
 ```
 apiVersion: argoproj.io/v1alpha1
@@ -42,14 +43,15 @@ You should see something like:
 ```
 STEP          TEMPLATE  PODNAME              DURATION  MESSAGE
  ✔ dag-shxn5  main                                       
- ├─✔ a        ctr       dag-shxn5-289972251  6s          
- └─✔ b        ctr       dag-shxn5-306749870  6s          
+ ├─✔ a        whalesay       dag-shxn5-289972251  6s          
+ └─✔ b        whalesay       dag-shxn5-306749870  6s          
 ```
 
 Did you see how `b` did not start until `a` had completed?
 
-Open the Argo Server tab a navigate to the workflow, you should see a two containers.
+Open the Argo Server tab and navigate to the workflow, you should see a two containers.
 
 ## Exercise
 
-Add a new task named "c" to the DAG. Make it depend on both "a" and "b". See how this looks in the user interface.
+Add a new task named "c" to the DAG. Make it depend on both "a" and "b".
+Go to the UI and view your updated workflow graph.
