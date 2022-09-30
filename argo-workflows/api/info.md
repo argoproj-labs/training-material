@@ -12,5 +12,4 @@ You should see something like:
 {"code":16,"message":"token not valid for running mode"}
 ```
 
-That's fine - you can connect - but we need to set-up an **access token**.
-
+To connect, we need to set-up an **access token**.
