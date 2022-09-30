@@ -1,5 +1,3 @@
-launch.sh
-
 echo
 echo "It typically takes between 1m and 2m to get Argo Workflows ready."
 echo
