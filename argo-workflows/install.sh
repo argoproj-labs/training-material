@@ -41,16 +41,10 @@ echo "4. Waiting for the Workflow Controller to be available..."
 kubectl rollout restart deployment workflow-controller  > /dev/null
 kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
 
-if [ "${MINIO:-0}" -eq 1 ]; then
-  echo "5. Waiting for MinIO to be available..."
-
-  kubectl scale deploy/minio --replicas 1 > /dev/null
-  kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m > /dev/null
-fi
 
 ## I don't really know what this is for (yet?)
 if [ "${CANARY:-0}" -eq 1 ]; then
-  echo "6. Waiting for canary workflow to be deleted..."
+  echo "5. Waiting for canary workflow to be deleted..."
   kubectl wait workflow/canary --for delete--timeout 2m > /dev/null
 fi
 
