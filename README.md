@@ -1,6 +1,6 @@
 # Argo Katacoda Training Material
 
-[Open the material](https://katacoda.com/argoproj)
+[Open the material](https://killercoda.com/pipekit/course/argo-workflows)
 
 ## Troubleshooting
 
