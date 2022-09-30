@@ -42,7 +42,7 @@ We can wait for that workflow to complete by polling:
 ```bash
 curl \
     http://localhost:2746/api/v1/workflows/argo/@latest \
-    -H "Authorization: $ARGO_TOKEN" 
+    -H "Authorization: $ARGO_TOKEN"
 ```{{execute}}
 
 You should see something like:
@@ -53,5 +53,6 @@ You should see something like:
 
 ## Exercise
 
-Create a workflow template and then submit the workflow template using the API. Tip: You'll need grant the `jenkins`
-service account the ability to read templates to do this.
+Create a workflow template and then submit the workflow template using the API.
+
+Tip: You'll need grant the `jenkins` service account the ability to read templates to do this.

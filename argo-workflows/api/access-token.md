@@ -3,9 +3,9 @@ just a Kubernetes service account token. So, to set up a service account for our
 
 * A **role** with the permission we want to use.
 * A **service account** for our automation user.
-* A **role binding** to bind the role to the service account:
+* A **role binding** to bind the role to the service account.
 
-In our example, we want to create a role for Jenkins to use that can create, get and list workflows:
+In our example, we want to create a role for Jenkins so it can create, get and list workflows:
 
 Create the role:
 
@@ -31,18 +31,20 @@ Print out the token:
 
 `echo $ARGO_TOKEN`{{execute}}
 
-You should something like :
+You should see something like the following:
 
 ```
 Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6...
 ```
 
-To use the token, you add it as an `Authorization` header to you HTTP request:
+To use the token, you add it as an `Authorization` header to your HTTP request:
 
 `curl http://localhost:2746/api/v1/info -H "Authorization: $ARGO_TOKEN"`{{execute}}
 
-You should see something like:
+You should see something like the following:
 
 ```
 {"managedNamespace":"argo"...
 ```
+
+Now you are ready to create an Argo Workflow using the API.
