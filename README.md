@@ -1,6 +1,6 @@
-# Argo Killercoda Training Material
+# Argo Workflows Killercoda Training Material
 
-[Open the material](TBD)
+[Open the material](https://killercoda.com/pipekit/course/argo-workflows/)
 
 ## Troubleshooting
 
