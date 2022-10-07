@@ -39,6 +39,11 @@ if [ "${AUTHCLIENT:-0}" -eq 1 ]; then
 
 else
   echo "Setting Argo Server to Server Auth..."
+  # To reduce confusion when following the courses, we suppress the popups.
+  kubectl -n argo set env deployment/argo-server FIRST_TIME_USER_MODAL=false > /dev/null
+  kubectl -n argo set env deployment/argo-server FEEDBACK_MODAL=false > /dev/null
+  kubectl -n argo set env deployment/argo-server NEW_VERSION_MODAL=false > /dev/null
+
   kubectl patch deployment \
     argo-server \
     --namespace argo \
@@ -50,11 +55,6 @@ else
   ]},
   {"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"}
   ]' > /dev/null
-  
-  # To reduce confusion when following the courses, we suppress the popups.
-  kubectl -n argo set env deployment/argo-server FIRST_TIME_USER_MODAL=false > /dev/null
-  kubectl -n argo set env deployment/argo-server FEEDBACK_MODAL=false > /dev/null
-  kubectl -n argo set env deployment/argo-server NEW_VERSION_MODAL=false > /dev/null
 
 kubectl wait deploy/argo-server --for condition=Available --timeout 2m > /dev/null
 fi
