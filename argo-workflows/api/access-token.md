@@ -3,6 +3,7 @@ just a Kubernetes service account token. So, to set up a service account for our
 
 * A **role** with the permission we want to use.
 * A **service account** for our automation user.
+* A **service account token** for our service account.
 * A **role binding** to bind the role to the service account.
 
 In our example, we want to create a role for Jenkins so it can create, get and list workflows:
@@ -19,13 +20,9 @@ Bind the service account to the role:
 
 `kubectl create rolebinding jenkins --role=jenkins --serviceaccount=argo:jenkins`{{execute}}
 
-Now we can get the name of the secret:
+Now we can create a token:
 
-`SECRET=$(kubectl get sa jenkins -o=jsonpath='{.secrets[0].name}')`{{execute}}
-
-Then we can get the secret and base-64 encode it:
-
-`ARGO_TOKEN="Bearer $(kubectl get secret $SECRET -o=jsonpath='{.data.token}' | base64 --decode)"`{{execute}}
+`ARGO_TOKEN="Bearer $(kubectl create token jenkins)"`{{execute}}
 
 Print out the token:
 

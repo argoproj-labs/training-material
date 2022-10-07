@@ -36,6 +36,11 @@ if [ "${AUTHCLIENT:-0}" -eq 1 ]; then
     "--secure=false"
   ]},
   {"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"},
+  {"op": "add", "path": "/spec/template/spec/containers/0/env", "value": [
+    { "name": "FIRST_TIME_USER_MODAL", "value": "false" },
+    { "name": "FEEDBACK_MODAL", "value": "false" },
+    { "name": "NEW_VERSION_MODAL", "value": "false" }
+  ]}
   ]' > /dev/null
 
 else
@@ -55,7 +60,7 @@ else
     { "name": "FIRST_TIME_USER_MODAL", "value": "false" },
     { "name": "FEEDBACK_MODAL", "value": "false" },
     { "name": "NEW_VERSION_MODAL", "value": "false" }
-  ]},
+  ]}
   ]' > /dev/null
 
 kubectl wait deploy/argo-server --for condition=Available --timeout 2m > /dev/null
