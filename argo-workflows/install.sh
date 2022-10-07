@@ -13,7 +13,6 @@ kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-
 kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows/patchpod.yaml > /dev/null
 kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/minio/minio-deploy.yaml  > /dev/null
 kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows/workflows-controller-configmap.yaml > /dev/null
-# kubectl scale deploy/workflow-controller --replicas 1 > /dev/null
 
 echo "2. Installing Argo CLI..."
 
