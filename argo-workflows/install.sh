@@ -34,7 +34,10 @@ if [ "${AUTHCLIENT:-0}" -eq 1 ]; then
     "--auth-mode=client",
     "--secure=false"
   ]},
-  {"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"}
+  {"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"},
+  {"op": "add", "path": "/spec/template/spec/containers/0/env/FIRST_TIME_USER_MODAL", "value": "false"},
+  {"op": "add", "path": "/spec/template/spec/containers/0/env/FEEDBACK_MODAL", "value": "false"},
+  {"op": "add", "path": "/spec/template/spec/containers/0/env/NEW_VERSION_MODAL", "value": "false"}
   ]' > /dev/null
 
 else
