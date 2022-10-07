@@ -14,6 +14,7 @@ spec:
     - name: main
       container:
         image: docker/whalesay
+        command: [ cowsay ]
 ```
 
 Lets created this workflow template:

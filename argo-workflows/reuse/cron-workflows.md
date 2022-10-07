@@ -4,7 +4,7 @@ A **cron workflow** is a workflow that runs on a cron schedule:
 apiVersion: argoproj.io/v1alpha1
 kind: CronWorkflow
 metadata:
-  name: hello
+  name: hello-cron
 spec:
   schedule: "* * * * *"
   workflowSpec:
