@@ -122,6 +122,6 @@ STEP                     TEMPLATE       PODNAME                      DURATION  M
  └─✔ consume-parameter   print-message  parameters-vjvwg-1497618270  8s          
 ```
 
-Learn more about parameters in the Argo Workflows [documentation:
+Learn more about parameters in the Argo Workflows documentation:
 - [Parameters overview](https://argoproj.github.io/argo-workflows/walk-through/parameters/)
 - [Workflow input parameters](https://argoproj.github.io/argo-workflows/workflow-inputs/).
