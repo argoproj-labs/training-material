@@ -54,5 +54,3 @@ You should see something like:
 ## Exercise
 
 Create a workflow template and then submit the workflow template using the API.
-
-Tip: You'll need grant the `jenkins` service account the ability to read templates to do this.

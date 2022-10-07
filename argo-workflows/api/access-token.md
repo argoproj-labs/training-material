@@ -41,7 +41,7 @@ To use the token, you add it as an `Authorization` header to your HTTP request:
 You should see something like the following:
 
 ```
-{"modals":{"feedback":true,"firstTimeUser":true,"newVersion":true}}...
+{"modals":{"feedback":false,"firstTimeUser":false,"newVersion":false}}...
 ```
 
 Now you are ready to create an Argo Workflow using the API.
