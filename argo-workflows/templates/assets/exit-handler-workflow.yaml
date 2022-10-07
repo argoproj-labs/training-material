@@ -15,6 +15,7 @@ spec:
     - name: whalesay
       container:
         image: docker/whalesay
+        command: [ cowsay ]
 
     - name: tidy-up
       container:
