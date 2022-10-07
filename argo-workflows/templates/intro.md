@@ -6,6 +6,4 @@ In this scenario you will:
 
 From now on, Argo Workflows will be set up automatically for you. Wait until you see "Ready" in the console.
 
-As part of the setup process, we have opened a port-forward to the Argo Server pod. Once the install script shows "Ready", [click here to access the Argo Workflows UI]({{TRAFFIC_HOST1_2746}}).
-
 There will also be optional exercises. These will mean the lessons take longer, but help you be sure you've really understood everything. 

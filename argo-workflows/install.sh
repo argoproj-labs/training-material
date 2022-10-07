@@ -37,8 +37,6 @@ if [ "${AUTHCLIENT:-0}" -eq 1 ]; then
   {"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"}
   ]' > /dev/null
 
-  kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &
-
 else
   echo "Setting Argo Server to Server Auth..."
   kubectl patch deployment \

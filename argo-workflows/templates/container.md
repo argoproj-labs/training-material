@@ -19,7 +19,10 @@ Let's run the workflow:
 
 `argo submit --watch container-workflow.yaml`{{execute}}
 
-[Open the Argo Workflows UI]({{TRAFFIC_HOST1_2746}}) and navigate to the workflow, you should see a single container running.
+Port-forward to the Argo Server pod...
+`kubectl -n argo rollout status --watch --timeout=600s deployment/argo-server`{{execute}}
+
+and [open the Argo Workflows UI]({{TRAFFIC_HOST1_2746}}). Then navigate to the workflow, you should see a single container running.
 
 ## Exercise
 
