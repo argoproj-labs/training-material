@@ -35,10 +35,10 @@ if [ "${AUTHCLIENT:-0}" -eq 1 ]; then
     "--secure=false"
   ]},
   {"op": "replace", "path": "/spec/template/spec/containers/0/readinessProbe/httpGet/scheme", "value": "HTTP"},
-  {"op": "add", "path": "/spec/template/spec/containers/0/env/FIRST_TIME_USER_MODAL", "value": "false"},
-  {"op": "add", "path": "/spec/template/spec/containers/0/env/FEEDBACK_MODAL", "value": "false"},
-  {"op": "add", "path": "/spec/template/spec/containers/0/env/NEW_VERSION_MODAL", "value": "false"}
   ]' > /dev/null
+  kubectl -n argo set env deployment/argo-server FIRST_TIME_USER_MODAL=false > /dev/null
+  kubectl -n argo set env deployment/argo-server FEEDBACK_MODAL=false > /dev/null
+  kubectl -n argo set env deployment/argo-server NEW_VERSION_MODAL=false > /dev/null
 
 else
   echo "Setting Argo Server to Server Auth..."
