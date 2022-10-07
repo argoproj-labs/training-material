@@ -19,7 +19,7 @@ Let's run the workflow:
 
 `argo submit --watch container-workflow.yaml`{{execute}}
 
-Open the Argo Server tab a navigate to the workflow, you should see a single container running.
+[Open the Argo Workflows UI]({{TRAFFIC_HOST1_2746}}) and navigate to the workflow, you should see a single container running.
 
 ## Exercise
 
