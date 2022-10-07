@@ -24,9 +24,7 @@ You can then view the user interface by running a port forward:
 
 `kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &`{{execute}}
 
-You can then use this link to access the UI:
-
-[ACCESS ARGO WORKFLOWS UI]({{TRAFFIC_HOST1_2746}})
+You can then [click here to access the UI]({{TRAFFIC_HOST1_2746}}). As its your first time using the Workflows UI, you will see a number of modals explaining the new features. Just dismiss them.
 
 ## Run a workflow
 
