@@ -1,6 +1,8 @@
 The Argo Server provides the API. This is secured using Kubernetes service accounts.
 
-All endpoints can be found under `http://localhost:2746/api/v1` URL and typically require an **access token**. To access this via Killercoda, we need to port-forward the argo-server pod:
+All endpoints can be found under `http://localhost:2746/api/v1` URL and typically require an **access token**.
+
+To access this via Killercoda, we need to port-forward the argo-server pod:
 
 `kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &`{{execute}}
 
