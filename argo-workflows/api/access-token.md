@@ -10,7 +10,7 @@ In our example, we want to create a role for Jenkins so it can create, get and l
 
 Create the role:
 
-`kubectl create role jenkins --verb=create,get,list --resource=workflows.argoproj.io`{{execute}}
+`kubectl create role jenkins --verb=create,get,list --resource=workflows.argoproj.io --resource=workfloweventbindings --resource=workflowtemplates`{{execute}}
 
 Create the service account:
 
@@ -41,7 +41,7 @@ To use the token, you add it as an `Authorization` header to your HTTP request:
 You should see something like the following:
 
 ```
-{"managedNamespace":"argo"...
+{"modals":{"feedback":true,"firstTimeUser":true,"newVersion":true}}...
 ```
 
 Now you are ready to create an Argo Workflow using the API.
