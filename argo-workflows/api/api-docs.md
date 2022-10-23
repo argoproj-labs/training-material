@@ -6,9 +6,15 @@ You can use the API docs to send API requests, so it is really useful to test th
 
 But you were asked for a password weren't you?
 
-You can use your `ARGO_TOKEN` as a password.
+Use your `ARGO_TOKEN` as a password:
 
 `echo $ARGO_TOKEN`{{execute}}
+
+Copy the whole response, including `Bearer`, and paste it into the white box in the center of the Argo UI Login page where it says "client authentication".
+
+Once you're logged in, you may need to click to open the API docs again:
+
+[Open the API docs]({{TRAFFIC_HOST1_2746}}/apidocs)
 
 ## Exercise
 
