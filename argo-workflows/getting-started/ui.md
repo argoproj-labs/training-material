@@ -1,6 +1,6 @@
 The argo-server (and thus the UI) defaults to client authentication, which requires clients to provide their Kubernetes bearer token in order to authenticate. For more information, refer to the [Argo Server Auth Mode documentation](https://argoproj.github.io/argo-workflows/argo-server-auth-mode/). We will switch the authentication mode to server so that we can bypass the UI login for now.
 
-Additionally, Argo Server runs over https by default. This isn't compatible with killercoda, so we will disable https at the same time.
+Additionally, Argo Server runs over https by default. This isn't compatible with Killercoda, so we will disable https at the same time.
 
 ```
 kubectl patch deployment \
@@ -24,7 +24,7 @@ You can then view the user interface by running a port forward:
 
 `kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &`{{execute}}
 
-You can then [click here to access the UI]({{TRAFFIC_HOST1_2746}}). As its your first time using the Workflows UI, you will see a number of modals explaining the new features. Just dismiss them.
+You can then [click here to access the UI]({{TRAFFIC_HOST1_2746}}). As it's your first time using the Workflows UI, you will see a number of modals explaining the new features. Dismiss them.
 
 ## Run a workflow
 
@@ -52,8 +52,8 @@ spec:
   entrypoint: main        
   templates:
   - name: main           
-    container: 
-      image: docker/whalesay 
+    container:
+      image: docker/whalesay
       command: ["cowsay"]
 ```{{copy}}
 
@@ -68,7 +68,7 @@ After about 30s, the icon will change to green:
 ## Exercise
 
 Take a few minutes to play around with the user interface. Find out how to:
- 
+
 * List workflows.
 * View a workflow.
 * Resubmit a completed workflow.
