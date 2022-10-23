@@ -12,11 +12,11 @@ spec:
   templates:
   - name: main           
     container: # this is a container template
-      image: docker/whalesay # this image prints "hello world" to the console 
+      image: docker/whalesay # this image prints "hello world" to the console
       command: ["cowsay"]
 ```
 
-There are several other types of template, and we'll come to more of them soon.
+There are several other types of templates, and we'll come to more of them soon.
 
 Because a workflow is just a Kubernetes resource, you can use `kubectl` with them.
 
