@@ -8,7 +8,7 @@
 
 Thank you to the following for their outsized contributions to this course:
 * [Alex Collins](https://github.com/alexec), [Intuit](https://intuit.com)
-* [Yuan Tang](https://github.com/terrytangyuan), Akuity
+* [Yuan Tang](https://github.com/terrytangyuan), [Akuity](https://akuity.io)
 
 
 ## Troubleshooting
