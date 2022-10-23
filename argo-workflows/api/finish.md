@@ -7,4 +7,4 @@ Let's recap:
 * You should use the `api/v1/events` endpoint for create workflows.
 * You can find **API docs** in the user interface.
 
-Please [let us know what can be improved](https://github.com/pipekit/argo-workflows-intro-course).
+Please [let us know what can be improved](https://github.com/pipekit/argo-workflows-intro-course/issues).
