@@ -49,7 +49,7 @@ STEP          TEMPLATE  PODNAME              DURATION  MESSAGE
 
 Did you see how `b` did not start until `a` had completed?
 
-Open the Argo Server tab and navigate to the workflow, you should see a two containers.
+Open the Argo Server tab and navigate to the workflow, you should see two containers.
 
 ## Exercise
 
