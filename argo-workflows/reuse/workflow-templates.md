@@ -17,7 +17,7 @@ spec:
         command: [ cowsay ]
 ```
 
-Lets created this workflow template:
+Let's create this workflow template:
 
 `argo template create hello-workflowtemplate.yaml`{{execute}}
 
