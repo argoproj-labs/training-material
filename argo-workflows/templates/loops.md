@@ -1,4 +1,4 @@
-The ability to run large parallel processing jobs is one of the key features or Argo Workflows.  
+The ability to run large parallel processing jobs is one of the key features of Argo Workflows.  
 Let's have a look at using loops to do this.
 
 ## withItems
