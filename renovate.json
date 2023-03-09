@@ -10,9 +10,11 @@
     {
       "fileMatch": ["install.sh$", "\\.md$"],
       "matchStrings": [
-        "datasource=(github-releases) depName=(argoproj/argo-workflows)( versioning=(?<versioning>.*?))?\\s.*https:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/.*\\s"
+        "(versioning=(?<versioning>.*?))?\\s.*https:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/.*\\s"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "depNameTemplate": "argoproj/argo-workflows",
+      "datasourceTemplate": "github-releases"
     }
   ]
 }
