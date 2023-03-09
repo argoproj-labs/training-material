@@ -10,7 +10,7 @@
     {
       "fileMatch": ["install.sh$", "\\.md$"],
       "matchStrings": [
-        "\\shttps:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/[^\\s]*"
+        "\\shttps:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/[^\\s]*/g"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "depNameTemplate": "argoproj/argo-workflows",
