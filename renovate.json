@@ -19,7 +19,7 @@
     {
       "fileMatch": ["install.sh$"],
       "matchStrings": [
-        "ARGO_WORKFLOWS_VERSION=\"(?<currentValue>.*)\"?\\s"
+        "ARGO_WORKFLOWS_VERSION='(?<currentValue>.*)'?\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "depNameTemplate": "argoproj/argo-workflows",
