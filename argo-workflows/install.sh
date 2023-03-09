@@ -16,7 +16,7 @@ kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-
 
 echo "2. Installing Argo CLI..."
 
-
+curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.4.4/argo-linux-amd64.gz
 gunzip argo-linux-amd64.gz
 chmod +x argo-linux-amd64
 mv ./argo-linux-amd64 /usr/local/bin/argo
