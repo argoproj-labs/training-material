@@ -8,7 +8,7 @@
   },
   "regexManagers": [
     {
-      "fileMatch": ["install.sh$", \\.md$],
+      "fileMatch": ["install.sh$", "\\.md$"],
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*https:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/.*\\s"
       ],
