@@ -8,13 +8,22 @@
   },
   "regexManagers": [
     {
-      "fileMatch": ["install.sh$", "\\.md$"],
+      "fileMatch": ["\\.md$"],
       "matchStrings": [
-        "\\shttps:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/[^\\s]*/g"
+        "\\shttps:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/[^\\s]*"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "depNameTemplate": "argoproj/argo-workflows",
       "datasourceTemplate": "github-releases"
-    }
+    },
+    {
+      "fileMatch": ["install.sh$"],
+      "matchStrings": [
+        "\\sARGO_WORKFLOWS_VERSION=(?<currentValue>.*)\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "depNameTemplate": "argoproj/argo-workflows",
+      "datasourceTemplate": "github-releases"
+    },
   ]
 }
