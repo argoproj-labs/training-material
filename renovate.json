@@ -5,5 +5,14 @@
   ],
   "kubernetes": {
     "fileMatch": ["\\.yaml$", "\\.yml$", "\\.sh$"]
-  }
+  },
+  "regexManagers": [
+    {
+      "fileMatch": ["install.sh$", \\.md$],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*https:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/.*\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ]
 }

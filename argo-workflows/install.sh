@@ -8,6 +8,8 @@ echo "1. Installing Argo Workflows..."
 
 kubectl create ns argo > /dev/null
 kubectl config set-context --current --namespace=argo > /dev/null
+# https://github.com/argoproj/argo-workflows/
+# renovate: datasource=github-releases depName=argoproj/argo-workflows
 kubectl apply -f https://github.com/argoproj/argo-workflows/releases/download/v3.4.5/install.yaml > /dev/null
 kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows/canary-workflow.yaml > /dev/null
 kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows/patchpod.yaml > /dev/null
@@ -16,6 +18,8 @@ kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-
 
 echo "2. Installing Argo CLI..."
 
+# https://github.com/argoproj/argo-workflows/
+# renovate: datasource=github-releases depName=argoproj/argo-workflows
 curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.4.5/argo-linux-amd64.gz
 gunzip argo-linux-amd64.gz
 chmod +x argo-linux-amd64
