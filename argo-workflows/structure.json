@@ -1,6 +1,7 @@
 {
     "items": [
       { "path": "getting-started" },
+      { "path": "install-using-helm" },
       { "path": "templates" },
       { "path": "inputs-and-outputs" },
       { "path": "reuse" },
