@@ -1,4 +1,4 @@
-While the [recommended installation method for Argo Workflows](https://argoproj.github.io/argo-workflows/installation/) is using the install manifests, you can also use the community-maintained Helm Charts.
+While the [recommended installation method for Argo Workflows](https://argoproj.github.io/argo-workflows/installation/) is using the install manifests, you can also use the community-maintained argoproj Helm Charts. More information can be [found on GitHub](https://argoproj.github.io/argo-helm/).
 
 In this scenario you will:
 

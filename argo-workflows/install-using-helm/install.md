@@ -1,8 +1,4 @@
-We will be using the community maintained argoproj Helm Charts. More information can be [found on GitHub](https://argoproj.github.io/argo-helm/).
-
-Argo is normally installed into a namespace named `argo` so we will create that as part of our deployment.
-
-This command installs the latest Argo Workflows Helm Chart. In production it would be sensible to pin the version of the chart to a specific version.
+This command installs the latest Argo Workflows Helm Chart. In production it would be sensible to pin the version of the chart to a specific version. Argo is normally installed into a namespace named `argo` so we will create that as part of our deployment:
 ```
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
