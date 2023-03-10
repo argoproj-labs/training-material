@@ -8,8 +8,8 @@
     },
     "steps": [
       {
-        "title": "todo",
-        "text": "todo.md"
+        "title": "Argo Workflows Examples",
+        "text": "examples.md"
       }
     ],
     "finish": {
