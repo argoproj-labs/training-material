@@ -1,4 +1,4 @@
-We will be using the community maintained argoproj Helm Charts. More information can be found here: https://argoproj.github.io/argo-helm/
+We will be using the community maintained argoproj Helm Charts. More information can be [found on GitHub](https://argoproj.github.io/argo-helm/).
 
 Argo is normally installed into a namespace named `argo` so we will create that as part of our deployment.
 
