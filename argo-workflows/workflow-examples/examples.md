@@ -8,6 +8,6 @@
 `kubectl apply -n argo -f /root/examples/workflow-template/templates.yaml`{{execute}}
 
 # View the server UI
-`kubectl port-forward svc/argo-server -n argo 2746:2746`{{execute}}
+`kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &`{{execute}}
 
 [click here to access the UI]({{TRAFFIC_HOST1_2746}})
