@@ -1,6 +1,8 @@
-The argo-server (and thus the UI) defaults to client authentication, which requires clients to provide their Kubernetes bearer token in order to authenticate. For more information, refer to the [Argo Server Auth Mode documentation](https://argoproj.github.io/argo-workflows/argo-server-auth-mode/). We will switch the authentication mode to server so that we can bypass the UI login for now.
+**The argo-server (and thus the UI) defaults to client authentication, which requires clients to provide their Kubernetes bearer token in order to authenticate.** For more information, refer to the [Argo Server Auth Mode documentation](https://argoproj.github.io/argo-workflows/argo-server-auth-mode/).
 
-Additionally, Argo Server runs over https by default. This isn't compatible with Killercoda, so we will disable https at the same time.
+We will switch the authentication mode to server so that we can bypass the UI login for now.
+
+Additionally, Argo Server runs over https by default. This isn't compatible with Killercoda, so we will disable https at the same time. **This is not something we recommend for production installs.**
 
 ```
 kubectl patch deployment \

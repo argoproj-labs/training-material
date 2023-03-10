@@ -1,3 +1,5 @@
+While the [recommended installation method for Argo Workflows](https://argoproj.github.io/argo-workflows/installation/) is using the install manifests, you can also use the community-maintained Helm Charts.
+
 In this scenario you will:
 
 1. Install Argo Workflows into a Kubernetes cluster using Helm.
