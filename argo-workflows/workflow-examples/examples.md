@@ -9,3 +9,5 @@
 
 # View the server UI
 `kubectl port-forward svc/argo-server -n argo 2746:2746`{{execute}}
+
+[click here to access the UI]({{TRAFFIC_HOST1_2746}})
