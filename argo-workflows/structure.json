@@ -4,6 +4,7 @@
       { "path": "templates" },
       { "path": "inputs-and-outputs" },
       { "path": "reuse" },
-      { "path": "api" }
+      { "path": "api" },
+      { "path": "install-using-helm" }
     ]
   }

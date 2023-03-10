@@ -1,0 +1,29 @@
+{
+  "title": "Install using Helm",
+  "description": "Learn how how to install Argo Workflows using Helm",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Installing Argo Workflows with Helm",
+        "text": "install.md"
+      },
+      {
+        "title": "Uninstalling Argo Workflows",
+        "text": "uninstall.md"
+      },
+      {
+        "title": "Modifying the install",
+        "text": "ui.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
