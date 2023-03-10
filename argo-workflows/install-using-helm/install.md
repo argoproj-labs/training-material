@@ -15,11 +15,11 @@ It will take about 1m for all deployments to become available. Let's look at wha
 
 The **Workflow Controller** is responsible for running workflows:
 
-`kubectl -n argo get deploy workflow-controller`{{execute}}
+`kubectl -n argo get deploy argo-argo-workflows-workflow-controller`{{execute}}
 
 And the **Argo Server** provides a user interface and API:
 
-`kubectl -n argo get deploy argo-server`{{execute}}
+`kubectl -n argo get deploy argo-argo-workflows-server`{{execute}}
 
 ## Wait for everything to be ready
 
