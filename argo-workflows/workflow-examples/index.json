@@ -1,0 +1,22 @@
+{
+  "title": "Workflow Examples",
+  "description": "Play with all the workflow examples here.",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "todo",
+        "text": "todo.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
