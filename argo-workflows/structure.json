@@ -5,6 +5,7 @@
       { "path": "inputs-and-outputs" },
       { "path": "reuse" },
       { "path": "api" },
+      { "path": "workflow-examples" },
       { "path": "install-using-helm" }
     ]
   }

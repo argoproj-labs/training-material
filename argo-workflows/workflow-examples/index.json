@@ -1,0 +1,23 @@
+{
+  "title": "Workflow Examples",
+  "description": "Play with all the workflow examples here.",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Argo Workflows Examples",
+        "text": "examples.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
