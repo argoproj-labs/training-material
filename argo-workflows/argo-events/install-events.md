@@ -6,7 +6,7 @@ Next, navigate to the [releases page](https://github.com/argoproj/argo-events/re
 
 Scroll down to the `Installation`{{}} section and execute the kubectl commands.
 
-Below is an example of the install commands, ensure that you update the command to install the correct version number:
+Below is an example of the install command, ensure that you update the command to install the correct version number:
 
 `kubectl apply -n argo-events -f https://github.com/argoproj/argo-events/releases/download/v1.7.6/install.yaml`{{execute}}
 
@@ -15,3 +15,11 @@ Argo Events also requires an eventbus to be created. This is a central point for
 There is an example available in the [argo events github repo](https://github.com/argoproj/argo-events/blob/stable/examples/eventbus/native.yaml). Execute the following command to create the eventbus:
 
 `kubectl apply -n argo-events -f https://raw.githubusercontent.com/argoproj/argo-events/stable/examples/eventbus/native.yaml`{{execute}}
+
+We want Argo Events to trigger a workflow when a file is added to minio. In order to achieve this, we will add [a minio eventsource](https://argoproj.github.io/argo-events/eventsources/setup/minio/) which will listen for minio events.
+
+The eventsource will require minio credentials. We will provide these in the form of a secret.
+View the secret with `cat bootstrap/argo-events/minio-secret.yaml`{{execute}}, Deploy with `kubectl apply -n argo-events -f bootstrap/argo-events/minio-secret.yaml`{{execute}}.
+
+Now we can deploy our eventsource:
+View our eventsource with `cat boostrap/argo-events/minio-eventsource.yaml`{{execute}}, Deploy with `kubectl apply -n argo-events -f boostrap/argo-events/minio-eventsource.yaml`{{execute}}.

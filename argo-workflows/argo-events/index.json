@@ -9,7 +9,7 @@
     },
     "steps": [
       {
-        "title": "Install Argo Events",
+        "title": "Install and Configure Argo Events",
         "text": "install-events.md"
       }
     ],
