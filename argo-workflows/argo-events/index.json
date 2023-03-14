@@ -1,0 +1,23 @@
+{
+  "title": "Argo Events",
+  "description": "Learn how to integrate Argo Workflows with Argo Events",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Install Argo Events",
+        "text": "install-events.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
