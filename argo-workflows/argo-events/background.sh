@@ -7,4 +7,9 @@ kubectl apply -f bootstrap/minio/ -n minio
 
 
 # Install the minio client
-apt install -y mc
+curl https://dl.min.io/client/mc/release/linux-amd64/mc \
+  --create-dirs \
+  -o /root/mc
+
+chmod +x /root/mc
+export PATH=$PATH:/root/
