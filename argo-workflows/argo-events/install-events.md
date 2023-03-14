@@ -1,4 +1,4 @@
-Argo is normally installed into a namespace named `argo-events`, so lets create that:
+Argo Events is normally installed into a namespace named `argo-events`, so lets create that:
 
 `kubectl create ns argo-events`{{execute}}
 
@@ -27,3 +27,18 @@ Now we can deploy our eventsource:
 View our eventsource with `cat /root/bootstrap/argo-events/minio-eventsource.yaml`{{execute}}.
 
 Deploy with `kubectl apply -n argo-events -f /root/bootstrap/argo-events/minio-eventsource.yaml`{{execute}}.
+
+
+## What was installed?
+It may take about 1m for all deployments to become available. Let's look at what is installed while we wait.
+
+The **Events Controller-Manager**:
+
+`kubectl -n argo-events get deploy controller-manager`{{execute}}
+
+An eventbus statefulset:
+
+`kubectl -n argo-events get statefulsets eventbus-default-stan`{{execute}}
+
+A minio eventsource pod:
+`kubectl -n argo-events get pod -l eventsource-name=minio`{{execute}}

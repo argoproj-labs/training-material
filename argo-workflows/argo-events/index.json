@@ -11,6 +11,10 @@
       {
         "title": "Install and Configure Argo Events",
         "text": "install-events.md"
+      },
+      {
+        "title": "Trigger an event using Minio",
+        "text": "eventsources.md"
       }
     ],
     "finish": {
