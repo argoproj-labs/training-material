@@ -6,7 +6,7 @@ echo
 
 echo "1. Installing Argo Workflows..."
 
-ARGO_WORKFLOWS_VERSION='v3.4.5'
+ARGO_WORKFLOWS_VERSION='v3.4.7'
 
 kubectl create ns argo > /dev/null
 kubectl config set-context --current --namespace=argo > /dev/null
