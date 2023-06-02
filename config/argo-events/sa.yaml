@@ -1,20 +1,22 @@
-kind: ClusterRole
+kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: argo-events-job
+  name: argo-events-wf-create
+  namespace: argo-events
 rules:
-- apiGroups: ["batch"]
-  resources: ["jobs"]
-  verbs: ["get", "watch", "patch", "create"]
+- apiGroups: ["argoproj.io"]
+  resources: ["workflows"]
+  verbs: ["create"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
+kind: RoleBinding
 metadata:
   name: argo-events-cluster-role-binding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: argo-events-job
+  kind: Role
+  name: argo-events-wf-create
+  namespace: argo-events
 subjects:
 - kind: ServiceAccount
   name: default

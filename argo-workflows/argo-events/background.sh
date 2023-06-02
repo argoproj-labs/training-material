@@ -3,11 +3,3 @@ wget https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master
 wget https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/argo-events/minio-secret.yaml
 wget https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/argo-events/minio-sensor.yaml
 wget https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/argo-events/sa.yaml
-
-# Install the minio client
-curl https://dl.min.io/client/mc/release/linux-amd64/mc \
-  --create-dirs \
-  -o /root/mc
-
-chmod +x /root/mc
-export PATH=$PATH:/root/

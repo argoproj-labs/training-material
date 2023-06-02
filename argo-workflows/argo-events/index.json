@@ -15,6 +15,10 @@
       {
         "title": "Add a Minio Sensor and Trigger",
         "text": "sensor.md"
+      },
+      {
+        "title": "Resolve RBAC issues and re-trigger",
+        "text": "rbac.md"
       }
     ],
     "finish": {
