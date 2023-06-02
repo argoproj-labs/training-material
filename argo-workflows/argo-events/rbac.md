@@ -42,4 +42,5 @@ This time, the event successfully triggered our workflow:
 ```
 
 We can see that the workflow was triggered, and that it completed successfully. It also contains the name of our file. In our case, we called it 'foo':
+
 `argo logs -n argo @latest`{{execute}}
