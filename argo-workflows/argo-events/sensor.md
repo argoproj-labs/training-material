@@ -29,7 +29,23 @@ Let's look at the sensor pod logs:
 We can see that... it failed. You'll see logs similar to:
 
 ```
-{"level":"error","ts":1685711961.5645943,"logger":"argo-events.sensor","caller":"sensors/listener.go:356","msg":"Failed to execute a trigger","sensorName":"minio","error":"failed to execute trigger, failed after retries: workflows.argoproj.io is forbidden: User \"system:serviceaccount:argo-events:default\" cannot create resource \"workflows\" in API group \"argoproj.io\" in the namespace \"argo\"","triggerName":"minio-workflow-trigger","triggeredBy":["example-dep"],"triggeredByEvents":["37656535323431372d386530342d343639302d393434332d316336343039646138623631"],"stacktrace":"github.com/argoproj/argo-events/sensors.(*SensorContext).triggerWithRateLimit\n\t/home/runner/work/argo-events/argo-events/sensors/listener.go:356"}
+{
+   "level":"error",
+   "ts":1685711961.5645943,
+   "logger":"argo-events.sensor",
+   "caller":"sensors/listener.go:356",
+   "msg":"Failed to execute a trigger",
+   "sensorName":"minio",
+   "error":"failed to execute trigger, failed after retries: workflows.argoproj.io is forbidden: User \"system:serviceaccount:argo-events:default\" cannot create resource \"workflows\" in API group \"argoproj.io\" in the namespace \"argo\"",
+   "triggerName":"minio-workflow-trigger",
+   "triggeredBy":[
+      "example-dep"
+   ],
+   "triggeredByEvents":[
+      "37656535323431372d386530342d343639302d393434332d316336343039646138623631"
+   ],
+   "stacktrace":"github.com/argoproj/argo-events/sensors.(*SensorContext).triggerWithRateLimit\n\t/home/runner/work/argo-events/argo-events/sensors/listener.go:356"
+}
 ```
 
 It's not all doom and gloom. We can see that something *tried* to happen when we uploaded our file to minio. The Sensor tried to trigger a workflow, but it failed because the default service account does not have permission to create workflows. We need to grant the default service account permission to create workflows.

@@ -13,11 +13,7 @@ Now we can attempt to re-trigger our workflow. We can do this by deleting the fi
 
 In case you need to, port-forward the minio UI. Then log in and delete a file from the Pipekit bucket.
 
-`kubectl -n argo port-forward --address 0.0.0.0 svc/minio 9001:9001 > /dev/null &`{{execute}}
-
-[Log in]({{TRAFFIC_HOST1_9001}}) with the username `pipekit` and the password `sup3rs3cr3tp4ssw0rd1`, and navigate to the Pipekit bucket.
-
-Delete the previously uploaded file.
+[Go back to Minio]({{TRAFFIC_HOST1_9001}}) and delete the previously uploaded file.
 
 
 Let's look at the sensor pod logs again.
@@ -27,10 +23,23 @@ Let's look at the sensor pod logs again.
 This time, the event successfully triggered our workflow:
 
 ```
-foo
+{
+   "level":"info",
+   "ts":1685713173.4561043,
+   "logger":"argo-events.sensor",
+   "caller":"sensors/listener.go:417",
+   "msg":"Successfully processed trigger 'minio-workflow-trigger'",
+   "sensorName":"minio",
+   "triggerName":"minio-workflow-trigger",
+   "triggerType":"Kubernetes",
+   "triggeredBy":[
+      "example-dep"
+   ],
+   "triggeredByEvents":[
+      "35313437336561662d633034302d346266632d613966302d613134383966313834383230"
+   ]
+}
 ```
 
 We can see that the workflow was triggered, and that it completed successfully. It also contains the name of our file. In our case, we called it 'foo':
-```
-bar
-```
+`argo logs -n argo @latest`{{execute}}
