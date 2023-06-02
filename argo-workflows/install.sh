@@ -10,7 +10,7 @@ ARGO_WORKFLOWS_VERSION='v3.4.8'
 
 kubectl create ns argo > /dev/null
 kubectl config set-context --current --namespace=argo > /dev/null
-kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/minio  > /dev/null
+kubectl apply -f https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/minio/minio.yaml  > /dev/null
 kubectl apply -f https://github.com/argoproj/argo-workflows/releases/download/${ARGO_WORKFLOWS_VERSION}/install.yaml > /dev/null
 kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows/canary-workflow.yaml > /dev/null
 kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/argo-workflows/patchpod.yaml > /dev/null
