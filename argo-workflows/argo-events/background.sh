@@ -1,10 +1,14 @@
-git clone https://github.com/pipekit/large-workflow-example.git --depth 1 -q
-mv large-workflow-example/bootstrap/ . > /dev/null
-rm -rf large-workflow-example > /dev/null
+# Get files
+wget https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/argo-events/minio-eventsource.yaml
+wget https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/argo-events/minio-secret.yaml
+wget https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/argo-events/minio-sensor.yaml
+wget https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/argo-events/sa.yaml
 
+# Minio
+kubectl delete -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/minio/minio-deploy.yaml  > /dev/null
 kubectl create namespace minio
-kubectl apply -f bootstrap/minio/ -n minio
-
+#kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/minio-events/ -n minio
+kubectl apply -f https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/minio-events/ -n minio
 
 # Install the minio client
 curl https://dl.min.io/client/mc/release/linux-amd64/mc \

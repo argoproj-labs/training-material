@@ -1,3 +1,12 @@
+We need to install a Sensor that is called by the EventSource. The Sensor is responsible for triggering the creation of a workflow when an event is received. Let's look at the Sensor configuration:
+
+View our Sensor with `cat /root/bootstrap/argo-events/minio-sensor.yaml`{{execute}}.
+
+Deploy with `kubectl apply -n argo-events -f /root/bootstrap/argo-events/minio-sensor.yaml`{{execute}}.
+
+
+
+
 Let's look again at our eventsource configuration:
 `cat /root/bootstrap/argo-events/minio-eventsource.yaml`{{execute}}.
 

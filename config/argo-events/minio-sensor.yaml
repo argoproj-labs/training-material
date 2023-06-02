@@ -1,0 +1,49 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Sensor
+metadata:
+  name: minio
+spec:
+  dependencies:
+    - name: test-dep
+      eventSourceName: minio
+      eventName: example
+  triggers:
+    - template:
+        name: http-trigger
+        k8s:
+          operation: create
+          source:
+            resource:
+              apiVersion: batch/v1
+              kind: Job
+              metadata:
+                name: trigger-pipe
+                labels:
+                  app: trigger-pipe
+                namespace: pipekit
+              spec:
+                activeDeadlineSeconds: 600
+                backoffLimit: 2
+                template:
+                  metadata:
+                    labels:
+                      app: trigger-pipe
+                  spec:
+                    restartPolicy: OnFailure
+                    containers:
+                      - name: trigger-pipes
+                        image: quay.io/curl/curl:latest
+                        command:
+                        - ash
+                        - -c
+                        - |
+                          curl -XPOST "http://events-handler:8080/api/events-handler/v1/events/github" -H 'Content-Type: application/json' -H 'X-Github-Event: pull_request' -d '{"action":"opened","pull_request":{"id":1,"title":"master","head":{"sha":"test"}},"repository":{"id":'"765432"'}}'
+                          sleep 300
+                        resources:
+                          requests:
+                            memory: 128Mi
+          parameters:
+            - src:
+                dependencyName: test-dep
+                dataKey: notification.0.s3.object.key
+              dest: metadata.labels.someData
