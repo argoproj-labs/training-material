@@ -1,43 +1,36 @@
 Kubernetes RBAC is a deep subject. Further reading can be found in the [Kubernetes Documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
-Our sensor is running using the default Service Account in the argo-events namespace. This service account does not have permission to create workflows in the argo namespace. We therefore need to give it permission
+Our sensor is running using the default Service Account in the argo-events namespace. This service account does not have permission to create workflows in the argo namespace. We therefore need to give it permission to do so.
+
+You may choose to create a completely new Service Account for this purpose. For brevity, we will just grant the default Service Account permission to create workflows. We do this using a ClusterRole, and a ClusterRoleBinding to bind the role to the Serviceaccount.
+
+View this: `cat /root/sa.yaml`{{execute}}.
+
+Deploy this with `kubectl apply -n argo-events -f /root/sa.yaml`{{execute}}.
 
 
-View our Sensor with `cat /root/sa.yaml`{{execute}}.
+Now we can attempt to re-trigger our workflow. We can do this by deleting the file we uploaded to minio. This will trigger a delete event, which will trigger our workflow.
 
-Deploy with `kubectl apply -n argo-events -f /root/sa.yaml`{{execute}}.
-
-
-
-
-
-
-This ultimately creates a pod in our argo-events namespace that is responsible for triggering workflows when events are received. 
-
-Let's look again at our eventsource configuration:
-`cat /root/minio-eventsource.yaml`{{execute}}.
-
-We can see that it is set to observe the minio bucket called `pipekit`. If we create a file, or delete a file in this bucket, we will trigger an event.
-
-Let's create a file in the minio bucket:
-We need to port-forward the minio UI, log in and upload/delete a file from the Pipekit bucket.
+In case you need to, port-forward the minio UI. Then log in and delete a file from the Pipekit bucket.
 
 `kubectl -n argo port-forward --address 0.0.0.0 svc/minio 9001:9001 > /dev/null &`{{execute}}
 
 [Log in]({{TRAFFIC_HOST1_9001}}) with the username `pipekit` and the password `sup3rs3cr3tp4ssw0rd1`, and navigate to the Pipekit bucket.
 
-Upload a file.
+Delete the previously uploaded file.
 
 
-Let's look at the sensor pod logs:
+Let's look at the sensor pod logs again.
 
 `kubectl -n argo-events logs -l sensor-name=minio`{{execute}}
 
-
-We can see that... it failed. You'll see logs similar to:
+This time, the event successfully triggered our workflow:
 
 ```
-{"level":"error","ts":1685711961.5645943,"logger":"argo-events.sensor","caller":"sensors/listener.go:356","msg":"Failed to execute a trigger","sensorName":"minio","error":"failed to execute trigger, failed after retries: workflows.argoproj.io is forbidden: User \"system:serviceaccount:argo-events:default\" cannot create resource \"workflows\" in API group \"argoproj.io\" in the namespace \"argo\"","triggerName":"minio-workflow-trigger","triggeredBy":["example-dep"],"triggeredByEvents":["37656535323431372d386530342d343639302d393434332d316336343039646138623631"],"stacktrace":"github.com/argoproj/argo-events/sensors.(*SensorContext).triggerWithRateLimit\n\t/home/runner/work/argo-events/argo-events/sensors/listener.go:356"}
+foo
 ```
 
-It's not all doom and gloom. We can see that something *tried* to happen when we uploaded our file to minio. The Sensor tried to trigger a workflow, but it failed because the default service account does not have permission to create workflows. We need to grant the default service account permission to create workflows.
+We can see that the workflow was triggered, and that it completed successfully. It also contains the name of our file. In our case, we called it 'foo':
+```
+bar
+```
