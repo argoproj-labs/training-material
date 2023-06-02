@@ -10,7 +10,7 @@ spec:
         # name of the bucket
         name: pipekit
       # s3 service endpoint
-      endpoint: minio.minio.svc.cluster.local:9000
+      endpoint: minio.argo.svc.cluster.local:9000
       # list of events to subscribe to
       # Visit https://docs.minio.io/docs/minio-bucket-notification-guide.html
       events:
