@@ -13,8 +13,8 @@
         "text": "install-events.md"
       },
       {
-        "title": "Trigger an event using Minio",
-        "text": "eventsources.md"
+        "title": "Add a Minio Sensor and Trigger",
+        "text": "sensor.md"
       }
     ],
     "finish": {
