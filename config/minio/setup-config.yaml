@@ -4,7 +4,6 @@ metadata:
   name: minio-config
   labels:
     app: minio-job
-    app.kubernetes.io/component: minio
 data:
   initialize: |-
     #!/bin/sh
