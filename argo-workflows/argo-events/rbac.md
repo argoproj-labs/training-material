@@ -1,8 +1,16 @@
-We need to install a Sensor that is called by the EventSource. The Sensor is responsible for triggering the creation of a workflow when an event is received. Let's look at the Sensor configuration:
+Kubernetes RBAC is a deep subject. Further reading can be found in the [Kubernetes Documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
-View our Sensor with `cat /root/minio-sensor.yaml`{{execute}}.
+Our sensor is running using the default Service Account in the argo-events namespace. This service account does not have permission to create workflows in the argo namespace. We therefore need to give it permission
 
-Deploy with `kubectl apply -n argo-events -f /root/minio-sensor.yaml`{{execute}}.
+
+View our Sensor with `cat /root/sa.yaml`{{execute}}.
+
+Deploy with `kubectl apply -n argo-events -f /root/sa.yaml`{{execute}}.
+
+
+
+
+
 
 This ultimately creates a pod in our argo-events namespace that is responsible for triggering workflows when events are received. 
 
