@@ -11,8 +11,3 @@ curl https://dl.min.io/client/mc/release/linux-amd64/mc \
 
 chmod +x /root/mc
 export PATH=$PATH:/root/
-
-# # Minio
-# kubectl create namespace minio
-# #kubectl apply -f https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/config/minio-events/ -n minio
-# kubectl apply -f https://raw.githubusercontent.com/tico24/argo-workflows-intro-course/master/config/minio-events/ -n minio

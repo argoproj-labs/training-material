@@ -19,14 +19,14 @@ There is an example available in the [argo events github repo](https://github.co
 We want Argo Events to trigger a workflow when a file is added to minio. In order to achieve this, we will add [a minio eventsource](https://argoproj.github.io/argo-events/eventsources/setup/minio/) which will listen for minio events.
 
 The eventsource will require minio credentials. We will provide these in the form of a secret.
-View the secret with `cat /root/bootstrap/argo-events/minio-secret.yaml`{{execute}}.
+View the secret with `cat /root/minio-secret.yaml`{{execute}}.
 
-Deploy with `kubectl apply -n argo-events -f /root/bootstrap/argo-events/minio-secret.yaml`{{execute}}.
+Deploy with `kubectl apply -n argo-events -f /root/minio-secret.yaml`{{execute}}.
 
 Now we can deploy our eventsource:
-View our eventsource with `cat /root/bootstrap/argo-events/minio-eventsource.yaml`{{execute}}.
+View our eventsource with `cat /root/minio-eventsource.yaml`{{execute}}.
 
-Deploy with `kubectl apply -n argo-events -f /root/bootstrap/argo-events/minio-eventsource.yaml`{{execute}}.
+Deploy with `kubectl apply -n argo-events -f /root/minio-eventsource.yaml`{{execute}}.
 
 
 ## What was installed?
