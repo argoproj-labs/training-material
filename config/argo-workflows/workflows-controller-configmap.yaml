@@ -6,7 +6,7 @@ data:
   artifactRepository: |
     archiveLogs: false
     s3:
-      bucket: my-bucket
+      bucket: workflows
       endpoint: minio:9000
       insecure: true
       accessKeySecret:

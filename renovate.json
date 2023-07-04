@@ -25,5 +25,14 @@
       "depNameTemplate": "argoproj/argo-workflows",
       "datasourceTemplate": "github-releases"
     },
+    {
+      "fileMatch": ["\\.md$"],
+      "matchStrings": [
+        "\\shttps:\/\/github.com\/argoproj\/argo-events\/releases\/download\/(?<currentValue>.*)\/[^\\s]*"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "depNameTemplate": "argoproj/argo-events",
+      "datasourceTemplate": "github-releases"
+    }
   ]
 }

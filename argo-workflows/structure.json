@@ -6,6 +6,7 @@
       { "path": "reuse" },
       { "path": "api" },
       { "path": "workflow-examples" },
+      { "path": "argo-events" },
       { "path": "install-using-helm" }
     ]
   }
