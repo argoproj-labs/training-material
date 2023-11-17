@@ -11,7 +11,7 @@ using `onExit`:
 
 They just state the name of the template that should be run on-exit.
 
-Lets look at a complete example:
+Let's look at a complete example:
 
 `cat exit-handler-workflow.yaml`{{execute}}
 
@@ -23,9 +23,9 @@ You should see:
 
 ```
 STEP                   TEMPLATE  PODNAME                        DURATION  MESSAGE
- ✔ exit-handler-plvg7  main                                                 
- ├─✔ a                 whalesay  exit-handler-plvg7-1651124468  5s          
- └─✔ a.onExit          tidy-up   exit-handler-plvg7-3635807335  6s          
+ ✔ exit-handler-plvg7  main
+ ├─✔ a                 whalesay  exit-handler-plvg7-1651124468  5s
+ └─✔ a.onExit          tidy-up   exit-handler-plvg7-3635807335  6s
 ```
 
 Note how the exit handler task ran last.

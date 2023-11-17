@@ -1,17 +1,17 @@
-A container template is the most common type of template, lets look at a complete example:
+A container template is the most common type of template, let's look at a complete example:
 
 ```
 apiVersion: argoproj.io/v1alpha1
-kind: Workflow                 
+kind: Workflow
 metadata:
-  generateName: container-   
+  generateName: container-
 spec:
-  entrypoint: main         
+  entrypoint: main
   templates:
-  - name: main             
+  - name: main
     container:
       image: docker/whalesay
-      command: [cowsay]         
+      command: [cowsay]
       args: ["hello world"]
 ```
 
