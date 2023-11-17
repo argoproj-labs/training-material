@@ -855,7 +855,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.name
-        image: argoproj/workflow-controller:v3.0.3
+        image: argoproj/workflow-controller:v3.5.1
         livenessProbe:
           httpGet:
             path: /metrics
