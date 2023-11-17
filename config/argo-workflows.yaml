@@ -746,7 +746,7 @@ spec:
         - server
         - --auth-mode
         - client
-        image: argoproj/argocli:v3.0.3
+        image: argoproj/argocli:v3.5.1
         name: argo-server
         ports:
         - containerPort: 2746
