@@ -1,1 +1,1 @@
-curl -s https://raw.githubusercontent.com/pipekit/argo-workflows-intro-course/master/argo-workflows/install.sh|sh
+curl -s https://raw.githubusercontent.com/argoproj-labs/training-material/master/argo-workflows/install.sh|sh

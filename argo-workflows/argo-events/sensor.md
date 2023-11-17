@@ -4,19 +4,19 @@ View our Sensor with `cat /root/minio-sensor.yaml`{{execute}}.
 
 Deploy with `kubectl apply -n argo-events -f /root/minio-sensor.yaml`{{execute}}.
 
-This ultimately creates a pod in our argo-events namespace that is responsible for triggering workflows when events are received. 
+This ultimately creates a pod in our argo-events namespace that is responsible for triggering workflows when events are received.
 
 Let's look again at our eventsource configuration:
 `cat /root/minio-eventsource.yaml`{{execute}}.
 
-We can see that it is set to observe the minio bucket called `pipekit`. If we create a file, or delete a file in this bucket, we will trigger an event.
+We can see that it is set to observe the minio bucket called `argoproj`. If we create a file, or delete a file in this bucket, we will trigger an event.
 
 Let's create a file in the minio bucket:
-We need to port-forward the minio UI, log in and upload/delete a file from the Pipekit bucket.
+We need to port-forward the minio UI, log in and upload/delete a file from the argoproj bucket.
 
 `kubectl -n argo port-forward --address 0.0.0.0 svc/minio 9001:9001 > /dev/null &`{{execute}}
 
-[Log in]({{TRAFFIC_HOST1_9001}}) with the username `pipekit` and the password `sup3rs3cr3tp4ssw0rd1`, and navigate to the Pipekit bucket.
+[Log in]({{TRAFFIC_HOST1_9001}}) with the username `argoproj` and the password `sup3rs3cr3tp4ssw0rd1`, and navigate to the argoproj bucket.
 
 Upload a file.
 

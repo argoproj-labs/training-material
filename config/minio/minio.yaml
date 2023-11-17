@@ -21,7 +21,7 @@ spec:
         - /usr/bin/docker-entrypoint.sh minio -S /etc/minio/certs/ server --console-address :9001 /export
         env:
         - name: MINIO_ROOT_USER
-          value: "pipekit"
+          value: "argoproj"
         - name: MINIO_ROOT_PASSWORD
           value: "sup3rs3cr3tp4ssw0rd1"
         image: minio/minio
@@ -42,7 +42,7 @@ spec:
 ---
 apiVersion: v1
 stringData:
-  accesskey: pipekit
+  accesskey: argoproj
   secretkey: sup3rs3cr3tp4ssw0rd1
 kind: Secret
 metadata:
@@ -87,7 +87,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   labels:
-    app.kubernetes.io/created-by: pipekit
+    app.kubernetes.io/created-by: argoproj
   name: minio-job-cluster-role-binding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -117,7 +117,7 @@ data:
       SCHEME=$1
       ATTEMPTS=0 ; LIMIT=29 ; # Allow 30 attempts
       set -e ; # fail if we can't read the keys.
-      ACCESS=pipekit ; SECRET=sup3rs3cr3tp4ssw0rd1 ;
+      ACCESS=argoproj ; SECRET=sup3rs3cr3tp4ssw0rd1 ;
       set +e ; # The connections to minio are allowed to fail.
       echo "Connecting to Minio server: $SCHEME://$MINIO_ENDPOINT:$MINIO_PORT" ;
       MC_COMMAND="${MC} config host add myminio $SCHEME://$MINIO_ENDPOINT:$MINIO_PORT $ACCESS $SECRET" ;
@@ -199,7 +199,7 @@ data:
     scheme=http
     connectToMinio $scheme
     # Create the buckets
-    createBucket pipekit public false false
+    createBucket argoproj public false false
     createBucket workflows public false true
 ---
 apiVersion: batch/v1

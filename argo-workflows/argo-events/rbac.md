@@ -11,7 +11,7 @@ Deploy this with `kubectl apply -n argo-events -f /root/sa.yaml`{{execute}}.
 
 Now we can attempt to re-trigger our workflow. We can do this by deleting the file we uploaded to minio. This will trigger a delete event, which will trigger our workflow.
 
-In case you need to, port-forward the minio UI. Then log in and delete a file from the Pipekit bucket.
+In case you need to, port-forward the minio UI. Then log in and delete a file from the argoproj bucket.
 
 [Go back to Minio]({{TRAFFIC_HOST1_9001}}) and delete the previously uploaded file.
 

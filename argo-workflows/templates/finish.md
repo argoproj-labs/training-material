@@ -6,4 +6,4 @@ Let's recap:
 * Other templates **orchestrate** that work, such as DAG templates.
 * You can run tasks at the end of a template or workflow using an **exit handler**.
 
-Please [let us know what can be improved](https://github.com/pipekit/argo-workflows-intro-course/issues).
+Please [let us know what can be improved](https://github.com/argoproj-labs/training-material/issues).

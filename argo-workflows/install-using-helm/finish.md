@@ -4,4 +4,4 @@ Let's recap:
 * It can be uninstalled using Helm.
 * The installation can be customized by modifying the Helm values.
 
-Please [let us know what can be improved](https://github.com/pipekit/argo-workflows-intro-course/issues).
+Please [let us know what can be improved](https://github.com/argoproj-labs/training-material/issues).

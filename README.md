@@ -1,6 +1,6 @@
 # Argo Workflows Killercoda Training Material
 
-[Open the material on Killercoda here.](https://killercoda.com/pipekit/course/argo-workflows/)
+[Open the material on Killercoda here.](https://killercoda.com/argoproj/course/argo-workflows/)
 
 ## Maintainers
 * [Tim Collins](https://github.com/tico24), [Pipekit](https:/pipekit.io)
@@ -11,16 +11,9 @@ Thank you to the following for their outsized contributions to this course:
 * [Yuan Tang](https://github.com/terrytangyuan), [Akuity](https://akuity.io)
 
 
-## Troubleshooting
-
-* Turn your VPN off.
-* Clear your browser's cache.
-
-If you find any problem - please raise an issue - or better still create a pull request to fix it.
-
 ## Contributing
 
-Changes are propagated to Killercoda's CDN once committed to `master` branch. So this means you changes must be on `master` to be seen. This means you will need to fork this repo and set up your own Killercoda scenario in order to preview your changes.
+Changes are propagated to Killercoda's CDN once committed to the `master` branch. So this means your changes must be on `master` to be seen. This means you will need to fork this repo and set up your own Killercoda scenario in order to preview your changes.
 
 If you open a PR with major changes to the code or assets (i.e. not just changing text or fixing typos), please include a link to your version of the Killercoda course (if possible) so we can preview it before merging.
 

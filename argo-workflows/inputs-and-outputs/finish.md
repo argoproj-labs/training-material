@@ -13,4 +13,4 @@ Learn more about artifact features in the Argo Workflows documentation:
 - [Referencing artifact repositories](https://argoproj.github.io/argo-workflows/artifact-repository-ref/)
 
 
-Please [let us know what can be improved](https://github.com/pipekit/argo-workflows-intro-course/issues).
+Please [let us know what can be improved](https://github.com/argoproj-labs/training-material/issues).

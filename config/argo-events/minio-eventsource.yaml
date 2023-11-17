@@ -8,7 +8,7 @@ spec:
       # bucket information
       bucket:
         # name of the bucket
-        name: pipekit
+        name: argoproj
       # s3 service endpoint
       endpoint: minio.argo.svc.cluster.local:9000
       # list of events to subscribe to
