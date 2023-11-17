@@ -3,8 +3,8 @@
 [Open the material on Killercoda here.](https://killercoda.com/argoproj/course/argo-workflows/)
 
 ## Maintainers
-* [Tim Collins](https://github.com/tico24), [Pipekit](https:/pipekit.io)
-* [Caelan Urquhart](https://github.com/caelan-io), [Pipekit](https:/pipekit.io)
+* [Tim Collins](https://github.com/tico24), [Pipekit](https://pipekit.io)
+* [Caelan Urquhart](https://github.com/caelan-io), [Pipekit](https://pipekit.io)
 
 Thank you to the following for their outsized contributions to this course:
 * [Alex Collins](https://github.com/alexec), [Intuit](https://intuit.com)
