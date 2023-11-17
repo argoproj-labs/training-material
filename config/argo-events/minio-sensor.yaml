@@ -1,0 +1,46 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Sensor
+metadata:
+  name: minio
+spec:
+  dependencies:
+    - name: example-dep
+      eventSourceName: minio
+      eventName: example
+  triggers:
+    - template:
+        name: minio-workflow-trigger
+        k8s:
+          operation: create
+          source:
+            resource:
+              apiVersion: argoproj.io/v1alpha1
+              kind: Workflow
+              metadata:
+                generateName: artifact-workflow-
+                namespace: argo
+              spec:
+                entrypoint: whalesay
+                arguments:
+                  parameters:
+                    - name: message
+                      # the value will get overridden by event payload from test-dep
+                      value: THIS_WILL_BE_REPLACED
+                templates:
+                  - name: whalesay
+                    inputs:
+                      parameters:
+                        - name: message
+                    container:
+                      command:
+                        - cowsay
+                      image: docker/whalesay:latest
+                      args: ["{{inputs.parameters.message}}"]
+          # The container args from the workflow are overridden by the s3 notification key
+          parameters:
+            - src:
+                dependencyName: example-dep
+                dataKey: notification.0.s3.object.key
+              dest: spec.arguments.parameters.0.value
+      retryStrategy:
+        steps: 3

@@ -9,12 +9,12 @@ spec:
       dag:
         tasks:
           - name: a
-            template: ctr
+            template: whalesay
           - name: b
-            template: ctr
+            template: whalesay
             dependencies:
               - a
-    - name: ctr
+    - name: whalesay
       container:
         image: docker/whalesay
         command: [ cowsay ]

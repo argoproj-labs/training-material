@@ -3,13 +3,14 @@ just a Kubernetes service account token. So, to set up a service account for our
 
 * A **role** with the permission we want to use.
 * A **service account** for our automation user.
-* A **role binding** to bind the role to the service account:
+* A **service account token** for our service account.
+* A **role binding** to bind the role to the service account.
 
-In our example, we want to create a role for Jenkins to use that can create, get and list workflows:
+In our example, we want to create a role for Jenkins so it can create, get and list workflows:
 
 Create the role:
 
-`kubectl create role jenkins --verb=create,get,list --resource=workflows.argoproj.io`{{execute}}
+`kubectl create role jenkins --verb=create,get,list --resource=workflows.argoproj.io --resource=workfloweventbindings --resource=workflowtemplates`{{execute}}
 
 Create the service account:
 
@@ -19,30 +20,28 @@ Bind the service account to the role:
 
 `kubectl create rolebinding jenkins --role=jenkins --serviceaccount=argo:jenkins`{{execute}}
 
-Now we can get the name of the secret:
+Now we can create a token:
 
-`SECRET=$(kubectl get sa jenkins -o=jsonpath='{.secrets[0].name}')`{{execute}}
-
-Then we can get the secret and base-64 encode it:
-
-`ARGO_TOKEN="Bearer $(kubectl get secret $SECRET -o=jsonpath='{.data.token}' | base64 --decode)"`{{execute}}
+`ARGO_TOKEN="Bearer $(kubectl create token jenkins)"`{{execute}}
 
 Print out the token:
 
 `echo $ARGO_TOKEN`{{execute}}
 
-You should something like :
+You should see something like the following:
 
 ```
 Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6...
 ```
 
-To use the token, you add it as an `Authorization` header to you HTTP request:
+To use the token, you add it as an `Authorization` header to your HTTP request:
 
 `curl http://localhost:2746/api/v1/info -H "Authorization: $ARGO_TOKEN"`{{execute}}
 
-You should see something like:
+You should see something like the following:
 
 ```
-{"managedNamespace":"argo"...
+{"modals":{"feedback":false,"firstTimeUser":false,"newVersion":false}}...
 ```
+
+Now you are ready to create an Argo Workflow using the API.

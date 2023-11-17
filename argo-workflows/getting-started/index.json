@@ -1,14 +1,14 @@
 {
   "title": "Getting Started",
-  "description": "Learn how how to set-up Argo Workflows and run you first workflow.",
-  "difficulty": "Beginner",
-  "time": "15 to 20 minutes",
+  "description": "Learn how how to set up Argo Workflows and run your first workflow.",
   "details": {
+    "intro": {
+      "text": "intro.md"
+    },
     "steps": [
       {
         "title": "Installing Argo Workflows",
-        "text": "install.md",
-        "code": "foreground.sh"
+        "text": "install.md"
       },
       {
         "title": "What is a workflow?",
@@ -31,24 +31,11 @@
         }
       ]
     },
-    "intro": {
-      "text": "intro.md"
-    },
     "finish": {
       "text": "finish.md"
     }
   },
-  "environment": {
-    "uilayout": "terminal-iframe",
-    "showdashboard": true,
-    "dashboards": [
-      {
-        "name": "Argo Server",
-        "href": "https://[[HOST_SUBDOMAIN]]-2746-[[KATACODA_HOST]].environments.katacoda.com/workflows/argo"
-      }
-    ]
-  },
   "backend": {
-    "imageid": "kubernetes-cluster-running:1.18"
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }

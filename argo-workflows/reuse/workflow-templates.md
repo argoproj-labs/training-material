@@ -14,9 +14,10 @@ spec:
     - name: main
       container:
         image: docker/whalesay
+        command: [ cowsay ]
 ```
 
-Lets created this workflow template:
+Let's create this workflow template:
 
 `argo template create hello-workflowtemplate.yaml`{{execute}}
 
@@ -53,6 +54,12 @@ Note how the specification of the workflow is actually a reference to the templa
 
 ## Exercise
 
-* Use the user interface to submit a workflow template.
+* Use the user interface to submit a workflow template:
+  *  Port-forward to the Argo Server pod...
+  
+  `kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &`{{execute}}
+  
+  * and [open the Argo Workflows UI]({{TRAFFIC_HOST1_2746}}/workflows/argo?limit=50).
+
 * Update the workflow template to add some parameters (e.g. to print a message). Use `argo submit --from` to submit it
   with different parameters. 

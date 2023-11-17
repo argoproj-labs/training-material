@@ -1,4 +1,4 @@
-If you need to perform a task after something has is finished, you can use an exit handle. Exit handlers are specified
+If you need to perform a task after something has finished, you can use an exit handler. Exit handlers are specified
 using `onExit`:
 
 ```
@@ -34,3 +34,5 @@ Note how the exit handler task ran last.
 
 An exit handler can be run at the end of a template, or at the end of a workflow. Change the example to run one at the
 end of the workflow.
+
+Learn more about [exit handlers](https://argoproj.github.io/argo-workflows/walk-through/exit-handlers/), as well as their close cousin, [lifecycle hooks](https://argoproj.github.io/argo-workflows/lifecyclehook/), in the Argo Workflows documentation.

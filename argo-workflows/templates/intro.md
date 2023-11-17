@@ -4,7 +4,6 @@ In this scenario you will:
 2. Learn how to template your templates using **template tags**.
 3. Combine them together to make **complex workflows**.
 
-From now on, Argo Workflows will be set-up automatically for you. Wait until you see "Ready" in the console.
+From now on, Argo Workflows will be set up automatically for you. Wait until you see "Ready" in the console.
 
-There will also be optional exercises. These will mean the lessons take longer, but help you be sure you've really
-understood everything. 
+There will also be optional exercises. These will mean the lessons take longer, but help you be sure you've really understood everything. 

@@ -1,0 +1,27 @@
+# Used by inputs-and-outputs/output parameters
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: patchpod-role
+  namespace: argo
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - patch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: argo-patchpod-binding
+  namespace: argo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: patchpod-role
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: argo

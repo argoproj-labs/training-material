@@ -1,9 +1,9 @@
-One type of input or output is a parameter. Unlike artifacts, these are plain string values, and are useful for most
+One type of input or output is a **parameter**. Unlike artifacts, these are plain string values, and are useful for most
 simple cases.
 
 ## Input Parameters
 
-Lets have a look at an example:
+Let's have a look at an example:
 
 ```
     - name: main
@@ -16,13 +16,13 @@ Lets have a look at an example:
         args: [ "{{inputs.parameters.message}}" ]
 ```
 
-This template declare that it has one input parameter named "message".
+This template declares that it has one input parameter named "message".
 
 See the complete workflow:
 
 `cat input-parameters-workflow.yaml`{{execute}}
 
-See how the workflow itself has arguments.
+See how the workflow itself has arguments?
 
 Run it:
 
@@ -35,9 +35,9 @@ STEP                       TEMPLATE  PODNAME                 DURATION  MESSAGE
  ✔ input-parameters-mvtcw  main      input-parameters-mvtcw  8s          
 ```
 
-If a workflow has parameters, you can change the parameters using `-p`:
+If a workflow has parameters, you can change the parameters using `-p` using the CLI:
 
-`argo submit --watch input-parameters-workflow.yaml -p message='Hi Katacoda!'`{{execute}}
+`argo submit --watch input-parameters-workflow.yaml -p message='Welcome to Argo!'`{{execute}}
 
 You should see:
 
@@ -46,16 +46,16 @@ STEP                       TEMPLATE  PODNAME                 DURATION  MESSAGE
  ✔ input-parameters-lwkdx  main      input-parameters-lwkdx  5s          
 ```
 
-Lets check the output in the logs:
+Let's check the output in the logs:
 
 `argo logs @latest`{{execute}}
 
 You should see:
 
 ```
- ______________ 
-< Hi Katacoda! >
- -------------- 
+ ______________
+< Welcome to Argo! >
+ --------------
     \
      \
       \     
@@ -71,7 +71,7 @@ You should see:
 
 ## Output Parameters
 
-Output parameters can be from a few places, but typically the most versatile is from a file. It this example, the
+Output parameters can be from a few places, but typically the most versatile is from a file. In this example, the
 container creates a file with a message in it:
 
 ```
@@ -79,7 +79,7 @@ container creates a file with a message in it:
     container:
       image: docker/whalesay
       command: [sh, -c]
-      args: ["echo -n hello world > /tmp/hello_world.txt"] 
+      args: ["echo -n hello world > /tmp/hello_world.txt"]
     outputs:
       parameters:
       - name: hello-param		
@@ -87,8 +87,8 @@ container creates a file with a message in it:
           path: /tmp/hello_world.txt
 ```
 
-In DAGs and steps template, you can reference the output from one task, as the input to another task using a **template
-tag**:
+In a DAG template and steps template, you can reference the output from one task, as the input to another
+task using a **template tag**:
 
 ```
       dag:
@@ -121,3 +121,7 @@ STEP                     TEMPLATE       PODNAME                      DURATION  M
  ├─✔ generate-parameter  whalesay       parameters-vjvwg-4019940555  43s         
  └─✔ consume-parameter   print-message  parameters-vjvwg-1497618270  8s          
 ```
+
+Learn more about parameters in the Argo Workflows documentation:
+- [Parameters overview](https://argoproj.github.io/argo-workflows/walk-through/parameters/)
+- [Workflow input parameters](https://argoproj.github.io/argo-workflows/workflow-inputs/).

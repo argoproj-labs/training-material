@@ -1,0 +1,31 @@
+{
+  "title": "Argo Events",
+  "description": "Learn how to integrate Argo Workflows with Argo Events",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Install and Configure Argo Events",
+        "text": "install-events.md"
+      },
+      {
+        "title": "Add a Minio Sensor and Trigger",
+        "text": "sensor.md"
+      },
+      {
+        "title": "Resolve RBAC issues and re-trigger",
+        "text": "rbac.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
