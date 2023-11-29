@@ -6,11 +6,11 @@ container.
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  name: hello  
+  name: hello
 spec:
-  entrypoint: main # the first template to run in the workflows        
+  entrypoint: main # the first template to run in the workflows
   templates:
-  - name: main           
+  - name: main
     container: # this is a container template
       image: docker/whalesay # this image prints "hello world" to the console
       command: ["cowsay"]
@@ -22,7 +22,7 @@ Because a workflow is just a Kubernetes resource, you can use `kubectl` with the
 
 Create a workflow:
 
-`kubectl -n argo apply -f hello-workflow.yaml`{{execute}}
+`kubectl -n argo create -f hello-workflow.yaml`{{execute}}
 
 Then you can wait for it to complete (around 1m):
 

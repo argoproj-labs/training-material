@@ -51,9 +51,10 @@ metadata:
   generateName: hello-world-
   namespace: argo
 spec:
-  entrypoint: main        
+  serviceAccountName: argo
+  entrypoint: main
   templates:
-  - name: main           
+  - name: main
     container:
       image: docker/whalesay
       command: ["cowsay"]
