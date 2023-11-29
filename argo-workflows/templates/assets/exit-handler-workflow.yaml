@@ -15,10 +15,10 @@ spec:
     - name: whalesay
       container:
         image: docker/whalesay
-        command: [ cowsay ]
+        command: [cowsay]
 
     - name: tidy-up
       container:
         image: docker/whalesay
-        command: [ cowsay ]
-        args: [ "tidy up!" ]
+        command: [cowsay]
+        args: ["tidy up!"]

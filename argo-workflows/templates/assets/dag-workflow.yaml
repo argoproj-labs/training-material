@@ -17,5 +17,5 @@ spec:
     - name: whalesay
       container:
         image: docker/whalesay
-        command: [ cowsay ]
-        args: [ "hello world" ]
+        command: [cowsay]
+        args: ["hello world"]

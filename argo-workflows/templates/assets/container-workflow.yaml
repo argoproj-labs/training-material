@@ -8,5 +8,5 @@ spec:
     - name: main
       container:
         image: docker/whalesay
-        command: [ cowsay ]
-        args: [ "hello world" ]
+        command: [cowsay]
+        args: ["hello world"]

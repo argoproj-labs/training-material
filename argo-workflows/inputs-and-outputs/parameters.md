@@ -32,7 +32,7 @@ You should see:
 
 ```
 STEP                       TEMPLATE  PODNAME                 DURATION  MESSAGE
- ✔ input-parameters-mvtcw  main      input-parameters-mvtcw  8s          
+ ✔ input-parameters-mvtcw  main      input-parameters-mvtcw  8s
 ```
 
 If a workflow has parameters, you can change the parameters using `-p` using the CLI:
@@ -43,7 +43,7 @@ You should see:
 
 ```
 STEP                       TEMPLATE  PODNAME                 DURATION  MESSAGE
- ✔ input-parameters-lwkdx  main      input-parameters-lwkdx  5s          
+ ✔ input-parameters-lwkdx  main      input-parameters-lwkdx  5s
 ```
 
 Let's check the output in the logs:
@@ -58,15 +58,15 @@ You should see:
  --------------
     \
      \
-      \     
-                    ##        .            
-              ## ## ##       ==            
-           ## ## ## ##      ===            
-       /""""""""""""""""___/ ===        
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
-       \______ o          __/            
-        \    \        __/             
-          \____\______/   
+      \
+                    ##        .
+              ## ## ##       ==
+           ## ## ## ##      ===
+       /""""""""""""""""___/ ===
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+       \______ o          __/
+        \    \        __/
+          \____\______/
 ```
 
 ## Output Parameters
@@ -82,7 +82,7 @@ container creates a file with a message in it:
       args: ["echo -n hello world > /tmp/hello_world.txt"]
     outputs:
       parameters:
-      - name: hello-param		
+      - name: hello-param
         valueFrom:
           path: /tmp/hello_world.txt
 ```
@@ -117,9 +117,12 @@ You should see:
 
 ```
 STEP                     TEMPLATE       PODNAME                      DURATION  MESSAGE
- ✔ parameters-vjvwg      main                                                    
- ├─✔ generate-parameter  whalesay       parameters-vjvwg-4019940555  43s         
- └─✔ consume-parameter   print-message  parameters-vjvwg-1497618270  8s          
+ ✔ parameters-vjvwg
+ main
+ ├─✔ generate-parameter  whalesay       parameters-vjvwg-4019940555
+ 43s
+ └─✔ consume-parameter   print-message  parameters-vjvwg-1497618270
+ 8s
 ```
 
 Learn more about parameters in the Argo Workflows documentation:

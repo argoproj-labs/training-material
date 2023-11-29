@@ -55,7 +55,7 @@ Note how the specification of the workflow is actually a reference to the templa
 ## Exercise
 
 * Use the user interface to submit a workflow template:
-  *  Port-forward to the Argo Server pod...
+  * Port-forward to the Argo Server pod...
 
   `kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &`{{execute}}
 

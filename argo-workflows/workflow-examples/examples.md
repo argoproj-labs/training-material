@@ -8,7 +8,7 @@ If an example works outside of Killercoda, but not in the course, please open an
 # Run an example
 `argo submit -n argo --watch /root/examples/coinflip.yaml`{{execute}}
 
-## You may need to `kubectl apply` additional files to the cluster prior to running an example:
+## You may need to `kubectl apply` additional files to the cluster prior to running an example
 `kubectl apply -n argo -f /root/examples/workflow-template/templates.yaml`{{execute}}
 
 # View the server UI
