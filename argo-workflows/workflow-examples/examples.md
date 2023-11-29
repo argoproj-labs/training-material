@@ -14,4 +14,5 @@ If an example works outside of Killercoda, but not in the course, please open an
 # View the server UI
 `kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &`{{execute}}
 
+<!-- markdown-link-check-disable-next-line -->
 [click here to access the UI]({{TRAFFIC_HOST1_2746}})

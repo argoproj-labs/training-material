@@ -14,6 +14,7 @@ Copy the whole response, including `Bearer`, and paste it into the white box in 
 
 Once you're logged in, you may need to click to open the API docs again:
 
+<!-- markdown-link-check-disable-next-line -->
 [Open the API docs]({{TRAFFIC_HOST1_2746}}/apidocs)
 
 ## Exercise
