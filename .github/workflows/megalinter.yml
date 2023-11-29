@@ -1,0 +1,6 @@
+name: 'Lint'
+on: pull_request
+jobs:
+  linter:
+    - name: MegaLinter
+      uses: oxsecurity/megalinter@v7.6.0
