@@ -1,8 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  name: hello
+  generateName: hello-
 spec:
+  serviceAccountName: argo
   entrypoint: main
   templates:
     - name: main
