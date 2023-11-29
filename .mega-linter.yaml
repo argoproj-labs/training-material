@@ -1,0 +1,6 @@
+# Configuration file for MegaLinter
+DISABLE_LINTERS:
+  - REPOSITORY_CHECKOV
+  - REPOSITORY_KICS
+  - REPOSITORY_TRIVY
+  - SPELL_LYCHEE
