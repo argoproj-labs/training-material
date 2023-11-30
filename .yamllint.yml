@@ -15,5 +15,9 @@ rules:
     max: 500
   comments:
     min-spaces-from-content: 1 # Used to follow prettier standard: https://github.com/prettier/prettier/pull/10926
-  document-start:
-    present: false
+  document-start: disable
+
+ignore:
+  - .mega-linter.yaml
+  - all/this/directory/
+  - '*.template.yaml'
