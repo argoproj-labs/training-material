@@ -6,4 +6,4 @@ DISABLE_LINTERS:
   - SPELL_LYCHEE
 
 JSON_ESLINT_PLUGIN_JSONC_FILTER_REGEX_EXCLUDE: "renovate.json$"
-YAML_V8R_FILTER_REGEX_EXCLUDE: "renovate.json$|.mega-linter.yaml$"
+YAML_V8R_FILTER_REGEX_EXCLUDE: "yamllint.yml$|.mega-linter.yaml$"
