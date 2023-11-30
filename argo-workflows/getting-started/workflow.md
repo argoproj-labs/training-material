@@ -22,7 +22,7 @@ Because a workflow is just a Kubernetes resource, you can use `kubectl` with the
 
 Create a workflow:
 
-`kubectl -n argo create -f hello-workflow.yaml`{{execute}}
+`kubectl -n argo apply -f hello-workflow.yaml`{{execute}}
 
 Then you can wait for it to complete (around 1m):
 
