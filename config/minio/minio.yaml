@@ -15,30 +15,30 @@ spec:
         app: minio
     spec:
       containers:
-      - command:
-        - /bin/sh
-        - -ce
-        - /usr/bin/docker-entrypoint.sh minio -S /etc/minio/certs/ server --console-address :9001 /export
-        env:
-        - name: MINIO_ROOT_USER
-          value: "argoproj"
-        - name: MINIO_ROOT_PASSWORD
-          value: "sup3rs3cr3tp4ssw0rd1"
-        image: minio/minio
-        imagePullPolicy: Always
-        name: minio
-        ports:
-        - containerPort: 9000
-          name: http
-          protocol: TCP
-        - containerPort: 9001
-          name: console
-          protocol: TCP
-        resources:
-          requests:
-            memory: 512Mi
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
+        - command:
+            - /bin/sh
+            - -ce
+            - /usr/bin/docker-entrypoint.sh minio -S /etc/minio/certs/ server --console-address :9001 /export
+          env:
+            - name: MINIO_ROOT_USER
+              value: "argoproj"
+            - name: MINIO_ROOT_PASSWORD
+              value: "sup3rs3cr3tp4ssw0rd1"
+          image: minio/minio
+          imagePullPolicy: Always
+          name: minio
+          ports:
+            - containerPort: 9000
+              name: http
+              protocol: TCP
+            - containerPort: 9001
+              name: console
+              protocol: TCP
+          resources:
+            requests:
+              memory: 512Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
 ---
 apiVersion: v1
 stringData:
@@ -94,9 +94,9 @@ roleRef:
   kind: ClusterRole
   name: minio-job-cluster-role
 subjects:
-- kind: ServiceAccount
-  name: minio-job
-  namespace: argo
+  - kind: ServiceAccount
+    name: minio-job
+    namespace: argo
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -221,25 +221,25 @@ spec:
         - name: minio-configuration
           projected:
             sources:
-            - configMap:
-                name: minio-config
+              - configMap:
+                  name: minio-config
       serviceAccountName: minio-job
       containers:
-      - name: minio-mc
-        image: "minio/mc"
-        imagePullPolicy: IfNotPresent
-        command: ["/bin/sh", "/config/initialize"]
-        env:
-          - name: MINIO_ENDPOINT
-            value: minio
-          - name: MINIO_PORT
-            value: "9000"
-        volumeMounts:
-          - name: minio-configuration
-            mountPath: /config
-        resources:
-          requests:
-            memory: 128Mi
+        - name: minio-mc
+          image: "minio/mc"
+          imagePullPolicy: IfNotPresent
+          command: ["/bin/sh", "/config/initialize"]
+          env:
+            - name: MINIO_ENDPOINT
+              value: minio
+            - name: MINIO_PORT
+              value: "9000"
+          volumeMounts:
+            - name: minio-configuration
+              mountPath: /config
+          resources:
+            requests:
+              memory: 128Mi
       initContainers:
         - name: waitforminio
           image: groundnuty/k8s-wait-for:v2.0
@@ -265,4 +265,4 @@ kind: ServiceAccount
 metadata:
   name: minio-job
 secrets:
-- name: minio-job-sa
+  - name: minio-job-sa

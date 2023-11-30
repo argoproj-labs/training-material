@@ -1,12 +1,12 @@
 {
-    "items": [
-      { "path": "getting-started" },
-      { "path": "templates" },
-      { "path": "inputs-and-outputs" },
-      { "path": "reuse" },
-      { "path": "api" },
-      { "path": "workflow-examples" },
-      { "path": "argo-events" },
-      { "path": "install-using-helm" }
-    ]
-  }
+  "items": [
+    { "path": "getting-started" },
+    { "path": "templates" },
+    { "path": "inputs-and-outputs" },
+    { "path": "reuse" },
+    { "path": "api" },
+    { "path": "workflow-examples" },
+    { "path": "argo-events" },
+    { "path": "install-using-helm" }
+  ]
+}

@@ -7,7 +7,7 @@ spec:
   ttlStrategy:
     secondsAfterCompletion: 1
   templates:
-  - name: main
-    container:
-      image: docker/whalesay
-      command: ["cowsay"]
+    - name: main
+      container:
+        image: docker/whalesay
+        command: ["cowsay"]

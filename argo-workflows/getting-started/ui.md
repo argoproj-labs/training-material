@@ -4,7 +4,7 @@ We will switch the authentication mode to server so that we can bypass the UI lo
 
 Additionally, Argo Server runs over https by default. This isn't compatible with Killercoda, so we will disable https at the same time. **This is not something we recommend for production installs.**
 
-```
+```bash
 kubectl patch deployment \
   argo-server \
   --namespace argo \
@@ -46,7 +46,7 @@ Click "Edit using full workflow options". You should see something similar to th
 
 Paste this YAML into the editor:
 
-```
+```yaml
 metadata:
   generateName: hello-world-
   namespace: argo
@@ -54,10 +54,10 @@ spec:
   serviceAccountName: argo
   entrypoint: main
   templates:
-  - name: main
-    container:
-      image: docker/whalesay
-      command: ["cowsay"]
+    - name: main
+      container:
+        image: docker/whalesay
+        command: ["cowsay"]
 ```{{copy}}
 
 Click "Create". You will see a diagram of the workflow. The yellow icon shows that it is pending, after a few seconds it'll turn blue to indicate it is running, and finally green to show that it has completed successfully:

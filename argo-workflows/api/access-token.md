@@ -30,7 +30,7 @@ Print out the token:
 
 You should see something like the following:
 
-```
+```bash
 Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6...
 ```
 
@@ -40,7 +40,7 @@ To use the token, you add it as an `Authorization` header to your HTTP request:
 
 You should see something like the following:
 
-```
+```bash
 {"modals":{"feedback":false,"firstTimeUser":false,"newVersion":false}}...
 ```
 

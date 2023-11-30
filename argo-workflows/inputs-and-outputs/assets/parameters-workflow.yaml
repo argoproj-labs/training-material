@@ -22,8 +22,8 @@ spec:
     - name: whalesay
       container:
         image: docker/whalesay
-        command: [ sh, -c ]
-        args: [ "echo -n hello world > /tmp/hello_world.txt" ]
+        command: [sh, -c]
+        args: ["echo -n hello world > /tmp/hello_world.txt"]
       outputs:
         parameters:
           - name: hello-param
@@ -36,5 +36,5 @@ spec:
           - name: message
       container:
         image: docker/whalesay
-        command: [ cowsay ]
-        args: [ "{{inputs.parameters.message}}" ]
+        command: [cowsay]
+        args: ["{{inputs.parameters.message}}"]

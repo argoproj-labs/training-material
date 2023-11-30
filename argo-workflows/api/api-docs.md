@@ -1,5 +1,6 @@
 You can find API docs in the user interface, try it now:
 
+<!-- markdown-link-check-disable-next-line -->
 [Open the API docs]({{TRAFFIC_HOST1_2746}}/apidocs)
 
 You can use the API docs to send API requests, so it is really useful to test things out.
@@ -14,6 +15,7 @@ Copy the whole response, including `Bearer`, and paste it into the white box in 
 
 Once you're logged in, you may need to click to open the API docs again:
 
+<!-- markdown-link-check-disable-next-line -->
 [Open the API docs]({{TRAFFIC_HOST1_2746}}/apidocs)
 
 ## Exercise

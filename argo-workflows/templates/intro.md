@@ -6,4 +6,4 @@ In this scenario you will:
 
 From now on, Argo Workflows will be set up automatically for you. Wait until you see "Ready" in the console.
 
-There will also be optional exercises. These will mean the lessons take longer, but help you be sure you've really understood everything. 
+There will also be optional exercises. These will mean the lessons take longer, but help you be sure you've really understood everything.

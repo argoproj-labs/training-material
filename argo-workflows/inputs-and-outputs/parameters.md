@@ -5,7 +5,7 @@ simple cases.
 
 Let's have a look at an example:
 
-```
+```yaml
     - name: main
       inputs:
         parameters:
@@ -30,9 +30,9 @@ Run it:
 
 You should see:
 
-```
+```bash
 STEP                       TEMPLATE  PODNAME                 DURATION  MESSAGE
- ✔ input-parameters-mvtcw  main      input-parameters-mvtcw  8s          
+ ✔ input-parameters-mvtcw  main      input-parameters-mvtcw  8s
 ```
 
 If a workflow has parameters, you can change the parameters using `-p` using the CLI:
@@ -41,9 +41,9 @@ If a workflow has parameters, you can change the parameters using `-p` using the
 
 You should see:
 
-```
+```bash
 STEP                       TEMPLATE  PODNAME                 DURATION  MESSAGE
- ✔ input-parameters-lwkdx  main      input-parameters-lwkdx  5s          
+ ✔ input-parameters-lwkdx  main      input-parameters-lwkdx  5s
 ```
 
 Let's check the output in the logs:
@@ -52,21 +52,21 @@ Let's check the output in the logs:
 
 You should see:
 
-```
+```bash
  ______________
 < Welcome to Argo! >
  --------------
     \
      \
-      \     
-                    ##        .            
-              ## ## ##       ==            
-           ## ## ## ##      ===            
-       /""""""""""""""""___/ ===        
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
-       \______ o          __/            
-        \    \        __/             
-          \____\______/   
+      \
+                    ##        .
+              ## ## ##       ==
+           ## ## ## ##      ===
+       /""""""""""""""""___/ ===
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+       \______ o          __/
+        \    \        __/
+          \____\______/
 ```
 
 ## Output Parameters
@@ -74,7 +74,7 @@ You should see:
 Output parameters can be from a few places, but typically the most versatile is from a file. In this example, the
 container creates a file with a message in it:
 
-```
+```yaml
   - name: whalesay
     container:
       image: docker/whalesay
@@ -82,7 +82,7 @@ container creates a file with a message in it:
       args: ["echo -n hello world > /tmp/hello_world.txt"]
     outputs:
       parameters:
-      - name: hello-param		
+      - name: hello-param
         valueFrom:
           path: /tmp/hello_world.txt
 ```
@@ -90,7 +90,7 @@ container creates a file with a message in it:
 In a DAG template and steps template, you can reference the output from one task, as the input to another
 task using a **template tag**:
 
-```
+```yaml
       dag:
         tasks:
           - name: generate-parameter
@@ -115,11 +115,14 @@ Run it:
 
 You should see:
 
-```
+```bash
 STEP                     TEMPLATE       PODNAME                      DURATION  MESSAGE
- ✔ parameters-vjvwg      main                                                    
- ├─✔ generate-parameter  whalesay       parameters-vjvwg-4019940555  43s         
- └─✔ consume-parameter   print-message  parameters-vjvwg-1497618270  8s          
+ ✔ parameters-vjvwg
+ main
+ ├─✔ generate-parameter  whalesay       parameters-vjvwg-4019940555
+ 43s
+ └─✔ consume-parameter   print-message  parameters-vjvwg-1497618270
+ 8s
 ```
 
 Learn more about parameters in the Argo Workflows documentation:

@@ -22,8 +22,8 @@ spec:
     - name: save-message
       container:
         image: docker/whalesay
-        command: [ sh, -c ]
-        args: [ "cowsay hello world > /tmp/hello_world.txt" ]
+        command: [sh, -c]
+        args: ["cowsay hello world > /tmp/hello_world.txt"]
       outputs:
         artifacts:
           - name: hello-art
@@ -36,5 +36,5 @@ spec:
             path: /tmp/message
       container:
         image: docker/whalesay
-        command: [ sh, -c ]
-        args: [ "cat /tmp/message" ]
+        command: [sh, -c]
+        args: ["cat /tmp/message"]

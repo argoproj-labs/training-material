@@ -1,6 +1,6 @@
 A **cron workflow** is a workflow that runs on a cron schedule:
 
-```
+```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: CronWorkflow
 metadata:
@@ -26,4 +26,3 @@ You'll need to wait for up to a minute to see the workflow run.
 ## Exercise
 
 Cron workflows can be submitted immediately from the CLI or the UI. Find out how.
-

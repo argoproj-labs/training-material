@@ -15,3 +15,6 @@ data:
       secretKeySecret:
         name: my-minio-cred
         key: secretkey
+  workflowDefaults: |
+    spec:
+      serviceAccountName: argo

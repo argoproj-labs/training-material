@@ -2,7 +2,7 @@ A workflow is defined as a **Kubernetes resource**. Each workflow consists of on
 defined as the entrypoint. Each template can be one of several types, in this example we have one template that is a
 container.
 
-```
+```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:

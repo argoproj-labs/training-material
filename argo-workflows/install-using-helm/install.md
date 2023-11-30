@@ -1,5 +1,5 @@
 This command installs the latest Argo Workflows Helm Chart. In production it would be sensible to pin the version of the chart to a specific version. Argo is normally installed into a namespace named `argo` so we will create that as part of our deployment:
-```
+```bash
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 helm install argo argo/argo-workflows --namespace argo --create-namespace

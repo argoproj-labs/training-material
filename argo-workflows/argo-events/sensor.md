@@ -16,6 +16,7 @@ We need to port-forward the minio UI, log in and upload/delete a file from the a
 
 `kubectl -n argo port-forward --address 0.0.0.0 svc/minio 9001:9001 > /dev/null &`{{execute}}
 
+<!-- markdown-link-check-disable-next-line -->
 [Log in]({{TRAFFIC_HOST1_9001}}) with the username `argoproj` and the password `sup3rs3cr3tp4ssw0rd1`, and navigate to the argoproj bucket.
 
 Upload a file.
@@ -28,7 +29,7 @@ Let's look at the sensor pod logs:
 
 We can see that... it failed. You'll see logs similar to:
 
-```
+```bash
 {
    "level":"error",
    "ts":1685711961.5645943,

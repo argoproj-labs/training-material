@@ -58,21 +58,21 @@ Allow about 5 seconds for the workflow to start and then check the logs:
 
 You should see something like the following:
 
-```
+```bash
  ______________
 < hello events >
  --------------
     \
      \
-      \     
-                    ##        .            
-              ## ## ##       ==            
-           ## ## ## ##      ===            
-       /""""""""""""""""___/ ===        
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
-       \______ o          __/            
-        \    \        __/             
-          \____\______/  
+      \
+                    ##        .
+              ## ## ##       ==
+           ## ## ## ##      ===
+       /""""""""""""""""___/ ===
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+       \______ o          __/
+        \    \        __/
+          \____\______/
 ```
 
 [Learn more about webhooks](https://argoproj.github.io/argo-workflows/events/) in the Argo Workflows docs.

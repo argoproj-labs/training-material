@@ -13,6 +13,7 @@ Now we can attempt to re-trigger our workflow. We can do this by deleting the fi
 
 In case you need to, port-forward the minio UI. Then log in and delete a file from the argoproj bucket.
 
+<!-- markdown-link-check-disable-next-line -->
 [Go back to Minio]({{TRAFFIC_HOST1_9001}}) and delete the previously uploaded file.
 
 
@@ -22,7 +23,7 @@ Let's look at the sensor pod logs again.
 
 This time, the event successfully triggered our workflow:
 
-```
+```bash
 {
    "level":"info",
    "ts":1685713173.4561043,

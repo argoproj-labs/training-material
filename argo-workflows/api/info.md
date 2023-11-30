@@ -14,12 +14,12 @@ Typically, it is good to be able to check you can access it first. This can be d
 
 You should see something like this if it is successful:
 
-```
+```bash
 {"code":16,"message":"token not valid for running mode"}
 ```
 
 If it fails, then you'll see something like this:
-```
+```bash
 curl: (7) Failed to connect to localhost port 2746: Connection refused
 ```
 
