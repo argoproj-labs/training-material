@@ -8,6 +8,7 @@
     "words": [
         "Akuity",
         "AUTHCLIENT",
+        "Caelan",
         "Imtp",
         "Killercoda",
         "Minio",
@@ -18,6 +19,7 @@
         "accesskey",
         "argoproj",
         "coinflip",
+        "configmap",
         "cowsay",
         "creds",
         "cronworkflow",
@@ -46,7 +48,9 @@
         "vjvwg",
         "waitforminio",
         "whalesay",
+        "workfloweventbinding",
         "workfloweventbindings",
+        "workflowtemplate",
         "workflowtemplates"
     ]
 }
