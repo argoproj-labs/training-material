@@ -4,7 +4,7 @@ We will switch the authentication mode to server so that we can bypass the UI lo
 
 Additionally, Argo Server runs over https by default. This isn't compatible with Killercoda, so we will disable https at the same time. **This is not something we recommend for production installs.**
 
-```
+```bash
 kubectl patch deployment \
   argo-server \
   --namespace argo \

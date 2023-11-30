@@ -1,7 +1,9 @@
 {
     "ignorePaths": [
         "**/.github/**",
-        ".mega-linter.yaml"
+        ".mega-linter.yaml",
+        ".markdownlint.json"
+        ".yamllint.yml"
     ],
     "language": "en",
     "version": "0.2",
