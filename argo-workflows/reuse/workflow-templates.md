@@ -58,6 +58,8 @@ Note how the specification of the workflow is actually a reference to the templa
   * Port-forward to the Argo Server pod...
     `kubectl -n argo port-forward --address 0.0.0.0 svc/argo-server 2746:2746 > /dev/null &`{{execute}}
 <!-- markdown-link-check-disable-next-line -->
+<!-- markdownlint-disable -->
   * and [open the Argo Workflows UI]({{TRAFFIC_HOST1_2746}}/workflows/argo?limit=50).
 * Update the workflow template to add some parameters (e.g. to print a message). Use `argo submit --from` to submit it
   with different parameters.
+<!-- markdownlint-restore -->
