@@ -1,7 +1,7 @@
 If you need to perform a task after something has finished, you can use an exit handler. Exit handlers are specified
 using `onExit`:
 
-```
+```yaml
       dag:
         tasks:
           - name: a
@@ -21,7 +21,7 @@ Run it:
 
 You should see:
 
-```
+```bash
 STEP                   TEMPLATE  PODNAME                        DURATION  MESSAGE
  ✔ exit-handler-plvg7  main
  ├─✔ a                 whalesay  exit-handler-plvg7-1651124468  5s

@@ -3,7 +3,7 @@ They're similar to pipelines in Jenkins.
 
 Workflow templates have a different `kind` to a workflow, but are otherwise very similar:
 
-```
+```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
@@ -33,7 +33,7 @@ To submit a template, you can use the UI or the CLI:
 
 You should see:
 
-```
+```bash
 STEP            TEMPLATE  PODNAME      DURATION  MESSAGE
  ✔ hello-c622t  main      hello-c622t  33s
 ```
@@ -44,7 +44,7 @@ Lets take a look at the workflow you created:
 
 Look for the workflow specification in the output:
 
-```
+```yaml
 spec:
   workflowTemplateRef:
     name: hello

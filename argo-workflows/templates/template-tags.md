@@ -3,7 +3,7 @@ and `}}` and will be replaced when the template is executed.
 
 What tags are available to use depends on the template type, and there are a number of global ones you can use, such as `{{workflow.name}}`, which is replaced by the workflow's name:
 
-```
+```yaml
     - name: main
       container:
         image: docker/whalesay
@@ -25,21 +25,21 @@ You can see the output by running
 
 You should see something like:
 
-```
+```bash
  __________________________
 < hello template-tag-kqpc6 >
  --------------------------
     \
      \
-      \     
-                    ##        .            
-              ## ## ##       ==            
-           ## ## ## ##      ===            
-       /""""""""""""""""___/ ===        
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~   
-       \______ o          __/            
-        \    \        __/             
-          \____\______/   
+      \
+                    ##        .
+              ## ## ##       ==
+           ## ## ## ##      ===
+       /""""""""""""""""___/ ===
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+       \______ o          __/
+        \    \        __/
+          \____\______/
 ```
 
 There are many more different tags, you can [read more about template tags in the docs](https://argoproj.github.io/argo-workflows/variables/).

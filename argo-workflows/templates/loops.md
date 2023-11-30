@@ -1,11 +1,11 @@
-The ability to run large parallel processing jobs is one of the key features of Argo Workflows.  
+The ability to run large parallel processing jobs is one of the key features of Argo Workflows.
 Let's have a look at using loops to do this.
 
 ## withItems
 
 A DAG allows you to loop over a number of items using `withItems`:
 
-```
+```yaml
       dag:
         tasks:
           - name: print-message
@@ -25,11 +25,11 @@ In this example, it will execute once for each of the listed items. We can see a
 
 You should see something like:
 
-```
+```bash
 STEP                                 TEMPLATE  PODNAME                      DURATION  MESSAGE
- ✔ with-items-4qzg9                  main                                               
- ├─✔ print-message(0:hello world)    whalesay  with-items-4qzg9-465751898   7s          
- └─✔ print-message(1:goodbye world)  whalesay  with-items-4qzg9-2410280706  5s          
+ ✔ with-items-4qzg9                  main
+ ├─✔ print-message(0:hello world)    whalesay  with-items-4qzg9-465751898   7s
+ └─✔ print-message(1:goodbye world)  whalesay  with-items-4qzg9-2410280706  5s
 ```
 
 Notice how the two items ran at the same time.
@@ -38,7 +38,7 @@ Notice how the two items ran at the same time.
 
 You can also loop over a sequence of numbers using `withSequence`:
 
-```
+```yaml
       dag:
         tasks:
           - name: print-message
@@ -55,14 +55,14 @@ As usual, run it:
 
 `argo submit --watch with-sequence-workflow.yaml`{{execute}}
 
-```
+```bash
 STEP                     TEMPLATE  PODNAME                         DURATION  MESSAGE
- ✔ with-sequence-8nrp5   main                                                  
- ├─✔ print-message(0:0)  whalesay  with-sequence-8nrp5-3678575801  9s          
- ├─✔ print-message(1:1)  whalesay  with-sequence-8nrp5-1828425621  7s          
- ├─✔ print-message(2:2)  whalesay  with-sequence-8nrp5-1644772305  13s         
- ├─✔ print-message(3:3)  whalesay  with-sequence-8nrp5-3766794981  15s         
- └─✔ print-message(4:4)  whalesay  with-sequence-8nrp5-361941985   11s         
+ ✔ with-sequence-8nrp5   main
+ ├─✔ print-message(0:0)  whalesay  with-sequence-8nrp5-3678575801  9s
+ ├─✔ print-message(1:1)  whalesay  with-sequence-8nrp5-1828425621  7s
+ ├─✔ print-message(2:2)  whalesay  with-sequence-8nrp5-1644772305  13s
+ ├─✔ print-message(3:3)  whalesay  with-sequence-8nrp5-3766794981  15s
+ └─✔ print-message(4:4)  whalesay  with-sequence-8nrp5-361941985   11s
 ```
 
 See how 5 pods were run at the same time, and that their names have the item value in them, zero-indexed?

@@ -1,7 +1,7 @@
 A **DAG template** is a common type of *orchestration* template.
 Let's look at a complete example:
 
-```
+```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
@@ -40,11 +40,11 @@ Let's run the workflow:
 
 You should see something like:
 
-```
+```bash
 STEP          TEMPLATE  PODNAME              DURATION  MESSAGE
- ✔ dag-shxn5  main                                       
- ├─✔ a        whalesay       dag-shxn5-289972251  6s          
- └─✔ b        whalesay       dag-shxn5-306749870  6s          
+ ✔ dag-shxn5  main
+ ├─✔ a        whalesay       dag-shxn5-289972251  6s
+ └─✔ b        whalesay       dag-shxn5-306749870  6s
 ```
 
 Did you see how `b` did not start until `a` had completed?

@@ -17,7 +17,7 @@ the manifest. Each output artifact declares:
 * The **path** within the container where it can be found.
 * A **name** so that it can be referred to.
 
-```
+```yaml
     - name: save-message
       container:
         image: docker/whalesay
@@ -40,7 +40,7 @@ To declare an input artifact, you must include `inputs` in the manifest. Each in
 * Its **name**
 * The **path** where it should be created
 
-```
+```yaml
     - name: print-message
       inputs:
         artifacts:
@@ -58,7 +58,7 @@ If the artifact was a compressed directory, it will be uncompressed and unpacked
 
 You can't use inputs and outputs in isolation, you need to combine them together using either a steps or a DAG template, as in the below example:
 
-```
+```yaml
     - name: main
       dag:
         tasks:
@@ -67,7 +67,7 @@ You can't use inputs and outputs in isolation, you need to combine them together
           - name: consume-artifact
             template: print-message
             dependencies:
-              - generate-artifact            
+              - generate-artifact
             arguments:
               artifacts:
                 - name: message
@@ -90,9 +90,9 @@ Let's run an example:
 
 You should see:
 
-```
+```bash
 STEP                    TEMPLATE       PODNAME                     DURATION  MESSAGE
- ✔ artifacts-qvcpn      main                                                   
- ├─✔ generate-artifact  save-message   artifacts-qvcpn-3260493969  7s          
- └─✔ consume-artifact   print-message  artifacts-qvcpn-2991781604  8s      
+ ✔ artifacts-qvcpn      main
+ ├─✔ generate-artifact  save-message   artifacts-qvcpn-3260493969  7s
+ └─✔ consume-artifact   print-message  artifacts-qvcpn-2991781604  8s
 ```

@@ -29,7 +29,7 @@ Let's look at the sensor pod logs:
 
 We can see that... it failed. You'll see logs similar to:
 
-```
+```bash
 {
    "level":"error",
    "ts":1685711961.5645943,

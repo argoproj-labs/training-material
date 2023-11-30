@@ -4,7 +4,7 @@ Helm allows us to configure our deployment by modifying [the default values](htt
 
 We will switch the authentication mode to server so that we can bypass the UI login for now. **This is not something we recommend for production installs.**
 
-```
+```bash
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 helm install argo argo/argo-workflows --namespace argo --create-namespace \
@@ -39,7 +39,7 @@ Click "Edit using full workflow options". You should see something similar to th
 
 Paste this YAML into the editor:
 
-```
+```yaml
 metadata:
   generateName: hello-world-
   namespace: argo

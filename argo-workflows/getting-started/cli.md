@@ -1,5 +1,5 @@
 To run workflows, the easiest way is to use the Argo CLI, you can download it as follows:
-```
+```bash
 curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.5.2/argo-linux-amd64.gz
 gunzip argo-linux-amd64.gz
 chmod +x argo-linux-amd64

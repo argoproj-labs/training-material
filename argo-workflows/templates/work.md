@@ -20,7 +20,7 @@ You can identify workflow pods by the `workflows.argoproj.io/workflow` label.
 
 You should see something like this:
 
-```
+```bash
 NAME                 READY   STATUS      RESTARTS   AGE
 container-m5664      0/2     Completed   0          5m21s
 template-tag-kqpc6   0/2     Completed   0          4m6s

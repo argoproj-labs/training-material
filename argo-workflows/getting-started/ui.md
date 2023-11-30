@@ -46,7 +46,7 @@ Click "Edit using full workflow options". You should see something similar to th
 
 Paste this YAML into the editor:
 
-```
+```yaml
 metadata:
   generateName: hello-world-
   namespace: argo

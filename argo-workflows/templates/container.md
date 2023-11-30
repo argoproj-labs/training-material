@@ -1,6 +1,6 @@
 A container template is the most common type of template, let's look at a complete example:
 
-```
+```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:

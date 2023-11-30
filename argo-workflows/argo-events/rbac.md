@@ -23,7 +23,7 @@ Let's look at the sensor pod logs again.
 
 This time, the event successfully triggered our workflow:
 
-```
+```bash
 {
    "level":"info",
    "ts":1685713173.4561043,
