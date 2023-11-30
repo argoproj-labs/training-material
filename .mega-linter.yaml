@@ -7,7 +7,7 @@ DISABLE_LINTERS:
 
 JSON_ESLINT_PLUGIN_JSONC_FILTER_REGEX_EXCLUDE: "renovate.json$"
 YAML_V8R_FILTER_REGEX_EXCLUDE: "yamllint.yml$|.mega-linter.yaml$"
-JSON_PRETTIER_FILTER_REGEX_EXCLUDE: "renovate.json$|.cspell.json$"
+JSON_PRETTIER_FILTER_REGEX_EXCLUDE: "renovate.json$|.cspell.json$|.markdownlint.json$"
 YAML_PRETTIER_FILTER_REGEX_EXCLUDE: "yamllint.yml$"
 
 MARKDOWN_MARKDOWNLINT_DISABLE_ERRORS: false
