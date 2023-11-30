@@ -16,7 +16,7 @@ You should see something like this:
 
 Let's run a workflow!
 
-`argo submit -n argo --watch https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml`{{execute}}
+`argo submit -n argo --serviceaccount argo --watch https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml`{{execute}}
 
 You should see the workflow complete successfully after about 1m:
 

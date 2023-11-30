@@ -8,6 +8,7 @@ kind: Workflow
 metadata:
   name: hello
 spec:
+  serviceAccountName: argo # this is the service account that the workflow will run with
   entrypoint: main # the first template to run in the workflows
   templates:
   - name: main
