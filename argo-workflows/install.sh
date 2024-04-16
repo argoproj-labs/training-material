@@ -16,6 +16,33 @@ kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-materi
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/argo-workflows/canary-workflow.yaml >/dev/null
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/argo-workflows/patchpod.yaml >/dev/null
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/argo-workflows/workflows-controller-configmap.yaml >/dev/null
+cat <<EOF | kubectl apply -f - >/dev/null
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: executor
+rules:
+  - apiGroups:
+      - argoproj.io
+    resources:
+      - workflowtaskresults
+    verbs:
+      - create
+      - patch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: argo-executor-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: executor
+subjects:
+- kind: ServiceAccount
+  name: argo
+  namespace: argo
+EOF
 
 echo "2. Installing Argo CLI..."
 
