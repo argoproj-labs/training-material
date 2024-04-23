@@ -53,6 +53,7 @@
         "whalesay",
         "workfloweventbinding",
         "workfloweventbindings",
+        "workflowtaskresults",
         "workflowtemplate",
         "workflowtemplates"
     ]
