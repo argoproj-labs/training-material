@@ -44,6 +44,7 @@ metadata:
   generateName: hello-world-
   namespace: argo
 spec:
+  serviceAccountName: argo-argo-workflows-workflow-controller
   entrypoint: main
   templates:
     - name: main
