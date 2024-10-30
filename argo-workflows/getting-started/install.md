@@ -10,7 +10,7 @@ Scroll down to the `Controller and Server`{{}} section and execute the kubectl c
 
 Below is an example of the install commands, ensure that you update the command to install the correct version number:
 
-`kubectl apply -n argo -f https://github.com/argoproj/argo-workflows/releases/download/v3.5.10/install.yaml`{{execute}}
+`kubectl apply -n argo -f https://github.com/argoproj/argo-workflows/releases/download/v3.5.12/install.yaml`{{execute}}
 
 ## What was installed?
 
