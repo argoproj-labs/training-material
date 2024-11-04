@@ -2,7 +2,10 @@ This command installs the latest Argo Workflows Helm Chart. In production it wou
 ```bash
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
-helm install argo argo/argo-workflows --namespace argo --create-namespace
+helm install argo argo/argo-workflows \
+  --namespace argo \
+  --create-namespace \
+  --set workflow.serviceAccount.create=true
 ```{{execute}}
 
 ## What was installed?
