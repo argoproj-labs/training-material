@@ -9,7 +9,7 @@ A DAG allows you to loop over a number of items using `withItems`:
       dag:
         tasks:
           - name: print-message
-            template: whalesay
+            template: echo
             arguments:
               parameters:
                 - name: message
@@ -28,8 +28,8 @@ You should see something like:
 ```bash
 STEP                                 TEMPLATE  PODNAME                      DURATION  MESSAGE
  ✔ with-items-4qzg9                  main
- ├─✔ print-message(0:hello world)    whalesay  with-items-4qzg9-465751898   7s
- └─✔ print-message(1:goodbye world)  whalesay  with-items-4qzg9-2410280706  5s
+ ├─✔ print-message(0:hello world)    echo  with-items-4qzg9-465751898   7s
+ └─✔ print-message(1:goodbye world)  echo  with-items-4qzg9-2410280706  5s
 ```
 
 Notice how the two items ran at the same time.
@@ -42,7 +42,7 @@ You can also loop over a sequence of numbers using `withSequence`:
       dag:
         tasks:
           - name: print-message
-            template: whalesay
+            template: echo
             arguments:
               parameters:
                 - name: message
@@ -58,11 +58,11 @@ As usual, run it:
 ```bash
 STEP                     TEMPLATE  PODNAME                         DURATION  MESSAGE
  ✔ with-sequence-8nrp5   main
- ├─✔ print-message(0:0)  whalesay  with-sequence-8nrp5-3678575801  9s
- ├─✔ print-message(1:1)  whalesay  with-sequence-8nrp5-1828425621  7s
- ├─✔ print-message(2:2)  whalesay  with-sequence-8nrp5-1644772305  13s
- ├─✔ print-message(3:3)  whalesay  with-sequence-8nrp5-3766794981  15s
- └─✔ print-message(4:4)  whalesay  with-sequence-8nrp5-361941985   11s
+ ├─✔ print-message(0:0)  echo  with-sequence-8nrp5-3678575801  9s
+ ├─✔ print-message(1:1)  echo  with-sequence-8nrp5-1828425621  7s
+ ├─✔ print-message(2:2)  echo  with-sequence-8nrp5-1644772305  13s
+ ├─✔ print-message(3:3)  echo  with-sequence-8nrp5-3766794981  15s
+ └─✔ print-message(4:4)  echo  with-sequence-8nrp5-361941985   11s
 ```
 
 See how 5 pods were run at the same time, and that their names have the item value in them, zero-indexed?

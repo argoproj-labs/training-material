@@ -56,8 +56,8 @@ spec:
   templates:
     - name: main
       container:
-        image: docker/whalesay
-        command: ["cowsay"]
+        image: busybox
+        command: ["echo"]
 ```{{copy}}
 
 Click "Create". You will see a diagram of the workflow. The yellow icon shows that it is pending, after a few seconds it'll turn blue to indicate it is running, and finally green to show that it has completed successfully:

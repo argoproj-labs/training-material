@@ -5,7 +5,7 @@ using `onExit`:
       dag:
         tasks:
           - name: a
-            template: whalesay
+            template: echo
             onExit: tidy-up
 ```
 
@@ -24,7 +24,7 @@ You should see:
 ```bash
 STEP                   TEMPLATE  PODNAME                        DURATION  MESSAGE
  ✔ exit-handler-plvg7  main
- ├─✔ a                 whalesay  exit-handler-plvg7-1651124468  5s
+ ├─✔ a                 echo      exit-handler-plvg7-1651124468  5s
  └─✔ a.onExit          tidy-up   exit-handler-plvg7-3635807335  6s
 ```
 

@@ -9,7 +9,7 @@ spec:
       dag:
         tasks:
           - name: generate-parameter
-            template: whalesay
+            template: echo
           - name: consume-parameter
             template: print-message
             dependencies:
@@ -19,9 +19,9 @@ spec:
                 - name: message
                   value: "{{tasks.generate-parameter.outputs.parameters.hello-param}}"
 
-    - name: whalesay
+    - name: echo
       container:
-        image: docker/whalesay
+        image: busybox
         command: [sh, -c]
         args: ["echo -n hello world > /tmp/hello_world.txt"]
       outputs:
@@ -35,6 +35,6 @@ spec:
         parameters:
           - name: message
       container:
-        image: docker/whalesay
-        command: [cowsay]
+        image: busybox
+        command: [echo]
         args: ["{{inputs.parameters.message}}"]

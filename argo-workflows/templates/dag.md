@@ -13,15 +13,15 @@ spec:
       dag:
         tasks:
           - name: a
-            template: whalesay
+            template: echo
           - name: b
-            template: whalesay
+            template: echo
             dependencies:
               - a
-    - name: whalesay
+    - name: echo
       container:
-        image: docker/whalesay
-        command: [ cowsay ]
+        image: busybox
+        command: [ echo ]
         args: [ "hello world" ]
 
 ```
@@ -29,9 +29,9 @@ spec:
 In this example, we have two templates:
 
 * The "main" template is our new DAG.
-* The "whalesay" template is the same template as in the container example.
+* The "echo" template is the same template as in the container example.
 
-The DAG has two tasks: "a" and "b". Both run the "whalesay" template, but as "b" depends on "a", it won't start until "
+The DAG has two tasks: "a" and "b". Both run the "echo" template, but as "b" depends on "a", it won't start until "
 a" has completed successfully.
 
 Let's run the workflow:
@@ -43,8 +43,8 @@ You should see something like:
 ```bash
 STEP          TEMPLATE  PODNAME              DURATION  MESSAGE
  ✔ dag-shxn5  main
- ├─✔ a        whalesay       dag-shxn5-289972251  6s
- └─✔ b        whalesay       dag-shxn5-306749870  6s
+ ├─✔ a        echo       dag-shxn5-289972251  6s
+ └─✔ b        echo       dag-shxn5-306749870  6s
 ```
 
 Did you see how `b` did not start until `a` had completed?

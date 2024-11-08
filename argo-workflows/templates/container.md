@@ -10,8 +10,8 @@ spec:
   templates:
   - name: main
     container:
-      image: docker/whalesay
-      command: [cowsay]
+      image: busybox
+      command: [echo]
       args: ["hello world"]
 ```
 

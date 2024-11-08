@@ -20,9 +20,9 @@ the manifest. Each output artifact declares:
 ```yaml
     - name: save-message
       container:
-        image: docker/whalesay
+        image: busybox
         command: [ sh, -c ]
-        args: [ "cowsay hello world > /tmp/hello_world.txt" ]
+        args: [ "echo hello world > /tmp/hello_world.txt" ]
       outputs:
         artifacts:
           - name: hello-art
@@ -47,7 +47,7 @@ To declare an input artifact, you must include `inputs` in the manifest. Each in
           - name: message
             path: /tmp/message
       container:
-        image: docker/whalesay
+        image: busybox
         command: [ sh, -c ]
         args: [ "cat /tmp/message" ]
 ```
