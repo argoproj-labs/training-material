@@ -12,7 +12,9 @@ spec:
     templates:
       - name: main
         container:
-          image: docker/whalesay
+          image: busybox
+          command: ["echo"]
+          args: ["hello world"]
 ```
 
 When it should be run is set in the `schedule` field, in the example every minute.

@@ -9,7 +9,7 @@ spec:
       dag:
         tasks:
           - name: print-message
-            template: whalesay
+            template: echo
             arguments:
               parameters:
                 - name: message
@@ -18,11 +18,11 @@ spec:
               - "hello world"
               - "goodbye world"
 
-    - name: whalesay
+    - name: echo
       inputs:
         parameters:
           - name: message
       container:
-        image: docker/whalesay
-        command: [cowsay]
+        image: busybox
+        command: [echo]
         args: ["{{inputs.parameters.message}}"]

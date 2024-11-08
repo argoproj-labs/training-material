@@ -9,13 +9,13 @@ spec:
       dag:
         tasks:
           - name: a
-            template: whalesay
+            template: echo
           - name: b
-            template: whalesay
+            template: echo
             dependencies:
               - a
-    - name: whalesay
+    - name: echo
       container:
-        image: docker/whalesay
-        command: [cowsay]
+        image: busybox
+        command: [echo]
         args: ["hello world"]

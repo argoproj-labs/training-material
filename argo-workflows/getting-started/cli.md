@@ -36,8 +36,6 @@ And you can view that workflows logs:
 
 `argo logs -n argo @latest`{{execute}}
 
-![UI](../assets/logs.png)
-
 Finally, you can get help:
 
 `argo --help`{{execute}}

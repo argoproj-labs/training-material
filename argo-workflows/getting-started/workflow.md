@@ -13,8 +13,10 @@ spec:
   templates:
   - name: main
     container: # this is a container template
-      image: docker/whalesay # this image prints "hello world" to the console
-      command: ["cowsay"]
+      image: busybox # this is the image to run
+      command: ["echo"]
+      args: ["hello world"]
+
 ```
 
 There are several other types of templates, and we'll come to more of them soon.

@@ -9,16 +9,17 @@ spec:
       dag:
         tasks:
           - name: a
-            template: whalesay
+            template: echo
             onExit: tidy-up
 
-    - name: whalesay
+    - name: echo
       container:
-        image: docker/whalesay
-        command: [cowsay]
+        image: busybox
+        command: [echo]
+        args: ["hello world"]
 
     - name: tidy-up
       container:
-        image: docker/whalesay
-        command: [cowsay]
+        image: busybox
+        command: [echo]
         args: ["tidy up!"]

@@ -15,9 +15,9 @@ curl \
         {
           "name": "main",
           "container": {
-            "image": "docker/whalesay",
+            "image": "busybox",
             "command": [
-              "cowsay"
+              "echo"
             ],
             "args": [
               "hello world"

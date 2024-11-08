@@ -11,8 +11,8 @@ Let's have a look at an example:
         parameters:
           - name: message
       container:
-        image: docker/whalesay
-        command: [ cowsay ]
+        image: busybox
+        command: [ echo ]
         args: [ "{{inputs.parameters.message}}" ]
 ```
 
@@ -53,20 +53,7 @@ Let's check the output in the logs:
 You should see:
 
 ```bash
- ______________
-< Welcome to Argo! >
- --------------
-    \
-     \
-      \
-                    ##        .
-              ## ## ##       ==
-           ## ## ## ##      ===
-       /""""""""""""""""___/ ===
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
-       \______ o          __/
-        \    \        __/
-          \____\______/
+Welcome to Argo!
 ```
 
 ## Output Parameters
@@ -75,9 +62,9 @@ Output parameters can be from a few places, but typically the most versatile is 
 container creates a file with a message in it:
 
 ```yaml
-  - name: whalesay
+  - name: echo
     container:
-      image: docker/whalesay
+      image: busybox
       command: [sh, -c]
       args: ["echo -n hello world > /tmp/hello_world.txt"]
     outputs:
@@ -94,7 +81,7 @@ task using a **template tag**:
       dag:
         tasks:
           - name: generate-parameter
-            template: whalesay
+            template: echo
           - name: consume-parameter
             template: print-message
             dependencies:
@@ -119,7 +106,7 @@ You should see:
 STEP                     TEMPLATE       PODNAME                      DURATION  MESSAGE
  ✔ parameters-vjvwg
  main
- ├─✔ generate-parameter  whalesay       parameters-vjvwg-4019940555
+ ├─✔ generate-parameter  echo       parameters-vjvwg-4019940555
  43s
  └─✔ consume-parameter   print-message  parameters-vjvwg-1497618270
  8s
