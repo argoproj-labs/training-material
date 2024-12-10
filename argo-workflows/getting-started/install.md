@@ -6,6 +6,8 @@ Argo is normally installed into a namespace named `argo`, so lets create that:
 
 Next, navigate to the [releases page](https://github.com/argoproj/argo-workflows/releases/latest) and find the release you wish to use (the latest full release is preferred).
 
+> There is an issue in Argo Workflows 3.6.x releases where some permissions are missing in **argo-cluster-role** ClusterRole. Install the latest 3.5 minor release instead.
+
 Scroll down to the `Controller and Server`{{}} section and execute the kubectl commands.
 
 Below is an example of the install commands, ensure that you update the command to install the correct version number:
