@@ -23,6 +23,23 @@ There are several other types of templates, and we'll come to more of them soon.
 
 Because a workflow is just a Kubernetes resource, you can use `kubectl` with them.
 
+> There is an issue in Argo Workflows 3.6.x releases where some permissions are missing in **argo-cluster-role** ClusterRole. If you have installed one of those affected versions, you must modify the **argo-cluster-role** ClusterRole, ensuring the role allows both `create` and `patch` verbs over the `workflowtaskresults` resources:
+
+`kubectl edit clusterrole argo-cluster-role`
+
+```
+- apiGroups:
+  - argoproj.io
+  resources:
+  - workflowtaskresults
+  verbs:
+  - list
+  - watch
+  - deletecollection
+  - create
+  - patch
+```
+
 Create a workflow:
 
 `kubectl -n argo apply -f hello-workflow.yaml`{{execute}}
