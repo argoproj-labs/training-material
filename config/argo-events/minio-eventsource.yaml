@@ -15,7 +15,7 @@ spec:
       # Visit https://docs.minio.io/docs/minio-bucket-notification-guide.html
       events:
         - s3:ObjectCreated:Put
-        - s3:ObjectRemoved:DeleteMarkerCreated
+        - s3:ObjectRemoved:Delete
 
       # type of the connection
       insecure: true
