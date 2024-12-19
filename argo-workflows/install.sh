@@ -16,6 +16,7 @@ kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-materi
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/argo-workflows/canary-workflow.yaml >/dev/null
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/argo-workflows/patchpod.yaml >/dev/null
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/argo-workflows/workflows-controller-configmap.yaml >/dev/null
+kubectl create serviceaccount argo-workflow -n argo  >/dev/null
 cat <<EOF | kubectl apply -f - >/dev/null
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -40,7 +41,7 @@ roleRef:
   name: executor
 subjects:
 - kind: ServiceAccount
-  name: argo
+  name: argo-workflow
   namespace: argo
 EOF
 

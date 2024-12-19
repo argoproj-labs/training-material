@@ -1,4 +1,4 @@
-To run workflows, the easiest way is to use the Argo CLI, you can download it as follows:
+To run workflows, the easiest way is to use the Argo CLI, you can install it as follows:
 ```bash
 curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.6.2/argo-linux-amd64.gz
 gunzip argo-linux-amd64.gz
@@ -16,7 +16,7 @@ You should see something like this:
 
 Let's run a workflow!
 
-`argo submit -n argo --serviceaccount argo --watch https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml`{{execute}}
+`argo submit -n argo --serviceaccount argo-workflow --watch https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml`{{execute}}
 
 You should see the workflow complete successfully after about 1m:
 
