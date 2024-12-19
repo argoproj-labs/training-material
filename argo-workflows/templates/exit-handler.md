@@ -17,7 +17,7 @@ Let's look at a complete example:
 
 Run it:
 
-`argo submit --watch exit-handler-workflow.yaml`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch exit-handler-workflow.yaml`{{execute}}
 
 You should see:
 

@@ -21,7 +21,7 @@ A DAG allows you to loop over a number of items using `withItems`:
 
 In this example, it will execute once for each of the listed items. We can see a **template tag** here. `{{item}}` will be replaced with "hello world" and "goodbye world". DAGs execute in parallel, so both tasks will be started at the same time.
 
-`argo submit --watch with-items-workflow.yaml`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch with-items-workflow.yaml`{{execute}}
 
 You should see something like:
 
@@ -53,7 +53,7 @@ You can also loop over a sequence of numbers using `withSequence`:
 
 As usual, run it:
 
-`argo submit --watch with-sequence-workflow.yaml`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch with-sequence-workflow.yaml`{{execute}}
 
 ```bash
 STEP                     TEMPLATE  PODNAME                         DURATION  MESSAGE

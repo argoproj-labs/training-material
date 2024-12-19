@@ -17,7 +17,7 @@ spec:
 
 Let's run the workflow:
 
-`argo submit --watch container-workflow.yaml`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch container-workflow.yaml`{{execute}}
 
 Port-forward to the Argo Server pod...
 

@@ -86,7 +86,7 @@ Let's see the complete DAG workflow:
 
 Let's run an example:
 
-`argo submit --watch artifacts-workflow.yaml`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch artifacts-workflow.yaml`{{execute}}
 
 You should see:
 

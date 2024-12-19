@@ -17,7 +17,7 @@ Look at the full example:
 
 Submit this workflow:
 
-`argo submit --watch template-tag-workflow.yaml`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch template-tag-workflow.yaml`{{execute}}
 
 You can see the output by running
 

@@ -26,7 +26,7 @@ See how the workflow itself has arguments?
 
 Run it:
 
-`argo submit --watch input-parameters-workflow.yaml`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch input-parameters-workflow.yaml`{{execute}}
 
 You should see:
 
@@ -37,7 +37,7 @@ STEP                       TEMPLATE  PODNAME                 DURATION  MESSAGE
 
 If a workflow has parameters, you can change the parameters using `-p` using the CLI:
 
-`argo submit --watch input-parameters-workflow.yaml -p message='Welcome to Argo!'`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch input-parameters-workflow.yaml -p message='Welcome to Argo!'`{{execute}}
 
 You should see:
 
@@ -98,7 +98,7 @@ See the complete workflow:
 
 Run it:
 
-`argo submit --watch parameters-workflow.yaml`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch parameters-workflow.yaml`{{execute}}
 
 You should see:
 

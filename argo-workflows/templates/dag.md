@@ -36,7 +36,7 @@ a" has completed successfully.
 
 Let's run the workflow:
 
-`argo submit --watch dag-workflow.yaml`{{execute}}
+`argo submit --serviceaccount argo-workflow --watch dag-workflow.yaml`{{execute}}
 
 You should see something like:
 
