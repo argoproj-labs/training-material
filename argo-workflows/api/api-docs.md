@@ -24,9 +24,9 @@ Open the API docs and find an endpoint to create workflow templates. Create a wo
 
 ## More API documentation
 Visit the Argo Workflows documentation for more information:
-- [Argo Workflows API](https://argoproj.github.io/argo-workflows/rest-api/)
-- [Access Tokens](https://argoproj.github.io/argo-workflows/access-token/)
-- [API examples](https://argoproj.github.io/argo-workflows/rest-examples/)
-- [API reference (Swagger docs)](https://argoproj.github.io/argo-workflows/swagger/)
-- [Client libraries for Python, Golang, and Java](https://argoproj.github.io/argo-workflows/client-libraries/)
-- [Argo Server](https://argoproj.github.io/argo-workflows/argo-server/)
+- [Argo Workflows API](https://argo-workflows.readthedocs.io/en/latest/rest-api/)
+- [Access Tokens](https://argo-workflows.readthedocs.io/en/latest/access-token/)
+- [API examples](https://argo-workflows.readthedocs.io/en/latest/rest-examples/)
+- [API reference (Swagger docs)](https://argo-workflows.readthedocs.io/en/latest/swagger/)
+- [Client libraries for Python, Golang, and Java](https://argo-workflows.readthedocs.io/en/latest/client-libraries/)
+- [Argo Server](https://argo-workflows.readthedocs.io/en/latest/argo-server/)
