@@ -22,13 +22,13 @@ Let's create this workflow template:
 
 `argo template create hello-workflowtemplate.yaml`{{execute}}
 
-You can also manage templates using `kubectl`:
+You could also manage templates using `kubectl`:
 
-`kubectl apply -f hello-workflowtemplate.yaml`{{execute}}
+`kubectl create -f hello-workflowtemplate.yaml`
 
 This allows you to use GitOps to manage your templates.
 
-To submit a template, you can use the UI or the CLI:
+To submit (i.e. run) a workflowTemplate, you can use the UI or the CLI:
 
 `argo submit --watch --from workflowtemplate/hello`{{execute}}
 
