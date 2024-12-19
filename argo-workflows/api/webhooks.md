@@ -11,7 +11,7 @@ To use this, you need to create a `WorkflowTemplate` and a **workflow event bind
 A **workflow event binding** consists of:
 
 * An **event selector** that matches events
-* A reference to a `WorkflowTemplates` using `workflowTemplateRef`
+* A reference to a `WorkflowTemplate` using `workflowTemplateRef`
 * Optional parameters
 
 
@@ -59,20 +59,7 @@ Allow about 5 seconds for the workflow to start and then check the logs:
 You should see something like the following:
 
 ```bash
- ______________
-< hello events >
- --------------
-    \
-     \
-      \
-                    ##        .
-              ## ## ##       ==
-           ## ## ## ##      ===
-       /""""""""""""""""___/ ===
-  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
-       \______ o          __/
-        \    \        __/
-          \____\______/
+hello-u7mnk: hello events
 ```
 
 [Learn more about webhooks](https://argoproj.github.io/argo-workflows/events/) in the Argo Workflows docs.
