@@ -24,6 +24,8 @@ spec:
               value: "argoproj"
             - name: MINIO_ROOT_PASSWORD
               value: "sup3rs3cr3tp4ssw0rd1"
+            - name: MINIO_BROWSER_LOGIN_ANIMATION
+              value: "off"
           image: minio/minio
           imagePullPolicy: Always
           name: minio
