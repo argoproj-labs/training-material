@@ -36,7 +36,7 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: executor
+  name: workflow-executor-rbac
 subjects:
 - kind: ServiceAccount
   name: argo-workflow
