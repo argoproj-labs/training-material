@@ -8,7 +8,8 @@ We will switch the authentication mode to server so that we can bypass the UI lo
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 helm install argo argo/argo-workflows --namespace argo --create-namespace \
-  --set server.extraArgs[0]="--auth-mode=server"
+  --set server.extraArgs[0]="--auth-mode=server" \
+  --set workflow.serviceAccount.create=true
 ```{{execute}}
 
 We need to wait for the Argo Server to deploy:
