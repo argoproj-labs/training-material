@@ -8,14 +8,14 @@ To access this via Killercoda, we need to port-forward the argo-server pod:
 
 Note: Killercoda currently has issues port-forwarding. You may need to wait a few minutes for Killercoda to complete the port-forward.
 
-Typically, it is good to be able to check you can access it first. This can be done using the `info` endpoint:
+Typically, it is good to be able to check you can access the API before using it. This can be done using the `info` endpoint:
 
 `curl http://localhost:2746/api/v1/info`{{execute}}
 
 You should see something like this if it is successful:
 
 ```bash
-{"code":16,"message":"token not valid for running mode"}
+{"code":16,"message":"token not valid. see https://argo-workflows.readthedocs.io/en/latest/faq/"}
 ```
 
 If it fails, then you'll see something like this:
