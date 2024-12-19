@@ -17,4 +17,4 @@ data:
         key: secretkey
   workflowDefaults: |
     spec:
-      serviceAccountName: argo
+      serviceAccountName: argo-workflow
