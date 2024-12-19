@@ -8,7 +8,7 @@ Scroll down to the `Installation`{{}} section and execute the kubectl commands.
 
 Below is an example of the install command, ensure that you update the command to install the correct version number:
 
-`kubectl apply -n argo-events -f https://github.com/argoproj/argo-events/releases/download/v1.9.2/install.yaml`{{execute}}
+`kubectl apply -n argo-events -f https://github.com/argoproj/argo-events/releases/download/v1.9.3/install.yaml`{{execute}}
 
 Argo Events also requires an eventbus to be created. This is a central point for all events to be sent to. The eventbus is created in the same namespace as the Argo Events controller.
 
