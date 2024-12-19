@@ -11,6 +11,10 @@
         "text": "install.md"
       },
       {
+        "title": "Managing RBAC",
+        "text": "rbac.md"
+      },
+      {
         "title": "What is a workflow?",
         "text": "workflow.md"
       },
