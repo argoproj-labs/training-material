@@ -10,13 +10,13 @@ echo "1. Installing Argo Workflows..."
 ARGO_WORKFLOWS_VERSION='v3.6.2'
 
 kubectl create ns argo >/dev/null
+kubectl create serviceaccount argo-workflow -n argo  >/dev/null
 kubectl config set-context --current --namespace=argo >/dev/null
 kubectl apply -f https://github.com/argoproj/argo-workflows/releases/download/${ARGO_WORKFLOWS_VERSION}/install.yaml >/dev/null
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/minio/minio.yaml >/dev/null
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/argo-workflows/canary-workflow.yaml >/dev/null
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/argo-workflows/patchpod.yaml >/dev/null
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/argo-workflows/workflows-controller-configmap.yaml >/dev/null
-kubectl create serviceaccount argo-workflow -n argo  >/dev/null
 cat <<EOF | kubectl apply -f - >/dev/null
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
