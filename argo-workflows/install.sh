@@ -100,5 +100,9 @@ echo "4. Waiting for the Workflow Controller to be available..."
 kubectl rollout restart deployment workflow-controller >/dev/null
 kubectl wait deploy/workflow-controller --for condition=Available --timeout 2m >/dev/null
 
+echo "5. Waiting for the Argo Server to be available..."
+kubectl rollout restart deployment argo-server >/dev/null
+kubectl wait deploy/argo-server --for condition=Available --timeout 2m >/dev/null
+
 echo
 echo "Ready"
