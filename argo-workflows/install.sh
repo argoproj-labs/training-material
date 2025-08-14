@@ -7,10 +7,10 @@ echo
 
 echo "1. Installing Argo Workflows..."
 
-ARGO_WORKFLOWS_VERSION='v3.6.10'
+ARGO_WORKFLOWS_VERSION='v3.7.1'
 
 kubectl create ns argo >/dev/null
-kubectl create serviceaccount argo-workflow -n argo  >/dev/null
+kubectl create serviceaccount argo-workflow -n argo >/dev/null
 kubectl config set-context --current --namespace=argo >/dev/null
 kubectl apply -f https://github.com/argoproj/argo-workflows/releases/download/${ARGO_WORKFLOWS_VERSION}/install.yaml >/dev/null
 kubectl apply -f https://raw.githubusercontent.com/argoproj-labs/training-material/main/config/minio/minio.yaml >/dev/null
