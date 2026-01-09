@@ -7,7 +7,7 @@ echo
 
 echo "1. Installing Argo Workflows..."
 
-ARGO_WORKFLOWS_VERSION='v3.7.6'
+ARGO_WORKFLOWS_VERSION='v3.7.7'
 
 kubectl create ns argo >/dev/null
 kubectl create serviceaccount argo-workflow -n argo >/dev/null
